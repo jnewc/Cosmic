@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041DF7FE1E88547100934C76 /* Cosmic.framework */; };
+		041DF80F1E88547100934C76 /* cosmic.h in Headers */ = {isa = PBXBuildFile; fileRef = 041DF8011E88547100934C76 /* cosmic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		041DF86C1E8999E400934C76 /* PrintLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DF86B1E8999E400934C76 /* PrintLogger.swift */; };
+		041DF86F1E899A3600934C76 /* CompositeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DF86E1E899A3600934C76 /* CompositeLogger.swift */; };
+		041DF8721E899BB500934C76 /* MemoryLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DF8711E899BB500934C76 /* MemoryLogger.swift */; };
+		041DF8781E89C3D900934C76 /* PrintLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DF8771E89C3D900934C76 /* PrintLoggerTests.swift */; };
+		041DF87C1E943FB800934C76 /* LogReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DF87B1E943FB800934C76 /* LogReporterTests.swift */; };
+		04C24ED51EAA9E1C0098D9AE /* PapertrailLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C24ED41EAA9E1C0098D9AE /* PapertrailLogger.swift */; };
+		04C24ED71EAAA6FD0098D9AE /* LogglyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C24ED61EAAA6FD0098D9AE /* LogglyLogger.swift */; };
+		04E411471EA0CFB8007279F9 /* LogReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E411441EA0CFB8007279F9 /* LogReporter.swift */; };
+		04E411481EA0CFB8007279F9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E411451EA0CFB8007279F9 /* Logger.swift */; };
+		04E411491EA0CFB8007279F9 /* LogReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E411461EA0CFB8007279F9 /* LogReceiver.swift */; };
+		04E4114F1EA0CFD7007279F9 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E4114B1EA0CFD7007279F9 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04E411501EA0CFD7007279F9 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4114C1EA0CFD7007279F9 /* GCDAsyncSocket.m */; };
+		04E411511EA0CFD7007279F9 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E4114D1EA0CFD7007279F9 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04E411521EA0CFD7007279F9 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E4114E1EA0CFD7007279F9 /* GCDAsyncUdpSocket.m */; };
+		04E411541EA0CFFE007279F9 /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E411531EA0CFFE007279F9 /* SocketLogger.swift */; };
+		04E4115A1EA0F0DB007279F9 /* LogOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E411591EA0F0DB007279F9 /* LogOutputStream.swift */; };
+		04E4115C1EA0F258007279F9 /* LogOutputStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4115B1EA0F258007279F9 /* LogOutputStreamTests.swift */; };
+		04E4115E1EA4EF24007279F9 /* SocketLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4115D1EA4EF24007279F9 /* SocketLoggerTests.swift */; };
+		04E411611EA5036C007279F9 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E411601EA5036C007279F9 /* Formatters.swift */; };
+		04E411631EA7EA24007279F9 /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E411621EA7EA24007279F9 /* LogFormatter.swift */; };
+		04E411661EA8085A007279F9 /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E411651EA8085A007279F9 /* JSONFormatter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		041DF8091E88547100934C76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 041DF7F51E88547000934C76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 041DF7FD1E88547000934C76;
+			remoteInfo = cosmic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		041DF7FE1E88547100934C76 /* Cosmic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		041DF8011E88547100934C76 /* cosmic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cosmic.h; sourceTree = "<group>"; };
+		041DF8071E88547100934C76 /* cosmicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cosmicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		041DF80E1E88547100934C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041DF8681E89975300934C76 /* LoggerPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LoggerPlayground.playground; sourceTree = "<group>"; };
+		041DF86B1E8999E400934C76 /* PrintLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintLogger.swift; sourceTree = "<group>"; };
+		041DF86E1E899A3600934C76 /* CompositeLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeLogger.swift; sourceTree = "<group>"; };
+		041DF8711E899BB500934C76 /* MemoryLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryLogger.swift; sourceTree = "<group>"; };
+		041DF8771E89C3D900934C76 /* PrintLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintLoggerTests.swift; sourceTree = "<group>"; };
+		041DF87B1E943FB800934C76 /* LogReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogReporterTests.swift; sourceTree = "<group>"; };
+		04C24ED41EAA9E1C0098D9AE /* PapertrailLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapertrailLogger.swift; sourceTree = "<group>"; };
+		04C24ED61EAAA6FD0098D9AE /* LogglyLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogglyLogger.swift; sourceTree = "<group>"; };
+		04E411441EA0CFB8007279F9 /* LogReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogReporter.swift; sourceTree = "<group>"; };
+		04E411451EA0CFB8007279F9 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		04E411461EA0CFB8007279F9 /* LogReceiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogReceiver.swift; sourceTree = "<group>"; };
+		04E4114B1EA0CFD7007279F9 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		04E4114C1EA0CFD7007279F9 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		04E4114D1EA0CFD7007279F9 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		04E4114E1EA0CFD7007279F9 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		04E411531EA0CFFE007279F9 /* SocketLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketLogger.swift; path = Cosmic/Loggers/SocketLogger.swift; sourceTree = SOURCE_ROOT; };
+		04E411581EA0D765007279F9 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		04E411591EA0F0DB007279F9 /* LogOutputStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutputStream.swift; sourceTree = "<group>"; };
+		04E4115B1EA0F258007279F9 /* LogOutputStreamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutputStreamTests.swift; sourceTree = "<group>"; };
+		04E4115D1EA4EF24007279F9 /* SocketLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketLoggerTests.swift; sourceTree = "<group>"; };
+		04E411601EA5036C007279F9 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		04E411621EA7EA24007279F9 /* LogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
+		04E411651EA8085A007279F9 /* JSONFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		041DF7FA1E88547000934C76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041DF8041E88547100934C76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		041DF7F41E88547000934C76 = {
+			isa = PBXGroup;
+			children = (
+				041DF8001E88547100934C76 /* Cosmic */,
+				041DF80B1E88547100934C76 /* cosmicTests */,
+				041DF8671E89973B00934C76 /* cosmicPlaygrounds */,
+				041DF7FF1E88547100934C76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		041DF7FF1E88547100934C76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				041DF7FE1E88547100934C76 /* Cosmic.framework */,
+				041DF8071E88547100934C76 /* cosmicTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		041DF8001E88547100934C76 /* Cosmic */ = {
+			isa = PBXGroup;
+			children = (
+				041DF87A1E942BCE00934C76 /* Base */,
+				041DF86A1E8999D500934C76 /* Loggers */,
+				04E411641EA80854007279F9 /* Formatters */,
+				04E4115F1EA50360007279F9 /* Utilities */,
+				04E4114A1EA0CFC2007279F9 /* Vendor */,
+				041DF8011E88547100934C76 /* cosmic.h */,
+			);
+			name = Cosmic;
+			path = cosmic;
+			sourceTree = "<group>";
+		};
+		041DF80B1E88547100934C76 /* cosmicTests */ = {
+			isa = PBXGroup;
+			children = (
+				041DF80E1E88547100934C76 /* Info.plist */,
+				041DF8771E89C3D900934C76 /* PrintLoggerTests.swift */,
+				041DF87B1E943FB800934C76 /* LogReporterTests.swift */,
+				04E4115B1EA0F258007279F9 /* LogOutputStreamTests.swift */,
+				04E4115D1EA4EF24007279F9 /* SocketLoggerTests.swift */,
+			);
+			path = cosmicTests;
+			sourceTree = "<group>";
+		};
+		041DF8671E89973B00934C76 /* cosmicPlaygrounds */ = {
+			isa = PBXGroup;
+			children = (
+				041DF8681E89975300934C76 /* LoggerPlayground.playground */,
+			);
+			path = cosmicPlaygrounds;
+			sourceTree = "<group>";
+		};
+		041DF86A1E8999D500934C76 /* Loggers */ = {
+			isa = PBXGroup;
+			children = (
+				04C24ED31EAA9E0F0098D9AE /* Services */,
+				041DF86B1E8999E400934C76 /* PrintLogger.swift */,
+				041DF86E1E899A3600934C76 /* CompositeLogger.swift */,
+				041DF8711E899BB500934C76 /* MemoryLogger.swift */,
+				04E411531EA0CFFE007279F9 /* SocketLogger.swift */,
+			);
+			path = Loggers;
+			sourceTree = "<group>";
+		};
+		041DF87A1E942BCE00934C76 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				04E411441EA0CFB8007279F9 /* LogReporter.swift */,
+				04E411451EA0CFB8007279F9 /* Logger.swift */,
+				04E411461EA0CFB8007279F9 /* LogReceiver.swift */,
+				04E411591EA0F0DB007279F9 /* LogOutputStream.swift */,
+				04E411621EA7EA24007279F9 /* LogFormatter.swift */,
+			);
+			name = Base;
+			path = Cosmic/Base;
+			sourceTree = SOURCE_ROOT;
+		};
+		04C24ED31EAA9E0F0098D9AE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				04C24ED41EAA9E1C0098D9AE /* PapertrailLogger.swift */,
+				04C24ED61EAAA6FD0098D9AE /* LogglyLogger.swift */,
+			);
+			name = Services;
+			path = Cosmic/Loggers/Services;
+			sourceTree = SOURCE_ROOT;
+		};
+		04E4114A1EA0CFC2007279F9 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				04E4114B1EA0CFD7007279F9 /* GCDAsyncSocket.h */,
+				04E4114C1EA0CFD7007279F9 /* GCDAsyncSocket.m */,
+				04E4114D1EA0CFD7007279F9 /* GCDAsyncUdpSocket.h */,
+				04E4114E1EA0CFD7007279F9 /* GCDAsyncUdpSocket.m */,
+				04E411581EA0D765007279F9 /* module.modulemap */,
+			);
+			name = Vendor;
+			path = Cosmic/Vendor;
+			sourceTree = SOURCE_ROOT;
+		};
+		04E4115F1EA50360007279F9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				04E411601EA5036C007279F9 /* Formatters.swift */,
+			);
+			name = Utilities;
+			path = Cosmic/Utilities;
+			sourceTree = SOURCE_ROOT;
+		};
+		04E411641EA80854007279F9 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				04E411651EA8085A007279F9 /* JSONFormatter.swift */,
+			);
+			name = Formatters;
+			path = Cosmic/Formatters;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		041DF7FB1E88547000934C76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041DF80F1E88547100934C76 /* cosmic.h in Headers */,
+				04E411511EA0CFD7007279F9 /* GCDAsyncUdpSocket.h in Headers */,
+				04E4114F1EA0CFD7007279F9 /* GCDAsyncSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		041DF7FD1E88547000934C76 /* Cosmic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041DF8121E88547100934C76 /* Build configuration list for PBXNativeTarget "Cosmic" */;
+			buildPhases = (
+				041DF7F91E88547000934C76 /* Sources */,
+				041DF7FA1E88547000934C76 /* Frameworks */,
+				041DF7FB1E88547000934C76 /* Headers */,
+				041DF7FC1E88547000934C76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cosmic;
+			productName = cosmic;
+			productReference = 041DF7FE1E88547100934C76 /* Cosmic.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		041DF8061E88547100934C76 /* cosmicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041DF8151E88547100934C76 /* Build configuration list for PBXNativeTarget "cosmicTests" */;
+			buildPhases = (
+				041DF8031E88547100934C76 /* Sources */,
+				041DF8041E88547100934C76 /* Frameworks */,
+				041DF8051E88547100934C76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				041DF80A1E88547100934C76 /* PBXTargetDependency */,
+			);
+			name = cosmicTests;
+			productName = cosmicTests;
+			productReference = 041DF8071E88547100934C76 /* cosmicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		041DF7F51E88547000934C76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Jack Newcombe";
+				TargetAttributes = {
+					041DF7FD1E88547000934C76 = {
+						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					041DF8061E88547100934C76 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 041DF7F81E88547000934C76 /* Build configuration list for PBXProject "Cosmic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 041DF7F41E88547000934C76;
+			productRefGroup = 041DF7FF1E88547100934C76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				041DF7FD1E88547000934C76 /* Cosmic */,
+				041DF8061E88547100934C76 /* cosmicTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		041DF7FC1E88547000934C76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041DF8051E88547100934C76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		041DF7F91E88547000934C76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E411661EA8085A007279F9 /* JSONFormatter.swift in Sources */,
+				04E411481EA0CFB8007279F9 /* Logger.swift in Sources */,
+				04E4115A1EA0F0DB007279F9 /* LogOutputStream.swift in Sources */,
+				04E411611EA5036C007279F9 /* Formatters.swift in Sources */,
+				041DF86C1E8999E400934C76 /* PrintLogger.swift in Sources */,
+				04C24ED51EAA9E1C0098D9AE /* PapertrailLogger.swift in Sources */,
+				04C24ED71EAAA6FD0098D9AE /* LogglyLogger.swift in Sources */,
+				04E411471EA0CFB8007279F9 /* LogReporter.swift in Sources */,
+				041DF86F1E899A3600934C76 /* CompositeLogger.swift in Sources */,
+				04E411521EA0CFD7007279F9 /* GCDAsyncUdpSocket.m in Sources */,
+				04E411541EA0CFFE007279F9 /* SocketLogger.swift in Sources */,
+				041DF8721E899BB500934C76 /* MemoryLogger.swift in Sources */,
+				04E411501EA0CFD7007279F9 /* GCDAsyncSocket.m in Sources */,
+				04E411491EA0CFB8007279F9 /* LogReceiver.swift in Sources */,
+				04E411631EA7EA24007279F9 /* LogFormatter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041DF8031E88547100934C76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E4115C1EA0F258007279F9 /* LogOutputStreamTests.swift in Sources */,
+				041DF8781E89C3D900934C76 /* PrintLoggerTests.swift in Sources */,
+				04E4115E1EA4EF24007279F9 /* SocketLoggerTests.swift in Sources */,
+				041DF87C1E943FB800934C76 /* LogReporterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		041DF80A1E88547100934C76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 041DF7FD1E88547000934C76 /* Cosmic */;
+			targetProxy = 041DF8091E88547100934C76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		041DF8101E88547100934C76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		041DF8111E88547100934C76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		041DF8131E88547100934C76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Cosmic/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.cosmic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Cosmic/Vendor";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		041DF8141E88547100934C76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Cosmic/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.cosmic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Cosmic/Vendor";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		041DF8161E88547100934C76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = cosmicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.cosmicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		041DF8171E88547100934C76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = cosmicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.cosmicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		041DF7F81E88547000934C76 /* Build configuration list for PBXProject "Cosmic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041DF8101E88547100934C76 /* Debug */,
+				041DF8111E88547100934C76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041DF8121E88547100934C76 /* Build configuration list for PBXNativeTarget "Cosmic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041DF8131E88547100934C76 /* Debug */,
+				041DF8141E88547100934C76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041DF8151E88547100934C76 /* Build configuration list for PBXNativeTarget "cosmicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041DF8161E88547100934C76 /* Debug */,
+				041DF8171E88547100934C76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 041DF7F51E88547000934C76 /* Project object */;
+}
