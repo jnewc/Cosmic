@@ -19,13 +19,8 @@ internal protocol LogReceiver: Logger {
     
     // MARK: Log message receivers
     
-    func onDebug(_ messages: [String])
+    func onReceive(_ messages: [String], logLevel: LogLevel)
     
-    func onLog(_ messages: [String])
-    
-    func onWarn(_ messages: [String])
-    
-    func onError(_ messages: [String])
 }
 
 extension LogReceiver {
@@ -49,7 +44,7 @@ extension LogReceiver {
     /// - Parameter messages: The messages to log
     public func debug(_ messages: String...) {
         guard enabled(.debug) else { return }
-        onDebug(messages)
+        onReceive(messages, logLevel: .debug)
     }
     
     
@@ -64,7 +59,7 @@ extension LogReceiver {
     /// - Parameter messages: The info messages to log
     public func log(_ messages: String...) {
         guard enabled(.info) else { return }
-        onLog(messages)
+        onReceive(messages, logLevel: .info)
     }
     
     /// Logs a series of warning messages
@@ -75,7 +70,7 @@ extension LogReceiver {
     /// - Parameter messages: The warning messages to log
     public func warn(_ messages: String...) {
         guard enabled(.warn) else { return }
-        onWarn(messages)
+        onReceive(messages, logLevel: .warn)
     }
     
     /// Logs a series of error messages
@@ -90,7 +85,7 @@ extension LogReceiver {
     /// - Parameter messages: The error messages to log
     public func error(_ messages: String...) {
         guard enabled(.error) else { return }
-        onError(messages)
+        onReceive(messages, logLevel: .error)
     }
     
     internal func format(message: String) -> String {

@@ -23,19 +23,7 @@ public class PrintLogger: LogReceiver {
     
     public required init() { }
 
-    internal func onDebug(_ messages: [String]) {
-        messages.forEach { printLine($0) }
-    }
-    
-    internal func onLog(_ messages: [String]) {
-        messages.forEach { printLine($0) }
-    }
-    
-    internal func onWarn(_ messages: [String]) {
-        messages.forEach { printLine($0) }
-    }
-    
-    internal func onError(_ messages: [String]) {
+    func onReceive(_ messages: [String], logLevel: LogLevel) {
         messages.forEach { printLine($0) }
     }
     

@@ -48,22 +48,7 @@ public class SocketLogger: NSObject, LogReceiver, GCDAsyncUdpSocketDelegate {
         attemptConnect()
     }
     
-    internal func onDebug(_ messages: [String]) {
-        cache.append(contentsOf: messages)
-        attemptSend()
-    }
-
-    internal func onLog(_ messages: [String]) {
-        cache.append(contentsOf: messages)
-        attemptSend()
-    }
-
-    func onWarn(_ messages: [String]) {
-        cache.append(contentsOf: messages)
-        attemptSend()
-    }
-    
-    func onError(_ messages: [String]) {
+    func onReceive(_ messages: [String], logLevel: LogLevel) {
         cache.append(contentsOf: messages)
         attemptSend()
     }

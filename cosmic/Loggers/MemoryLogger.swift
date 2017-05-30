@@ -17,30 +17,13 @@ public class MemoryLogger: LogReceiver {
     
     public var formatters: [LogFormatter] = []
     
-    internal var messages: [LogMessage] = []
+    internal var cache: LogCache = LogCache()
 
     public required init() { }
 
-    internal func onDebug(_ messages: [String]) {
-        let logs: [LogMessage] = messages.map { (.debug, $0) }
-        self.messages.append(contentsOf: logs)
+    internal func onReceive(_ messages: [String], logLevel: LogLevel) {
+        self.cache.addEntry(with: messages, logLevel: logLevel)
     }
-    
-    internal func onLog(_ messages: [String]) {
-        let logs: [LogMessage] = messages.map { (.info, $0) }
-        self.messages.append(contentsOf: logs)
-    }
-    
-    internal func onWarn(_ messages: [String]) {
-        let logs: [LogMessage] = messages.map { (.warn, $0) }
-        self.messages.append(contentsOf: logs)
-    }
-    
-    internal func onError(_ messages: [String]) {
-        let logs: [LogMessage] = messages.map { (.error, $0) }
-        self.messages.append(contentsOf: logs)
-    }
-   
     
     
 }

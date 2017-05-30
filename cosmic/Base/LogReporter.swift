@@ -33,7 +33,7 @@ public extension LogReporter {
         
     }
     
-    public var logger: DefaultLoggerType {
+    public var logger: Logger {
         return self.createLogger(with: DefaultLoggerType.self)
     }
     

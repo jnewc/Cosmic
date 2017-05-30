@@ -8,6 +8,13 @@
 
 import Foundation
 
-public class LogglyLogger {
+public class LogglyLogger: RESTLogger {
+    
+    
+    public required init() {
+        super.init()
+        
+        sessionConfiguration.httpAdditionalHeaders = [:]
+    }
     
 }

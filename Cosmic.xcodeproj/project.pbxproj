@@ -14,6 +14,8 @@
 		041DF8721E899BB500934C76 /* MemoryLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DF8711E899BB500934C76 /* MemoryLogger.swift */; };
 		041DF8781E89C3D900934C76 /* PrintLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DF8771E89C3D900934C76 /* PrintLoggerTests.swift */; };
 		041DF87C1E943FB800934C76 /* LogReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DF87B1E943FB800934C76 /* LogReporterTests.swift */; };
+		04821FE31EDDE15C00BC30A2 /* RESTLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04821FE21EDDE15C00BC30A2 /* RESTLogger.swift */; };
+		04821FE51EDE0B9E00BC30A2 /* LogCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04821FE41EDE0B9E00BC30A2 /* LogCache.swift */; };
 		04C24ED51EAA9E1C0098D9AE /* PapertrailLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C24ED41EAA9E1C0098D9AE /* PapertrailLogger.swift */; };
 		04C24ED71EAAA6FD0098D9AE /* LogglyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C24ED61EAAA6FD0098D9AE /* LogglyLogger.swift */; };
 		04E411471EA0CFB8007279F9 /* LogReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E411441EA0CFB8007279F9 /* LogReporter.swift */; };
@@ -53,6 +55,8 @@
 		041DF8711E899BB500934C76 /* MemoryLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryLogger.swift; sourceTree = "<group>"; };
 		041DF8771E89C3D900934C76 /* PrintLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintLoggerTests.swift; sourceTree = "<group>"; };
 		041DF87B1E943FB800934C76 /* LogReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogReporterTests.swift; sourceTree = "<group>"; };
+		04821FE21EDDE15C00BC30A2 /* RESTLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RESTLogger.swift; path = Cosmic/Loggers/RESTLogger.swift; sourceTree = SOURCE_ROOT; };
+		04821FE41EDE0B9E00BC30A2 /* LogCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCache.swift; sourceTree = "<group>"; };
 		04C24ED41EAA9E1C0098D9AE /* PapertrailLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapertrailLogger.swift; sourceTree = "<group>"; };
 		04C24ED61EAAA6FD0098D9AE /* LogglyLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogglyLogger.swift; sourceTree = "<group>"; };
 		04E411441EA0CFB8007279F9 /* LogReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogReporter.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 				041DF86E1E899A3600934C76 /* CompositeLogger.swift */,
 				041DF8711E899BB500934C76 /* MemoryLogger.swift */,
 				04E411531EA0CFFE007279F9 /* SocketLogger.swift */,
+				04821FE21EDDE15C00BC30A2 /* RESTLogger.swift */,
 			);
 			path = Loggers;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				04E411461EA0CFB8007279F9 /* LogReceiver.swift */,
 				04E411591EA0F0DB007279F9 /* LogOutputStream.swift */,
 				04E411621EA7EA24007279F9 /* LogFormatter.swift */,
+				04821FE41EDE0B9E00BC30A2 /* LogCache.swift */,
 			);
 			name = Base;
 			path = Cosmic/Base;
@@ -327,12 +333,14 @@
 				04E411661EA8085A007279F9 /* JSONFormatter.swift in Sources */,
 				04E411481EA0CFB8007279F9 /* Logger.swift in Sources */,
 				04E4115A1EA0F0DB007279F9 /* LogOutputStream.swift in Sources */,
+				04821FE51EDE0B9E00BC30A2 /* LogCache.swift in Sources */,
 				04E411611EA5036C007279F9 /* Formatters.swift in Sources */,
 				041DF86C1E8999E400934C76 /* PrintLogger.swift in Sources */,
 				04C24ED51EAA9E1C0098D9AE /* PapertrailLogger.swift in Sources */,
 				04C24ED71EAAA6FD0098D9AE /* LogglyLogger.swift in Sources */,
 				04E411471EA0CFB8007279F9 /* LogReporter.swift in Sources */,
 				041DF86F1E899A3600934C76 /* CompositeLogger.swift in Sources */,
+				04821FE31EDDE15C00BC30A2 /* RESTLogger.swift in Sources */,
 				04E411521EA0CFD7007279F9 /* GCDAsyncUdpSocket.m in Sources */,
 				04E411541EA0CFFE007279F9 /* SocketLogger.swift in Sources */,
 				041DF8721E899BB500934C76 /* MemoryLogger.swift in Sources */,
