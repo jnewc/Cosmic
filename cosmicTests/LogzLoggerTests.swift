@@ -1,15 +1,15 @@
 //
-//  LogReporterTests.swift
+//  LogzLoggerTests.swift
 //  Cosmic
 //
-//  Created by Jack Newcombe on 04/04/2017.
+//  Created by Jack Newcombe on 12/06/2017.
 //  Copyright © 2017 Jack Newcombe. All rights reserved.
 //
 
 import XCTest
-@testable import Cosmic
+import Cosmic
 
-class LogReporterTests: XCTestCase, DefaultLogReporter {
+class LogzLoggerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,14 +21,10 @@ class LogReporterTests: XCTestCase, DefaultLogReporter {
         super.tearDown()
     }
     
-    func testDefaultLogger() {
+    func _testLogzLogger() {
         
-        let loggerWithClass = self.createLogger(with: PrintLogger.self)
-        
-        let a = String(describing: type(of: self.logger))
-        let b = String(describing: type(of: loggerWithClass))
-        
-        XCTAssertEqual(a, b)
+        // TODO
         
     }
+    
 }

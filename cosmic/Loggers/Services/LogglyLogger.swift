@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class LogglyLogger: RESTLogger {
+public class LogglyLogger: HTTPLogger {
     
     
     public required init() {

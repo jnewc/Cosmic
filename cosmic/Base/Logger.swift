@@ -6,6 +6,16 @@ public enum LogLevel: UInt {
 	case info	= 2
 	case warn	= 4
 	case error	= 8
+    
+    var simpleName: String {
+        switch self {
+        case .debug:    return "debug"
+        case .info:     return "info"
+        case .warn:     return "warn"
+        case .error:    return "error"
+        default:        return ""
+        }
+    }
 }
 
 

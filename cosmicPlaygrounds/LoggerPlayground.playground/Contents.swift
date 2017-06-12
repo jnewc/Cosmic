@@ -1,11 +1,13 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
-import cosmic
+import Cosmic
 
 var str = "Hello, playground"
 
 class LikesToLog: LogReporter {
+    
+    typealias DefaultLoggerType = PrintLogger
     
     init() {
     }

@@ -25,13 +25,15 @@ class JSONFormatter: LogFormatter, JSONFormatterConverter  {
     
     let converter: JSONFormatterConverterCompletion
     
+    var options: JSONSerialization.WritingOptions = []
+    
     init(converter: @escaping JSONFormatterConverterCompletion) {
         self.converter = converter
     }
     
     func toJSON(message: String) -> Data? {
         let dict = self.converter(message)
-        return try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+        return try? JSONSerialization.data(withJSONObject: dict, options: options)
     }
     
     func format(message: String) -> String {

@@ -52,3 +52,24 @@ open class DateLogFormatter: BasicLogFormatter {
     
 }
 
+// MARK: BatchFormatter
+
+public protocol BatchFormatter: LogFormatter {
+    
+    func format (batch: [String]) -> String
+    
+}
+
+// MARK: NewLineBatchFormatter
+
+public class NewLineBatchFormatter: BatchFormatter {
+    
+    public func format(message: String) -> String {
+        return message
+    }
+    
+    public func format(batch: [String]) -> String {
+        return batch.joined(separator: "\n")
+    }
+    
+}

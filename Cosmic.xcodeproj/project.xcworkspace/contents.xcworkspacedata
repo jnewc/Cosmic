@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/jack/dev/Cosmic/cosmic/Cosmic.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

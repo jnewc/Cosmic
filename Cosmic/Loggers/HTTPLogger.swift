@@ -1,5 +1,5 @@
 //
-//  RESTLogger.swift
+//  HTTPLogger.swift
 //  Cosmic
 //
 //  Created by Jack Newcombe on 30/05/2017.
@@ -8,17 +8,29 @@
 
 import Foundation
 
-public struct RESTLoggerConfig {
-    let url: String
-    let method: String
+public struct HTTPLoggerConfig {
+    var url: String
+    var method: String
+    var query: [String: String]
     
-    init(url: String, method: String = "POST") {
+    init(url: String, method: String = "POST", query: [String: String] = [:]) {
         self.url = url
         self.method = method
+        self.query = query
+    }
+    
+    var urlWithQuery: String {
+        let query = self.query.keys.map { "\($0)=\(self.query[$0]!)" }
+        if query.count > 0 {
+            return [ url, query.joined(separator: "&") ].joined(separator: "?")
+        }
+        return url
     }
 }
 
-public class RESTLogger: LogReceiver {
+public class HTTPLogger: LogReceiver {
+    
+    // MARK: LogReceiver properties
     
     /// A list of formatters to apply to logs
     ///
@@ -26,7 +38,6 @@ public class RESTLogger: LogReceiver {
     /// formatter will be applied to every message, so any filtering should be done 
     /// within the formatter itself.
     public var formatters: [LogFormatter] = []
-
     
     /// Indicates the current level of logging.
     ///
@@ -35,11 +46,15 @@ public class RESTLogger: LogReceiver {
     ///  - The classes of augmentation that should be applied to logs
     public var logLevel: LogLevel = .info
 
-    internal var sessionConfiguration = URLSessionConfiguration()
+    // MARK: HTTPLogger properties
+    
+    internal var batchFormatter: BatchFormatter = NewLineBatchFormatter()
+    
+    internal var sessionConfiguration = URLSessionConfiguration.default
     
     internal var session: URLSession
     
-    internal var config: RESTLoggerConfig?
+    internal var config: HTTPLoggerConfig?
     
     internal var cache: [String] = []
     
@@ -47,7 +62,7 @@ public class RESTLogger: LogReceiver {
         session = URLSession(configuration: sessionConfiguration)
     }
     
-    convenience init(config: RESTLoggerConfig) {
+    convenience init(config: HTTPLoggerConfig) {
         self.init()
         self.config = config
     }
@@ -59,20 +74,23 @@ public class RESTLogger: LogReceiver {
     
     func attemptSend() {
         
-        guard let url = config?.url else { return }
+        guard let url = config?.urlWithQuery else { return }
 
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = config?.method
         
-        let cache = self.cache
+        let cache = self.cache.map { self.format(message: $0) }
         self.cache = []
         
-        let messagesAsData = try? JSONSerialization.data(withJSONObject: cache, options: [])
-        request.httpBody = messagesAsData
+        let body = batchFormatter.format(batch: cache)
         
+        request.httpBody = body.data(using: .utf8)
         
         let task: URLSessionDataTask = session.dataTask(with: request) { data, response, error in
-            
+            print("Logz Response: \(response)")
+            if let data = data {
+                print(String(data: data, encoding: .utf8))
+            }
         }
         
         task.resume()
