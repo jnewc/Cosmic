@@ -37,6 +37,8 @@
 		04E411611EA5036C007279F9 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E411601EA5036C007279F9 /* Formatters.swift */; };
 		04E411631EA7EA24007279F9 /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E411621EA7EA24007279F9 /* LogFormatter.swift */; };
 		04E411661EA8085A007279F9 /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E411651EA8085A007279F9 /* JSONFormatter.swift */; };
+		04FD03F11EEF229C002B19E6 /* LogItLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD03F01EEF229C002B19E6 /* LogItLogger.swift */; };
+		04FD03F31EEF3BE7002B19E6 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD03F21EEF3BE7002B19E6 /* Commons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		04E411601EA5036C007279F9 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		04E411621EA7EA24007279F9 /* LogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
 		04E411651EA8085A007279F9 /* JSONFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
+		04FD03F01EEF229C002B19E6 /* LogItLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogItLogger.swift; sourceTree = "<group>"; };
+		04FD03F21EEF3BE7002B19E6 /* Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,7 @@
 				04C24ED41EAA9E1C0098D9AE /* PapertrailLogger.swift */,
 				04C24ED61EAAA6FD0098D9AE /* LogglyLogger.swift */,
 				041B31B91EED8B630040EED8 /* LogzLogger.swift */,
+				04FD03F01EEF229C002B19E6 /* LogItLogger.swift */,
 			);
 			name = Services;
 			path = Cosmic/Loggers/Services;
@@ -223,6 +228,7 @@
 			children = (
 				04E411601EA5036C007279F9 /* Formatters.swift */,
 				041B31BD1EEDB7870040EED8 /* DataUtility.swift */,
+				04FD03F21EEF3BE7002B19E6 /* Commons.swift */,
 			);
 			name = Utilities;
 			path = Cosmic/Utilities;
@@ -360,8 +366,10 @@
 				04821FE51EDE0B9E00BC30A2 /* LogCache.swift in Sources */,
 				04E411611EA5036C007279F9 /* Formatters.swift in Sources */,
 				041DF86C1E8999E400934C76 /* PrintLogger.swift in Sources */,
+				04FD03F11EEF229C002B19E6 /* LogItLogger.swift in Sources */,
 				04C24ED51EAA9E1C0098D9AE /* PapertrailLogger.swift in Sources */,
 				04C24ED71EAAA6FD0098D9AE /* LogglyLogger.swift in Sources */,
+				04FD03F31EEF3BE7002B19E6 /* Commons.swift in Sources */,
 				04E411471EA0CFB8007279F9 /* LogReporter.swift in Sources */,
 				041B31BE1EEDB7870040EED8 /* DataUtility.swift in Sources */,
 				041DF86F1E899A3600934C76 /* CompositeLogger.swift in Sources */,

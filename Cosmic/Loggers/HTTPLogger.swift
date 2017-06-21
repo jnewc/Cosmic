@@ -12,11 +12,13 @@ public struct HTTPLoggerConfig {
     var url: String
     var method: String
     var query: [String: String]
+    var headers: [String: String]
     
-    init(url: String, method: String = "POST", query: [String: String] = [:]) {
+    init(url: String, method: String = "POST", query: [String: String] = [:], headers: [String: String] = [:]) {
         self.url = url
         self.method = method
         self.query = query
+        self.headers = headers
     }
     
     var urlWithQuery: String {
@@ -71,13 +73,17 @@ public class HTTPLogger: LogReceiver {
         cache.append(contentsOf: messages)
         attemptSend()
     }
-    
+
     func attemptSend() {
         
         guard let url = config?.urlWithQuery else { return }
 
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = config?.method
+        
+        if let headers = config?.headers {
+            headers.keys.forEach { request.addValue(headers[$0]!, forHTTPHeaderField: $0) }
+        }
         
         let cache = self.cache.map { self.format(message: $0) }
         self.cache = []
@@ -87,10 +93,6 @@ public class HTTPLogger: LogReceiver {
         request.httpBody = body.data(using: .utf8)
         
         let task: URLSessionDataTask = session.dataTask(with: request) { data, response, error in
-            print("Logz Response: \(response)")
-            if let data = data {
-                print(String(data: data, encoding: .utf8))
-            }
         }
         
         task.resume()

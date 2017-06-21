@@ -26,11 +26,14 @@ fileprivate struct LogzServiceConfig {
 
 /// Sends logs to Logz.io
 public class LogzLogger: HTTPLogger {
+
+    var defaultFields = [
+        "Sender": "Cosmic"
+    ]
     
     public required init() {
         super.init()
-        
-        sessionConfiguration.httpAdditionalHeaders = [:]
+
         
         // Each log is transmitted as an atomic JSON string
         // NOTE: Avoid pretty-printing options and ensure that
