@@ -30,9 +30,11 @@ internal class StandardOutputStream: LogOutputStream {
 
 internal class StandardErrorStream: LogOutputStream {
     
+    let fileHandle = FileHandle.standardError
+    
     override func write(_ string: String) {
         if let data = string.data(using: .utf8) {
-            FileHandle.standardError.write(data)
+            fileHandle.write(data)
         }
     }
     

@@ -20,12 +20,10 @@
 		049F00E81EFED30C00BD9E41 /* CompositeLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */; };
 		049F00E91EFED30C00BD9E41 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */; };
 		049F00EA1EFED30C00BD9E41 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049F00E01EFED30C00BD9E41 /* Info.plist */; };
-		049F00EB1EFED30C00BD9E41 /* LogOutputStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00E11EFED30C00BD9E41 /* LogOutputStreamTests.swift */; };
 		049F00EC1EFED30C00BD9E41 /* LogReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00E21EFED30C00BD9E41 /* LogReporterTests.swift */; };
 		049F00EE1EFED30C00BD9E41 /* RegularExpressionAsserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00E41EFED30C00BD9E41 /* RegularExpressionAsserts.swift */; };
 		049F00EF1EFED30C00BD9E41 /* ServiceLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00E51EFED30C00BD9E41 /* ServiceLoggerTests.swift */; };
 		049F00F21EFED83A00BD9E41 /* HTTPLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00F11EFED83A00BD9E41 /* HTTPLoggerTests.swift */; };
-		049F00F41EFEDDF100BD9E41 /* Swifter-stable-20170824.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00F31EFEDDF100BD9E41 /* Swifter-stable-20170824.swift */; };
 		049F00F61EFEFA4000BD9E41 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00F51EFEFA4000BD9E41 /* MockURLSession.swift */; };
 		049F00F71EFF0CCA00BD9E41 /* PrintLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00E31EFED30C00BD9E41 /* PrintLoggerTests.swift */; };
 		04A0695B1EFB215500DEEE7E /* cosmic.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A4A9191EFB1FBA00EBD44E /* cosmic.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -90,13 +88,11 @@
 		049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeLoggerTests.swift; sourceTree = "<group>"; };
 		049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
 		049F00E01EFED30C00BD9E41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		049F00E11EFED30C00BD9E41 /* LogOutputStreamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutputStreamTests.swift; sourceTree = "<group>"; };
 		049F00E21EFED30C00BD9E41 /* LogReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogReporterTests.swift; sourceTree = "<group>"; };
 		049F00E31EFED30C00BD9E41 /* PrintLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintLoggerTests.swift; sourceTree = "<group>"; };
 		049F00E41EFED30C00BD9E41 /* RegularExpressionAsserts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionAsserts.swift; sourceTree = "<group>"; };
 		049F00E51EFED30C00BD9E41 /* ServiceLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLoggerTests.swift; sourceTree = "<group>"; };
 		049F00F11EFED83A00BD9E41 /* HTTPLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPLoggerTests.swift; sourceTree = "<group>"; };
-		049F00F31EFEDDF100BD9E41 /* Swifter-stable-20170824.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swifter-stable-20170824.swift"; sourceTree = "<group>"; };
 		049F00F51EFEFA4000BD9E41 /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		04A4A9061EFB1FBA00EBD44E /* LogglyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogglyLogger.swift; sourceTree = "<group>"; };
 		04A4A9071EFB1FBA00EBD44E /* LogItLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogItLogger.swift; sourceTree = "<group>"; };
@@ -221,11 +217,9 @@
 		049F00DD1EFED30C00BD9E41 /* CosmicTests */ = {
 			isa = PBXGroup;
 			children = (
-				049F00F31EFEDDF100BD9E41 /* Swifter-stable-20170824.swift */,
 				049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */,
 				049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */,
 				049F00E01EFED30C00BD9E41 /* Info.plist */,
-				049F00E11EFED30C00BD9E41 /* LogOutputStreamTests.swift */,
 				049F00E21EFED30C00BD9E41 /* LogReporterTests.swift */,
 				049F00E31EFED30C00BD9E41 /* PrintLoggerTests.swift */,
 				049F00E41EFED30C00BD9E41 /* RegularExpressionAsserts.swift */,
@@ -512,7 +506,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				049F00E91EFED30C00BD9E41 /* FormatterTests.swift in Sources */,
-				049F00F41EFEDDF100BD9E41 /* Swifter-stable-20170824.swift in Sources */,
 				049F00E71EFED30C00BD9E41 /* SocketLoggerTests.swift in Sources */,
 				049F00F61EFEFA4000BD9E41 /* MockURLSession.swift in Sources */,
 				049F00EC1EFED30C00BD9E41 /* LogReporterTests.swift in Sources */,
@@ -520,7 +513,6 @@
 				049F00E81EFED30C00BD9E41 /* CompositeLoggerTests.swift in Sources */,
 				049F00EE1EFED30C00BD9E41 /* RegularExpressionAsserts.swift in Sources */,
 				049F00F21EFED83A00BD9E41 /* HTTPLoggerTests.swift in Sources */,
-				049F00EB1EFED30C00BD9E41 /* LogOutputStreamTests.swift in Sources */,
 				049F00EF1EFED30C00BD9E41 /* ServiceLoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,6 +786,7 @@
 				049F00BA1EFEBA1800BD9E41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

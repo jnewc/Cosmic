@@ -52,6 +52,7 @@ class PrintLoggerTests: XCTestCase {
         stream = AssertionOutputStream()
 
         printLogger.stream = stream
+        printLogger.errorStream = stream
     }
     
     override func tearDown() {

@@ -19,6 +19,8 @@ public class PrintLogger: LogReceiver {
     public var suffix: String = ""
     
     internal var stream: LogOutputStream = StandardOutputStream()
+
+    internal var errorStream: LogOutputStream = StandardErrorStream()
     
     
     public required init() { }
@@ -30,7 +32,11 @@ public class PrintLogger: LogReceiver {
     fileprivate func printLine(_ line: String) {
         let message = "\(prefix)\(line)\(suffix)"
         
-        print(message, to: &stream)
+        if logLevel == .error {
+            print(message, to: &errorStream)
+        } else {
+            print(message, to: &stream)
+        }
     }
     
 }
