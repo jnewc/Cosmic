@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "041DF8061E88547100934C76"
-               BuildableName = "cosmicTests.xctest"
-               BlueprintName = "cosmicTests"
+               BuildableName = "CosmicTests.xctest"
+               BlueprintName = "CosmicTests"
                ReferencedContainer = "container:Cosmic.xcodeproj">
             </BuildableReference>
          </TestableReference>

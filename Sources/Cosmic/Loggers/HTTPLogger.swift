@@ -50,6 +50,8 @@ public class HTTPLogger: LogReceiver {
 
     // MARK: HTTPLogger properties
     
+    /// A formatter for batching logs into single HTTP requests.
+    /// Defaults to NewLineBatchFormatter
     internal var batchFormatter: BatchFormatter = NewLineBatchFormatter()
     
     internal var sessionConfiguration = URLSessionConfiguration.default
@@ -61,7 +63,9 @@ public class HTTPLogger: LogReceiver {
     internal var cache: [String] = []
     
     required public init() {
-        session = URLSession(configuration: sessionConfiguration)
+        let queue = OperationQueue()
+        queue.underlyingQueue = DispatchQueue(label: "com.cosmic.httplogger")
+        session = URLSession(configuration: sessionConfiguration, delegate: nil, delegateQueue: queue)
     }
     
     convenience init(config: HTTPLoggerConfig) {
@@ -93,6 +97,7 @@ public class HTTPLogger: LogReceiver {
         request.httpBody = body.data(using: .utf8)
         
         let task: URLSessionDataTask = session.dataTask(with: request) { data, response, error in
+            // TODO: Error handling
         }
         
         task.resume()

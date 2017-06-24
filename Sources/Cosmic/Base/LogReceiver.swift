@@ -32,7 +32,8 @@ extension LogReceiver {
     /// - Parameter expected: The log level to test
     /// - Returns: A boolean value indicating whether the log level is enabled
     private func enabled(_ expected: LogLevel) -> Bool {
-        return (logLevel.rawValue & expected.rawValue) > 0
+        print("Checking enabled: \(logLevel.rawValue) <= \(expected.rawValue)")
+        return logLevel.rawValue <= expected.rawValue
     }
     
     

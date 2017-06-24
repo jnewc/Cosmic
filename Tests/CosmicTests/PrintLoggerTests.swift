@@ -105,6 +105,18 @@ class PrintLoggerTests: XCTestCase {
         
     }
     
+    // Log level implicit tests
+    
+    func testDebugImplicit() {
+        
+        printLogger.logLevel = .debug
+        
+        logs.forEach {
+            printLogger.log($0)
+            XCTAssertEqual(stream.array[logs.index(of: $0)!], $0)
+        }
+    }
+    
     // Log level disabled tests
     
     func testDebugDisabled() {

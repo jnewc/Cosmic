@@ -14,7 +14,11 @@ open class CompositeLogger: LogReceiver {
     
     public var formatters: [LogFormatter] = []
     
-    public var logLevel: LogLevel = .info
+    public var logLevel: LogLevel = .info {
+        didSet {
+            loggers.forEach { $0.logLevel = logLevel }
+        }
+    }
     
     public required init() { }
     

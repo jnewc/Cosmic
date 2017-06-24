@@ -1,11 +1,12 @@
 import Foundation
 
 public enum LogLevel: UInt {
-	case none	= 0
-	case debug  = 1
-	case info	= 2
-	case warn	= 4
-	case error	= 8
+	case debug  = 0b0001
+	case info	= 0b0010
+	case warn	= 0b0100
+	case error	= 0b1000
+    case none   = 0xFFFF
+    
     
     var simpleName: String {
         switch self {
