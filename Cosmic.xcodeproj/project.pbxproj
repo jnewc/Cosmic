@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0411F6EE1EFF256200BE872F /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6EC1EFF256200BE872F /* MockURLSession.swift */; };
+		0411F6EF1EFF256200BE872F /* RegularExpressionAsserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6ED1EFF256200BE872F /* RegularExpressionAsserts.swift */; };
 		041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041DF7FE1E88547100934C76 /* Cosmic.framework */; };
 		049F00BF1EFEBA4A00BD9E41 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */; };
 		049F00C51EFEBB9F00BD9E41 /* CocoaAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 049F00C31EFEBB9F00BD9E41 /* CocoaAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,10 +23,8 @@
 		049F00E91EFED30C00BD9E41 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */; };
 		049F00EA1EFED30C00BD9E41 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049F00E01EFED30C00BD9E41 /* Info.plist */; };
 		049F00EC1EFED30C00BD9E41 /* LogReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00E21EFED30C00BD9E41 /* LogReporterTests.swift */; };
-		049F00EE1EFED30C00BD9E41 /* RegularExpressionAsserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00E41EFED30C00BD9E41 /* RegularExpressionAsserts.swift */; };
 		049F00EF1EFED30C00BD9E41 /* ServiceLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00E51EFED30C00BD9E41 /* ServiceLoggerTests.swift */; };
 		049F00F21EFED83A00BD9E41 /* HTTPLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00F11EFED83A00BD9E41 /* HTTPLoggerTests.swift */; };
-		049F00F61EFEFA4000BD9E41 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00F51EFEFA4000BD9E41 /* MockURLSession.swift */; };
 		049F00F71EFF0CCA00BD9E41 /* PrintLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00E31EFED30C00BD9E41 /* PrintLoggerTests.swift */; };
 		04A0695B1EFB215500DEEE7E /* cosmic.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A4A9191EFB1FBA00EBD44E /* cosmic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04A4A93A1EFB1FD200EBD44E /* LogCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9131EFB1FBA00EBD44E /* LogCache.swift */; };
@@ -74,6 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0411F6EC1EFF256200BE872F /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		0411F6ED1EFF256200BE872F /* RegularExpressionAsserts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionAsserts.swift; sourceTree = "<group>"; };
 		041DF7FE1E88547100934C76 /* Cosmic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041DF8071E88547100934C76 /* CosmicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		041DF8681E89975300934C76 /* LoggerPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LoggerPlayground.playground; sourceTree = "<group>"; };
@@ -90,10 +92,8 @@
 		049F00E01EFED30C00BD9E41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049F00E21EFED30C00BD9E41 /* LogReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogReporterTests.swift; sourceTree = "<group>"; };
 		049F00E31EFED30C00BD9E41 /* PrintLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintLoggerTests.swift; sourceTree = "<group>"; };
-		049F00E41EFED30C00BD9E41 /* RegularExpressionAsserts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionAsserts.swift; sourceTree = "<group>"; };
 		049F00E51EFED30C00BD9E41 /* ServiceLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLoggerTests.swift; sourceTree = "<group>"; };
 		049F00F11EFED83A00BD9E41 /* HTTPLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPLoggerTests.swift; sourceTree = "<group>"; };
-		049F00F51EFEFA4000BD9E41 /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		04A4A9061EFB1FBA00EBD44E /* LogglyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogglyLogger.swift; sourceTree = "<group>"; };
 		04A4A9071EFB1FBA00EBD44E /* LogItLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogItLogger.swift; sourceTree = "<group>"; };
 		04A4A9081EFB1FBA00EBD44E /* LogzLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogzLogger.swift; sourceTree = "<group>"; };
@@ -146,6 +146,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0411F6EB1EFF256200BE872F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0411F6EC1EFF256200BE872F /* MockURLSession.swift */,
+				0411F6ED1EFF256200BE872F /* RegularExpressionAsserts.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		041DF7F41E88547000934C76 = {
 			isa = PBXGroup;
 			children = (
@@ -217,15 +226,14 @@
 		049F00DD1EFED30C00BD9E41 /* CosmicTests */ = {
 			isa = PBXGroup;
 			children = (
+				0411F6EB1EFF256200BE872F /* Helpers */,
 				049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */,
 				049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */,
 				049F00E01EFED30C00BD9E41 /* Info.plist */,
 				049F00E21EFED30C00BD9E41 /* LogReporterTests.swift */,
 				049F00E31EFED30C00BD9E41 /* PrintLoggerTests.swift */,
-				049F00E41EFED30C00BD9E41 /* RegularExpressionAsserts.swift */,
 				049F00E51EFED30C00BD9E41 /* ServiceLoggerTests.swift */,
 				049F00F11EFED83A00BD9E41 /* HTTPLoggerTests.swift */,
-				049F00F51EFEFA4000BD9E41 /* MockURLSession.swift */,
 			);
 			path = CosmicTests;
 			sourceTree = "<group>";
@@ -507,13 +515,13 @@
 			files = (
 				049F00E91EFED30C00BD9E41 /* FormatterTests.swift in Sources */,
 				049F00E71EFED30C00BD9E41 /* SocketLoggerTests.swift in Sources */,
-				049F00F61EFEFA4000BD9E41 /* MockURLSession.swift in Sources */,
 				049F00EC1EFED30C00BD9E41 /* LogReporterTests.swift in Sources */,
 				049F00F71EFF0CCA00BD9E41 /* PrintLoggerTests.swift in Sources */,
 				049F00E81EFED30C00BD9E41 /* CompositeLoggerTests.swift in Sources */,
-				049F00EE1EFED30C00BD9E41 /* RegularExpressionAsserts.swift in Sources */,
 				049F00F21EFED83A00BD9E41 /* HTTPLoggerTests.swift in Sources */,
+				0411F6EE1EFF256200BE872F /* MockURLSession.swift in Sources */,
 				049F00EF1EFED30C00BD9E41 /* ServiceLoggerTests.swift in Sources */,
+				0411F6EF1EFF256200BE872F /* RegularExpressionAsserts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

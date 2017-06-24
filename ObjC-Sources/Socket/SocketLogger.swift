@@ -80,15 +80,15 @@ public class SocketLogger: NSObject, LogReceiver, GCDAsyncUdpSocketDelegate {
     // MARK: Socket delegate
     
     public func udpSocket(_ sock: GCDAsyncUdpSocket, didConnectToAddress address: Data) {
-        print("SOCKET: Did connect")
         DispatchQueue.main.async { self.attemptSend() }
     }
     
     public func udpSocketDidClose(_ sock: GCDAsyncUdpSocket, withError error: Error?) {
-        print("SOCKET: Error - \(error?.localizedDescription ?? "Unknown")")
+        if let error = error {
+            print("SOCKET: Error - \(error.localizedDescription)")
+        }
     }
     
     public func udpSocket(_ sock: GCDAsyncUdpSocket, didSendDataWithTag tag: Int) {
-        print("SOCKET: Data sent")
     }
 }
