@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041B31C31EEF0D530040EED8 /* LogzLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041B31C21EEF0D530040EED8 /* LogzLoggerTests.swift */; };
 		041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041DF7FE1E88547100934C76 /* Cosmic.framework */; };
 		041DF8781E89C3D900934C76 /* PrintLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DF8771E89C3D900934C76 /* PrintLoggerTests.swift */; };
 		041DF87C1E943FB800934C76 /* LogReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DF87B1E943FB800934C76 /* LogReporterTests.swift */; };
-		0438E0F41EFB20A100B3A5B1 /* GCDAsyncSocket.h in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A90C1EFB1FBA00EBD44E /* GCDAsyncSocket.h */; };
-		0438E0F51EFB20A100B3A5B1 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A90D1EFB1FBA00EBD44E /* GCDAsyncSocket.m */; };
-		0438E0F61EFB20A100B3A5B1 /* GCDAsyncUdpSocket.h in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A90E1EFB1FBA00EBD44E /* GCDAsyncUdpSocket.h */; };
-		0438E0F71EFB20A100B3A5B1 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A90F1EFB1FBA00EBD44E /* GCDAsyncUdpSocket.m */; };
-		0438E0F81EFB20C200B3A5B1 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9291EFB1FBA00EBD44E /* module.modulemap */; };
-		04A069591EFB214800DEEE7E /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A4A90C1EFB1FBA00EBD44E /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04A0695A1EFB214800DEEE7E /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A4A90E1EFB1FBA00EBD44E /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		049F00A51EFC777500BD9E41 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00A41EFC777500BD9E41 /* FormatterTests.swift */; };
+		049F00A91EFD9F1A00BD9E41 /* CompositeLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00A81EFD9F1A00BD9E41 /* CompositeLoggerTests.swift */; };
+		049F00AB1EFDA0EF00BD9E41 /* ServiceLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00AA1EFDA0EF00BD9E41 /* ServiceLoggerTests.swift */; };
+		049F00AD1EFEA97300BD9E41 /* RegularExpressionAsserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00AC1EFEA97300BD9E41 /* RegularExpressionAsserts.swift */; };
+		049F00BF1EFEBA4A00BD9E41 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */; };
+		049F00C51EFEBB9F00BD9E41 /* CocoaAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 049F00C31EFEBB9F00BD9E41 /* CocoaAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		049F00C61EFEBB9F00BD9E41 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049F00C41EFEBB9F00BD9E41 /* Info.plist */; };
+		049F00CD1EFEBC0300BD9E41 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 049F00C91EFEBC0300BD9E41 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		049F00CE1EFEBC0300BD9E41 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F00CA1EFEBC0300BD9E41 /* GCDAsyncSocket.m */; };
+		049F00CF1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 049F00CB1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		049F00D01EFEBC0300BD9E41 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F00CC1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.m */; };
+		049F00D91EFEBF6D00BD9E41 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */; };
 		04A0695B1EFB215500DEEE7E /* cosmic.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A4A9191EFB1FBA00EBD44E /* cosmic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04A4A93A1EFB1FD200EBD44E /* LogCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9131EFB1FBA00EBD44E /* LogCache.swift */; };
 		04A4A93B1EFB1FD200EBD44E /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9141EFB1FBA00EBD44E /* LogFormatter.swift */; };
@@ -26,7 +30,6 @@
 		04A4A93E1EFB1FD200EBD44E /* LogReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9171EFB1FBA00EBD44E /* LogReceiver.swift */; };
 		04A4A93F1EFB1FD200EBD44E /* LogReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9181EFB1FBA00EBD44E /* LogReporter.swift */; };
 		04A4A9401EFB1FD200EBD44E /* BlockFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A91B1EFB1FBA00EBD44E /* BlockFormatter.swift */; };
-		04A4A9411EFB1FD200EBD44E /* JSONBatchFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A91C1EFB1FBA00EBD44E /* JSONBatchFormatter.swift */; };
 		04A4A9421EFB1FD200EBD44E /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A91D1EFB1FBA00EBD44E /* JSONFormatter.swift */; };
 		04A4A9431EFB1FD200EBD44E /* CompositeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9201EFB1FBA00EBD44E /* CompositeLogger.swift */; };
 		04A4A9441EFB1FD200EBD44E /* HTTPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9211EFB1FBA00EBD44E /* HTTPLogger.swift */; };
@@ -52,25 +55,45 @@
 			remoteGlobalIDString = 041DF7FD1E88547000934C76;
 			remoteInfo = cosmic;
 		};
+		049F00C01EFEBB4400BD9E41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 041DF7F51E88547000934C76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 049F00B21EFEBA1800BD9E41;
+			remoteInfo = CocoaAsyncSocket;
+		};
+		049F00D71EFEBF6900BD9E41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 041DF7F51E88547000934C76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 049F00B21EFEBA1800BD9E41;
+			remoteInfo = CocoaAsyncSocket;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		041B31C21EEF0D530040EED8 /* LogzLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogzLoggerTests.swift; sourceTree = "<group>"; };
 		041DF7FE1E88547100934C76 /* Cosmic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041DF8071E88547100934C76 /* cosmicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cosmicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		041DF80E1E88547100934C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		041DF8681E89975300934C76 /* LoggerPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LoggerPlayground.playground; sourceTree = "<group>"; };
 		041DF8771E89C3D900934C76 /* PrintLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintLoggerTests.swift; sourceTree = "<group>"; };
 		041DF87B1E943FB800934C76 /* LogReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogReporterTests.swift; sourceTree = "<group>"; };
+		049F00A41EFC777500BD9E41 /* FormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
+		049F00A81EFD9F1A00BD9E41 /* CompositeLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeLoggerTests.swift; sourceTree = "<group>"; };
+		049F00AA1EFDA0EF00BD9E41 /* ServiceLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLoggerTests.swift; sourceTree = "<group>"; };
+		049F00AC1EFEA97300BD9E41 /* RegularExpressionAsserts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionAsserts.swift; sourceTree = "<group>"; };
+		049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		049F00C31EFEBB9F00BD9E41 /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAsyncSocket.h; sourceTree = "<group>"; };
+		049F00C41EFEBB9F00BD9E41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049F00C91EFEBC0300BD9E41 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		049F00CA1EFEBC0300BD9E41 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		049F00CB1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		049F00CC1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		04A4A9061EFB1FBA00EBD44E /* LogglyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogglyLogger.swift; sourceTree = "<group>"; };
 		04A4A9071EFB1FBA00EBD44E /* LogItLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogItLogger.swift; sourceTree = "<group>"; };
 		04A4A9081EFB1FBA00EBD44E /* LogzLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogzLogger.swift; sourceTree = "<group>"; };
 		04A4A9091EFB1FBA00EBD44E /* PapertrailLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapertrailLogger.swift; sourceTree = "<group>"; };
 		04A4A90A1EFB1FBA00EBD44E /* SocketLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketLogger.swift; sourceTree = "<group>"; };
-		04A4A90C1EFB1FBA00EBD44E /* GCDAsyncSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
-		04A4A90D1EFB1FBA00EBD44E /* GCDAsyncSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
-		04A4A90E1EFB1FBA00EBD44E /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		04A4A90F1EFB1FBA00EBD44E /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		04A4A9131EFB1FBA00EBD44E /* LogCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCache.swift; sourceTree = "<group>"; };
 		04A4A9141EFB1FBA00EBD44E /* LogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
 		04A4A9151EFB1FBA00EBD44E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -79,7 +102,6 @@
 		04A4A9181EFB1FBA00EBD44E /* LogReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogReporter.swift; sourceTree = "<group>"; };
 		04A4A9191EFB1FBA00EBD44E /* cosmic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cosmic.h; sourceTree = "<group>"; };
 		04A4A91B1EFB1FBA00EBD44E /* BlockFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockFormatter.swift; sourceTree = "<group>"; };
-		04A4A91C1EFB1FBA00EBD44E /* JSONBatchFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONBatchFormatter.swift; sourceTree = "<group>"; };
 		04A4A91D1EFB1FBA00EBD44E /* JSONFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
 		04A4A91E1EFB1FBA00EBD44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A4A9201EFB1FBA00EBD44E /* CompositeLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeLogger.swift; sourceTree = "<group>"; };
@@ -89,7 +111,6 @@
 		04A4A9251EFB1FBA00EBD44E /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		04A4A9261EFB1FBA00EBD44E /* DataUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtility.swift; sourceTree = "<group>"; };
 		04A4A9271EFB1FBA00EBD44E /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
-		04A4A9291EFB1FBA00EBD44E /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		04E4115B1EA0F258007279F9 /* LogOutputStreamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutputStreamTests.swift; sourceTree = "<group>"; };
 		04E4115D1EA4EF24007279F9 /* SocketLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketLoggerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049F00BF1EFEBA4A00BD9E41 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,21 +128,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049F00D91EFEBF6D00BD9E41 /* CocoaAsyncSocket.framework in Frameworks */,
 				041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		049F00AF1EFEBA1800BD9E41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		041B31C11EEF0D440040EED8 /* Services Tests */ = {
-			isa = PBXGroup;
-			children = (
-				041B31C21EEF0D530040EED8 /* LogzLoggerTests.swift */,
-			);
-			name = "Services Tests";
-			sourceTree = "<group>";
-		};
 		041DF7F41E88547000934C76 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +150,7 @@
 				04A4A9101EFB1FBA00EBD44E /* Sources */,
 				041DF80B1E88547100934C76 /* cosmicTests */,
 				041DF8671E89973B00934C76 /* cosmicPlaygrounds */,
+				049F00C21EFEBB9F00BD9E41 /* CocoaAsyncSocket */,
 				041DF7FF1E88547100934C76 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,6 +160,7 @@
 			children = (
 				041DF7FE1E88547100934C76 /* Cosmic.framework */,
 				041DF8071E88547100934C76 /* cosmicTests.xctest */,
+				049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,12 +168,15 @@
 		041DF80B1E88547100934C76 /* cosmicTests */ = {
 			isa = PBXGroup;
 			children = (
-				041B31C11EEF0D440040EED8 /* Services Tests */,
 				041DF80E1E88547100934C76 /* Info.plist */,
 				041DF8771E89C3D900934C76 /* PrintLoggerTests.swift */,
 				041DF87B1E943FB800934C76 /* LogReporterTests.swift */,
 				04E4115B1EA0F258007279F9 /* LogOutputStreamTests.swift */,
 				04E4115D1EA4EF24007279F9 /* SocketLoggerTests.swift */,
+				049F00A41EFC777500BD9E41 /* FormatterTests.swift */,
+				049F00A81EFD9F1A00BD9E41 /* CompositeLoggerTests.swift */,
+				049F00AA1EFDA0EF00BD9E41 /* ServiceLoggerTests.swift */,
+				049F00AC1EFEA97300BD9E41 /* RegularExpressionAsserts.swift */,
 			);
 			path = cosmicTests;
 			sourceTree = "<group>";
@@ -162,11 +189,31 @@
 			path = cosmicPlaygrounds;
 			sourceTree = "<group>";
 		};
+		049F00C21EFEBB9F00BD9E41 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				049F00C81EFEBC0300BD9E41 /* Vendor */,
+				049F00C31EFEBB9F00BD9E41 /* CocoaAsyncSocket.h */,
+				049F00C41EFEBB9F00BD9E41 /* Info.plist */,
+			);
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		049F00C81EFEBC0300BD9E41 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				049F00C91EFEBC0300BD9E41 /* GCDAsyncSocket.h */,
+				049F00CA1EFEBC0300BD9E41 /* GCDAsyncSocket.m */,
+				049F00CB1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.h */,
+				049F00CC1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.m */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 		04A4A9031EFB1FBA00EBD44E /* ObjC-Sources */ = {
 			isa = PBXGroup;
 			children = (
 				04A4A9041EFB1FBA00EBD44E /* Socket */,
-				04A4A90B1EFB1FBA00EBD44E /* Vendor */,
 			);
 			path = "ObjC-Sources";
 			sourceTree = "<group>";
@@ -191,22 +238,10 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		04A4A90B1EFB1FBA00EBD44E /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				04A4A90C1EFB1FBA00EBD44E /* GCDAsyncSocket.h */,
-				04A4A90D1EFB1FBA00EBD44E /* GCDAsyncSocket.m */,
-				04A4A90E1EFB1FBA00EBD44E /* GCDAsyncUdpSocket.h */,
-				04A4A90F1EFB1FBA00EBD44E /* GCDAsyncUdpSocket.m */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
 		04A4A9101EFB1FBA00EBD44E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				04A4A9111EFB1FBA00EBD44E /* Cosmic */,
-				04A4A9281EFB1FBA00EBD44E /* include */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -241,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				04A4A91B1EFB1FBA00EBD44E /* BlockFormatter.swift */,
-				04A4A91C1EFB1FBA00EBD44E /* JSONBatchFormatter.swift */,
 				04A4A91D1EFB1FBA00EBD44E /* JSONFormatter.swift */,
 			);
 			path = Formatters;
@@ -268,14 +302,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		04A4A9281EFB1FBA00EBD44E /* include */ = {
-			isa = PBXGroup;
-			children = (
-				04A4A9291EFB1FBA00EBD44E /* module.modulemap */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -283,9 +309,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A069591EFB214800DEEE7E /* GCDAsyncSocket.h in Headers */,
-				04A0695A1EFB214800DEEE7E /* GCDAsyncUdpSocket.h in Headers */,
 				04A0695B1EFB215500DEEE7E /* cosmic.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		049F00B01EFEBA1800BD9E41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049F00CF1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.h in Headers */,
+				049F00C51EFEBB9F00BD9E41 /* CocoaAsyncSocket.h in Headers */,
+				049F00CD1EFEBC0300BD9E41 /* GCDAsyncSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +338,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				049F00C11EFEBB4400BD9E41 /* PBXTargetDependency */,
 			);
 			name = Cosmic;
 			productName = cosmic;
@@ -321,12 +356,31 @@
 			buildRules = (
 			);
 			dependencies = (
+				049F00D81EFEBF6900BD9E41 /* PBXTargetDependency */,
 				041DF80A1E88547100934C76 /* PBXTargetDependency */,
 			);
 			name = cosmicTests;
 			productName = cosmicTests;
 			productReference = 041DF8071E88547100934C76 /* cosmicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		049F00B21EFEBA1800BD9E41 /* CocoaAsyncSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 049F00B81EFEBA1800BD9E41 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */;
+			buildPhases = (
+				049F00AE1EFEBA1800BD9E41 /* Sources */,
+				049F00AF1EFEBA1800BD9E41 /* Frameworks */,
+				049F00B01EFEBA1800BD9E41 /* Headers */,
+				049F00B11EFEBA1800BD9E41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaAsyncSocket;
+			productName = GCDAsyncSocket;
+			productReference = 049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -340,11 +394,15 @@
 				TargetAttributes = {
 					041DF7FD1E88547000934C76 = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					041DF8061E88547100934C76 = {
 						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					049F00B21EFEBA1800BD9E41 = {
+						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -364,6 +422,7 @@
 			targets = (
 				041DF7FD1E88547000934C76 /* Cosmic */,
 				041DF8061E88547100934C76 /* cosmicTests */,
+				049F00B21EFEBA1800BD9E41 /* CocoaAsyncSocket */,
 			);
 		};
 /* End PBXProject section */
@@ -383,6 +442,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		049F00B11EFEBA1800BD9E41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049F00C61EFEBB9F00BD9E41 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -390,11 +457,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0438E0F81EFB20C200B3A5B1 /* module.modulemap in Sources */,
-				0438E0F41EFB20A100B3A5B1 /* GCDAsyncSocket.h in Sources */,
-				0438E0F51EFB20A100B3A5B1 /* GCDAsyncSocket.m in Sources */,
-				0438E0F61EFB20A100B3A5B1 /* GCDAsyncUdpSocket.h in Sources */,
-				0438E0F71EFB20A100B3A5B1 /* GCDAsyncUdpSocket.m in Sources */,
 				04A4A9471EFB1FD200EBD44E /* Commons.swift in Sources */,
 				04A4A93A1EFB1FD200EBD44E /* LogCache.swift in Sources */,
 				04A4A94E1EFB1FED00EBD44E /* LogzLogger.swift in Sources */,
@@ -403,7 +465,6 @@
 				04A4A9451EFB1FD200EBD44E /* MemoryLogger.swift in Sources */,
 				04A4A9421EFB1FD200EBD44E /* JSONFormatter.swift in Sources */,
 				04A4A93E1EFB1FD200EBD44E /* LogReceiver.swift in Sources */,
-				04A4A9411EFB1FD200EBD44E /* JSONBatchFormatter.swift in Sources */,
 				04A4A93C1EFB1FD200EBD44E /* Logger.swift in Sources */,
 				04A4A94D1EFB1FED00EBD44E /* LogItLogger.swift in Sources */,
 				04A4A9441EFB1FD200EBD44E /* HTTPLogger.swift in Sources */,
@@ -423,11 +484,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049F00AD1EFEA97300BD9E41 /* RegularExpressionAsserts.swift in Sources */,
 				04E4115C1EA0F258007279F9 /* LogOutputStreamTests.swift in Sources */,
+				049F00A91EFD9F1A00BD9E41 /* CompositeLoggerTests.swift in Sources */,
 				041DF8781E89C3D900934C76 /* PrintLoggerTests.swift in Sources */,
+				049F00AB1EFDA0EF00BD9E41 /* ServiceLoggerTests.swift in Sources */,
+				049F00A51EFC777500BD9E41 /* FormatterTests.swift in Sources */,
 				04E4115E1EA4EF24007279F9 /* SocketLoggerTests.swift in Sources */,
-				041B31C31EEF0D530040EED8 /* LogzLoggerTests.swift in Sources */,
 				041DF87C1E943FB800934C76 /* LogReporterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		049F00AE1EFEBA1800BD9E41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049F00D01EFEBC0300BD9E41 /* GCDAsyncUdpSocket.m in Sources */,
+				049F00CE1EFEBC0300BD9E41 /* GCDAsyncSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +511,16 @@
 			isa = PBXTargetDependency;
 			target = 041DF7FD1E88547000934C76 /* Cosmic */;
 			targetProxy = 041DF8091E88547100934C76 /* PBXContainerItemProxy */;
+		};
+		049F00C11EFEBB4400BD9E41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 049F00B21EFEBA1800BD9E41 /* CocoaAsyncSocket */;
+			targetProxy = 049F00C01EFEBB4400BD9E41 /* PBXContainerItemProxy */;
+		};
+		049F00D81EFEBF6900BD9E41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 049F00B21EFEBA1800BD9E41 /* CocoaAsyncSocket */;
+			targetProxy = 049F00D71EFEBF6900BD9E41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -606,6 +689,44 @@
 			};
 			name = Release;
 		};
+		049F00B91EFEBA1800BD9E41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CocoaAsyncSocket/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.CocoaAsyncSocket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		049F00BA1EFEBA1800BD9E41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CocoaAsyncSocket/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.CocoaAsyncSocket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -635,6 +756,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		049F00B81EFEBA1800BD9E41 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				049F00B91EFEBA1800BD9E41 /* Debug */,
+				049F00BA1EFEBA1800BD9E41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

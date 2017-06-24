@@ -7,9 +7,15 @@
 //
 
 import XCTest
+import CocoaAsyncSocket
+
 @testable import Cosmic
 
-class SocketLoggerTests: XCTestCase {
+class SocketLoggerTests: XCTestCase, GCDAsyncUdpSocketDelegate {
+    
+    typealias DidReadClosure = (_ sock: GCDAsyncUdpSocket, _ data: Data) -> ()
+    
+    var didReadClosure: DidReadClosure?
     
     override func setUp() {
         super.setUp()
@@ -21,18 +27,44 @@ class SocketLoggerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testSocketLogger_PaperTrail() {
+    
+    /// Verifies that messages are sent as expected over a socket
+    func testSocketLoggerDispatchSingleLog() {
         
-        // TODO FIXME
-        // This will currently send a log to a live papertrail system.
+        // Generate a random port to listen / connect on
+        let interface =  "127.0.0.1"
+        let port = UInt16(arc4random() % (UInt32(UInt16.max) - 1024)) + 1024
+
+        // SUT
+        let config = SocketLoggerConfig(host: interface, port: port)
+        let logger = SocketLogger(config: config)
+
+        // Connect server socket to receive logs on
+        let serverSocket = GCDAsyncUdpSocket(delegate: self, delegateQueue: DispatchQueue(label: "com.cosmic.server.socket"))
+        do {
+            try serverSocket.bind(toPort: port, interface: interface)
+            try serverSocket.beginReceiving()
+        } catch let e {
+            XCTFail(e.localizedDescription)
+        }
         
-        let logger = SocketLogger()
+        let expected = self.expectation(description: "Server socket will receive log")
         
-        try! logger.socket.connect(toHost: "logs5.papertrailapp.com", onPort: 48441)
-       
+        // The closure will be called when the server socket receives logs
+        didReadClosure = { _, data in
+            let text = String(data: data, encoding: .utf8)
+
+            XCTAssert(text == "Test")
+            expected.fulfill()
+        }
+        
         logger.log("Test")
         
-        sleep(5)
+        waitForExpectations(timeout: 5.0, handler: nil)
+    }
+    
+    func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext filterContext: Any?) {
+        didReadClosure?(sock, data)
     }
     
 }

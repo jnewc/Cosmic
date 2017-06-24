@@ -16,6 +16,3 @@ FOUNDATION_EXPORT const unsigned char cosmicVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <cosmic/PublicHeader.h>
 
-
-#import <cosmic/GCDAsyncSocket.h>
-#import <cosmic/GCDAsyncUdpSocket.h>

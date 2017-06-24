@@ -45,6 +45,7 @@ open class DateLogFormatter: BasicLogFormatter {
     let dateFormatter = DateFormatter()
     
     override public func format(message: String) -> String {
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let date = dateFormatter.string(from: Date())
         self.prefix = date
         return super.format(message: " \(message)")

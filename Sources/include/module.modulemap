@@ -1,6 +1,0 @@
-//
-//module GCDAsyncSocket {
-//    header "./GCDAsyncSocket.h"
-//    header "./GCDAsyncUdpSocket.h"
-//    export *
-//}

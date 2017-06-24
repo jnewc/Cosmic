@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CocoaAsyncSocket
 
 public struct SocketLoggerConfig {
     let host: String
@@ -26,7 +27,7 @@ public class SocketLogger: NSObject, LogReceiver, GCDAsyncUdpSocketDelegate {
     
     let socket = GCDAsyncUdpSocket()
 
-    private let queue = DispatchQueue(label: "cosmic.socket")
+    internal let queue = DispatchQueue(label: "cosmic.socket")
     
     private var cache: [String] = []
     
@@ -80,7 +81,7 @@ public class SocketLogger: NSObject, LogReceiver, GCDAsyncUdpSocketDelegate {
     
     public func udpSocket(_ sock: GCDAsyncUdpSocket, didConnectToAddress address: Data) {
         print("SOCKET: Did connect")
-        attemptSend()
+        DispatchQueue.main.async { self.attemptSend() }
     }
     
     public func udpSocketDidClose(_ sock: GCDAsyncUdpSocket, withError error: Error?) {

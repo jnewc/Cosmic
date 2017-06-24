@@ -27,11 +27,6 @@ public class PapertrailLogger: SocketLogger {
     
     let syslogFormatter = SyslogFormatter()
     
-    public var sender: String {
-        get { return syslogFormatter.sender }
-        set { syslogFormatter.sender = newValue }
-    }
-    
     public required init() {
         super.init()
         formatters.append(syslogFormatter)

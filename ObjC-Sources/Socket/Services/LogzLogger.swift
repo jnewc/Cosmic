@@ -8,7 +8,7 @@
 
 import Foundation
 
-fileprivate struct LogzServiceConfig {
+struct LogzServiceConfig {
     
     
     static let method        = "POST"
