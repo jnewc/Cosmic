@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Cosmic"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A logging framework"
 
   # This description is used to generate tags and improve search results.
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "WTFPL"
+  s.license      = "Apache 2.0"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -91,10 +91,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Cosmic/**/*.{h,m,swift}"
+  s.source_files  = "ObjC-Sources/**/*.swift", "Sources/**/*.swift"
 
   # s.public_header_files = "Classes/**/*.h"
-
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -132,5 +131,7 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
+
+  s.dependency "CocoaAsyncSocket", "~> 7.6.1"
 
 end
