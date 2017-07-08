@@ -64,7 +64,7 @@ public class HTTPLogger: LogReceiver {
     
     required public init() {
         let queue = OperationQueue()
-        queue.underlyingQueue = DispatchQueue(label: "com.cosmic.httplogger")
+        queue.underlyingQueue = DispatchQueue(label: "com.cosmic.httplogger-\(UUID().uuidString)")
         session = URLSession(configuration: sessionConfiguration, delegate: nil, delegateQueue: queue)
     }
     
@@ -79,6 +79,8 @@ public class HTTPLogger: LogReceiver {
     }
 
     func attemptSend() {
+        
+        Debug.logger.debug("Attempting HTTP send with config: \(String(describing: config))")
         
         guard let url = config?.urlWithQuery else { return }
 
@@ -97,7 +99,11 @@ public class HTTPLogger: LogReceiver {
         request.httpBody = body.data(using: .utf8)
         
         let task: URLSessionDataTask = session.dataTask(with: request) { data, response, error in
-            // TODO: Error handling
+            error => Debug.logger.error(error!.localizedDescription)
+            if let response = (response as? HTTPURLResponse) {
+                Debug.logger.log("Status code: \(response.statusCode)")
+            }
+            
         }
         
         task.resume()

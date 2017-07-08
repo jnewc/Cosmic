@@ -1,13 +1,12 @@
 //
-//  Formatters.swift
+//  SyslogFormatter.swift
 //  Cosmic
 //
-//  Created by Jack Newcombe on 17/04/2017.
+//  Created by Jack Newcombe on 29/06/2017.
 //  Copyright © 2017 Jack Newcombe. All rights reserved.
 //
 
 import Foundation
-
 
 /// Formatter for generating syslog messages conforming to the
 /// RFC 5424 standard.

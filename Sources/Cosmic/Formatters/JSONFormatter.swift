@@ -8,14 +8,18 @@
 
 import Foundation
 
-typealias JSONFormatterConverterCompletion = (String) -> [String: String]
+typealias JSONClosure<T> = () -> T
+
+typealias JSONFormatterDictionary = [String: Any]
+
+typealias JSONFormatterConverterCompletion = (String) -> JSONFormatterDictionary
 
 protocol JSONFormatterConverter {
     
     /// <#Description#>
     var converter: JSONFormatterConverterCompletion { get }
     
-    func toJSON(message: String) -> Data?
+    func toJSON(message: String) -> String?
     
 }
 
@@ -31,15 +35,40 @@ class JSONFormatter: LogFormatter, JSONFormatterConverter  {
         self.converter = converter
     }
     
-    func toJSON(message: String) -> Data? {
+    func toJSON(message: String) -> String? {
         let dict = self.converter(message)
-        return try? JSONSerialization.data(withJSONObject: dict, options: options)
+        do {
+            return try JSONSerialization.string(withJSONObject: dict, options: options)
+        } catch let err {
+            Debug.logger.error("ERROR: failed to convert to JSON in JSONFormatter - \(err.localizedDescription)")
+            return nil
+        }
     }
     
     func format(message: String) -> String {
-        guard let data = toJSON(message: message) else { return message }
-        return String(data: data, encoding: .utf8) ?? message
+        guard let string = toJSON(message: message) else { return message }
+        return string
     }
     
+    
+}
+
+// MARK: NewLineBatchFormatter
+
+public class JSONBatchFormatter: BatchFormatter {
+    
+    private let jsonFormatter: JSONFormatter
+    
+    init(converter: @escaping JSONFormatterConverterCompletion) {
+        jsonFormatter = JSONFormatter(converter: converter)
+    }
+    
+    public func format(message: String) -> String {
+        return jsonFormatter.format(message: message)
+    }
+    
+    public func format(batch: [String]) -> String {
+        return batch.map({ format(message: $0) }).joined(separator: "\n")
+    }
     
 }

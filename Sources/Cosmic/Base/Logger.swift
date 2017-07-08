@@ -2,9 +2,9 @@ import Foundation
 
 public enum LogLevel: UInt {
 	case debug  = 0b0001
-	case info	= 0b0010
-	case warn	= 0b0100
-	case error	= 0b1000
+	case info	= 0b0011
+	case warn	= 0b0111
+	case error	= 0b1111
     case none   = 0xFFFF
     
     

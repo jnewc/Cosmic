@@ -49,6 +49,29 @@ class FormatterTests: XCTestCase {
         XCTAssertEqual(expectedMessage, formattedMessage)
     }
     
+    func testJSONFormatterDynamic() {
+        
+        var count = 0
+        
+        let formatter = JSONFormatter { message in
+            count += 1
+            return [
+                "id": count,
+                "message": message
+            ]
+        }
+        
+        let message1 = formatter.format(message: "Message #1")
+        XCTAssertEqual(message1, "{\"id\":1,\"message\":\"Message #1\"}")
+
+        let message2 = formatter.format(message: "Message #2")
+        XCTAssertEqual(message2, "{\"id\":2,\"message\":\"Message #2\"}")
+
+        let message3 = formatter.format(message: "Message #3")
+        XCTAssertEqual(message3, "{\"id\":3,\"message\":\"Message #3\"}")
+
+    }
+    
     func testBlockFormatter() {
         
         let blockFormatter = BlockFormatter {

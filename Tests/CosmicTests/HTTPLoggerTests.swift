@@ -9,12 +9,6 @@
 import XCTest
 @testable import Cosmic
 
-class MockURLSession: URLSession {
-    
-    
-    
-}
-
 class HTTPLoggerTests: XCTestCase {
     
     override func setUp() {
