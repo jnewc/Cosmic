@@ -23,6 +23,16 @@ class FormatterTests: XCTestCase {
         super.tearDown()
     }
     
+    func testBasicLogFormatter() {
+        
+        let formatter = BasicLogFormatter(prefix: "a", suffix: "c")
+        
+        let string = formatter.format(message: "b")
+        
+        XCTAssertEqual(string, "abc")
+        
+    }
+    
     func testSyslogFormatter() {
        
         let formatter = SyslogFormatter()

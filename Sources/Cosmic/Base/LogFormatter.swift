@@ -70,7 +70,7 @@ public class NewLineBatchFormatter: BatchFormatter {
     }
     
     public func format(batch: [String]) -> String {
-        return batch.joined(separator: "\n")
+        return batch.map({ format(message: $0) }).joined(separator: "\n")
     }
     
 }
