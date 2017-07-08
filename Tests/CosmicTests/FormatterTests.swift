@@ -105,4 +105,19 @@ class FormatterTests: XCTestCase {
         
     }
     
+    func testJSONBatchFormatter() {
+        
+        let batchFormatter = JSONBatchFormatter { message -> JSONFormatterDictionary in
+            return [
+                "message": message
+            ]
+        }
+        
+        let formattedMessage = batchFormatter.format(batch: [ "Test1", "Test2", "Test3" ])
+        
+        let template: (String) -> String = { "{\"message\":\"\($0)\"}" }
+        
+        XCTAssertEqual([template("Test1"), template("Test2"), template("Test3")].joined(separator: "\n"), formattedMessage)
+    }
+    
 }

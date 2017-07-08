@@ -12,8 +12,10 @@ import Foundation
 
 struct HTTPHeader {
     
-    static let ContentType = "Content-Type"
+    static let ContentType              = "Content-Type"
     
-    static let ContentTypeJSON = "application/json"
+    static let ContentTypeJSON          = "application/json"
+    
+    static let ContentTypePlainText     = "text/plain"
     
 }

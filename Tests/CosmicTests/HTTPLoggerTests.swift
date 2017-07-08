@@ -33,7 +33,7 @@ class HTTPLoggerTests: XCTestCase {
             url: loggingUrl,
             method: loggingMethod,
             query: ["search": "term", "charset": "utf-8"],
-            headers: [ "Content-Type": "text/plain" ]
+            headers: [ HTTPHeader.ContentType: HTTPHeader.ContentTypePlainText ]
         )
         
         // SUT

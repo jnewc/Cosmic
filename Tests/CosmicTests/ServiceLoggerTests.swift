@@ -44,4 +44,15 @@ class ServiceLoggerTests: XCTestCase {
         
     }
     
+    func testLogglyLogger() {
+        
+        let logger = LogglyLogger(token: "MY_TOKEN")
+        
+        XCTAssertEqual(logger.config?.urlWithQuery, LogglyServiceConfig.url.replacingOccurrences(of: "$(TOKEN)", with: "MY_TOKEN"))
+        XCTAssertEqual(logger.config?.method, LogglyServiceConfig.method)
+        XCTAssertEqual(logger.config?.headers[HTTPHeader.ContentType], HTTPHeader.ContentTypeJSON)
+        
+        
+    }
+    
 }

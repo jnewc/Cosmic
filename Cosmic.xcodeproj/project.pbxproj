@@ -11,13 +11,12 @@
 		0411F6EF1EFF256200BE872F /* RegularExpressionAsserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6ED1EFF256200BE872F /* RegularExpressionAsserts.swift */; };
 		0411F6F11F02F5CC00BE872F /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6F01F02F5CC00BE872F /* Debug.swift */; };
 		0411F6F31F03097B00BE872F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6F21F03097B00BE872F /* Operators.swift */; };
-		0411F6F71F030BC500BE872F /* LogglyLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6F61F030BC500BE872F /* LogglyLoggerTests.swift */; };
 		041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041DF7FE1E88547100934C76 /* Cosmic.framework */; };
+		0441B8CE1F116CC20088A851 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441B8CD1F116CC20088A851 /* LoggerTests.swift */; };
 		046BDDB21F058CC4008F1C1C /* SyslogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BDDB11F058CC4008F1C1C /* SyslogFormatter.swift */; };
 		046BDDB41F058CEB008F1C1C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BDDB31F058CEB008F1C1C /* Extensions.swift */; };
 		049F00BF1EFEBA4A00BD9E41 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */; };
 		049F00C51EFEBB9F00BD9E41 /* CocoaAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 049F00C31EFEBB9F00BD9E41 /* CocoaAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		049F00C61EFEBB9F00BD9E41 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049F00C41EFEBB9F00BD9E41 /* Info.plist */; };
 		049F00CD1EFEBC0300BD9E41 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 049F00C91EFEBC0300BD9E41 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		049F00CE1EFEBC0300BD9E41 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F00CA1EFEBC0300BD9E41 /* GCDAsyncSocket.m */; };
 		049F00CF1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 049F00CB1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,7 +25,6 @@
 		049F00E71EFED30C00BD9E41 /* SocketLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DB1EFED30C00BD9E41 /* SocketLoggerTests.swift */; };
 		049F00E81EFED30C00BD9E41 /* CompositeLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */; };
 		049F00E91EFED30C00BD9E41 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */; };
-		049F00EA1EFED30C00BD9E41 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049F00E01EFED30C00BD9E41 /* Info.plist */; };
 		049F00EC1EFED30C00BD9E41 /* LogReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00E21EFED30C00BD9E41 /* LogReporterTests.swift */; };
 		049F00EF1EFED30C00BD9E41 /* ServiceLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00E51EFED30C00BD9E41 /* ServiceLoggerTests.swift */; };
 		049F00F21EFED83A00BD9E41 /* HTTPLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00F11EFED83A00BD9E41 /* HTTPLoggerTests.swift */; };
@@ -52,6 +50,7 @@
 		04A4A94F1EFB1FED00EBD44E /* PapertrailLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9091EFB1FBA00EBD44E /* PapertrailLogger.swift */; };
 		04A4A9501EFB1FED00EBD44E /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A90A1EFB1FBA00EBD44E /* SocketLogger.swift */; };
 		04FCF0FD1F0D7AC300505A5F /* LogItLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCF0FC1F0D7AC300505A5F /* LogItLoggerTests.swift */; };
+		04FCF0FF1F115EE500505A5F /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,10 +82,10 @@
 		0411F6ED1EFF256200BE872F /* RegularExpressionAsserts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionAsserts.swift; sourceTree = "<group>"; };
 		0411F6F01F02F5CC00BE872F /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		0411F6F21F03097B00BE872F /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
-		0411F6F61F030BC500BE872F /* LogglyLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogglyLoggerTests.swift; sourceTree = "<group>"; };
 		041DF7FE1E88547100934C76 /* Cosmic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041DF8071E88547100934C76 /* CosmicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		041DF8681E89975300934C76 /* LoggerPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LoggerPlayground.playground; sourceTree = "<group>"; };
+		0441B8CD1F116CC20088A851 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		046BDDB11F058CC4008F1C1C /* SyslogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyslogFormatter.swift; sourceTree = "<group>"; };
 		046BDDB31F058CEB008F1C1C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +125,7 @@
 		04A4A9251EFB1FBA00EBD44E /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		04A4A9261EFB1FBA00EBD44E /* DataUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtility.swift; sourceTree = "<group>"; };
 		04FCF0FC1F0D7AC300505A5F /* LogItLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogItLoggerTests.swift; sourceTree = "<group>"; };
+		04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				049F00DB1EFED30C00BD9E41 /* SocketLoggerTests.swift */,
-				0411F6F61F030BC500BE872F /* LogglyLoggerTests.swift */,
 				04FCF0FC1F0D7AC300505A5F /* LogItLoggerTests.swift */,
 			);
 			path = "Objc-Tests";
@@ -246,6 +245,8 @@
 				049F00E31EFED30C00BD9E41 /* PrintLoggerTests.swift */,
 				049F00E51EFED30C00BD9E41 /* ServiceLoggerTests.swift */,
 				049F00F11EFED83A00BD9E41 /* HTTPLoggerTests.swift */,
+				04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */,
+				0441B8CD1F116CC20088A851 /* LoggerTests.swift */,
 			);
 			path = CosmicTests;
 			sourceTree = "<group>";
@@ -394,7 +395,6 @@
 			buildPhases = (
 				041DF8031E88547100934C76 /* Sources */,
 				041DF8041E88547100934C76 /* Frameworks */,
-				041DF8051E88547100934C76 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -414,7 +414,6 @@
 				049F00AE1EFEBA1800BD9E41 /* Sources */,
 				049F00AF1EFEBA1800BD9E41 /* Frameworks */,
 				049F00B01EFEBA1800BD9E41 /* Headers */,
-				049F00B11EFEBA1800BD9E41 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -478,22 +477,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		041DF8051E88547100934C76 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				049F00EA1EFED30C00BD9E41 /* Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		049F00B11EFEBA1800BD9E41 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				049F00C61EFEBB9F00BD9E41 /* Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -533,11 +516,12 @@
 			files = (
 				049F00E91EFED30C00BD9E41 /* FormatterTests.swift in Sources */,
 				04FCF0FD1F0D7AC300505A5F /* LogItLoggerTests.swift in Sources */,
-				0411F6F71F030BC500BE872F /* LogglyLoggerTests.swift in Sources */,
 				049F00E71EFED30C00BD9E41 /* SocketLoggerTests.swift in Sources */,
 				049F00EC1EFED30C00BD9E41 /* LogReporterTests.swift in Sources */,
+				04FCF0FF1F115EE500505A5F /* OperatorsTests.swift in Sources */,
 				049F00F71EFF0CCA00BD9E41 /* PrintLoggerTests.swift in Sources */,
 				049F00E81EFED30C00BD9E41 /* CompositeLoggerTests.swift in Sources */,
+				0441B8CE1F116CC20088A851 /* LoggerTests.swift in Sources */,
 				049F00F21EFED83A00BD9E41 /* HTTPLoggerTests.swift in Sources */,
 				0411F6EE1EFF256200BE872F /* MockURLSession.swift in Sources */,
 				049F00EF1EFED30C00BD9E41 /* ServiceLoggerTests.swift in Sources */,
@@ -748,6 +732,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				INFOPLIST_FILE = CocoaAsyncSocket/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -767,6 +752,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				INFOPLIST_FILE = CocoaAsyncSocket/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;

@@ -8,7 +8,7 @@
 
 import Foundation
 
-fileprivate struct LogglyServiceConfig {
+struct LogglyServiceConfig {
     
     static let method = "POST"
     

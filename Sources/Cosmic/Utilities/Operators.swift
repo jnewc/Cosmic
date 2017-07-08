@@ -16,21 +16,14 @@ import Foundation
 /// * if the argument is falsy (i.e. false or nil), do not execute the closure
 infix operator => : NilCoalescingPrecedence
 
-public func =>(state: Bool, closure: @autoclosure () -> ()) {
-    if state { closure() }
-}
-
-public func =><T>(state: Bool, closure: @autoclosure () -> (T)) -> T? {
-    if state { return closure() }
-    return nil
-}
-
-public func =><T>(state: Optional<T>, closure: @autoclosure () -> ()) {
+public func =><T>(state: T?, closure: @autoclosure () -> ()) {
     if state != nil { closure() }
 }
 
-public func =><T, U>(state: Optional<T>, closure: @autoclosure () -> (U)) -> U? {
-    if state != nil { return closure() }
+public func =><T, U>(state: T?, closure: @autoclosure () -> (U)) -> U? {
+    if state != nil {
+        return closure()
+    }
     return nil
 }
 

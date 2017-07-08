@@ -83,12 +83,6 @@ public class SocketLogger: NSObject, LogReceiver, GCDAsyncUdpSocketDelegate {
         DispatchQueue.main.async { self.attemptSend() }
     }
     
-    public func udpSocketDidClose(_ sock: GCDAsyncUdpSocket, withError error: Error?) {
-        if let error = error {
-            print("SOCKET: Error - \(error.localizedDescription)")
-        }
-    }
-    
     public func udpSocket(_ sock: GCDAsyncUdpSocket, didSendDataWithTag tag: Int) {
     }
 }
