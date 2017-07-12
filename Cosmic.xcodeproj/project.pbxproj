@@ -17,6 +17,11 @@
 		046BDDB21F058CC4008F1C1C /* SyslogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BDDB11F058CC4008F1C1C /* SyslogFormatter.swift */; };
 		046BDDB41F058CEB008F1C1C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BDDB31F058CEB008F1C1C /* Extensions.swift */; };
 		048F15101F12B114009ED8F1 /* UniversalSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F150F1F12B114009ED8F1 /* UniversalSocket.swift */; };
+		048F15181F16C57E009ED8F1 /* LogglyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F15131F16C57E009ED8F1 /* LogglyLogger.swift */; };
+		048F15191F16C57E009ED8F1 /* LogItLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F15141F16C57E009ED8F1 /* LogItLogger.swift */; };
+		048F151A1F16C57E009ED8F1 /* LogzLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F15151F16C57E009ED8F1 /* LogzLogger.swift */; };
+		048F151B1F16C57E009ED8F1 /* PapertrailLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F15161F16C57E009ED8F1 /* PapertrailLogger.swift */; };
+		048F151C1F16C57E009ED8F1 /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F15171F16C57E009ED8F1 /* SocketLogger.swift */; };
 		049F00E71EFED30C00BD9E41 /* SocketLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DB1EFED30C00BD9E41 /* SocketLoggerTests.swift */; };
 		049F00E81EFED30C00BD9E41 /* CompositeLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */; };
 		049F00E91EFED30C00BD9E41 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */; };
@@ -39,11 +44,6 @@
 		04A4A9461EFB1FD200EBD44E /* PrintLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9231EFB1FBA00EBD44E /* PrintLogger.swift */; };
 		04A4A9471EFB1FD200EBD44E /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9251EFB1FBA00EBD44E /* Commons.swift */; };
 		04A4A9481EFB1FD200EBD44E /* DataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9261EFB1FBA00EBD44E /* DataUtility.swift */; };
-		04A4A94C1EFB1FED00EBD44E /* LogglyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9061EFB1FBA00EBD44E /* LogglyLogger.swift */; };
-		04A4A94D1EFB1FED00EBD44E /* LogItLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9071EFB1FBA00EBD44E /* LogItLogger.swift */; };
-		04A4A94E1EFB1FED00EBD44E /* LogzLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9081EFB1FBA00EBD44E /* LogzLogger.swift */; };
-		04A4A94F1EFB1FED00EBD44E /* PapertrailLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9091EFB1FBA00EBD44E /* PapertrailLogger.swift */; };
-		04A4A9501EFB1FED00EBD44E /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A90A1EFB1FBA00EBD44E /* SocketLogger.swift */; };
 		04FCF0FD1F0D7AC300505A5F /* LogItLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCF0FC1F0D7AC300505A5F /* LogItLoggerTests.swift */; };
 		04FCF0FF1F115EE500505A5F /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */; };
 		21BE76192CF7D72AD787B219 /* Pods_Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94200653A44BD6612B15CC45 /* Pods_Cosmic.framework */; };
@@ -71,6 +71,11 @@
 		046BDDB11F058CC4008F1C1C /* SyslogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyslogFormatter.swift; sourceTree = "<group>"; };
 		046BDDB31F058CEB008F1C1C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		048F150F1F12B114009ED8F1 /* UniversalSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversalSocket.swift; sourceTree = "<group>"; };
+		048F15131F16C57E009ED8F1 /* LogglyLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogglyLogger.swift; sourceTree = "<group>"; };
+		048F15141F16C57E009ED8F1 /* LogItLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogItLogger.swift; sourceTree = "<group>"; };
+		048F15151F16C57E009ED8F1 /* LogzLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogzLogger.swift; sourceTree = "<group>"; };
+		048F15161F16C57E009ED8F1 /* PapertrailLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapertrailLogger.swift; sourceTree = "<group>"; };
+		048F15171F16C57E009ED8F1 /* SocketLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketLogger.swift; sourceTree = "<group>"; };
 		049F00DB1EFED30C00BD9E41 /* SocketLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketLoggerTests.swift; sourceTree = "<group>"; };
 		049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeLoggerTests.swift; sourceTree = "<group>"; };
 		049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
@@ -79,11 +84,6 @@
 		049F00E31EFED30C00BD9E41 /* PrintLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintLoggerTests.swift; sourceTree = "<group>"; };
 		049F00E51EFED30C00BD9E41 /* ServiceLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLoggerTests.swift; sourceTree = "<group>"; };
 		049F00F11EFED83A00BD9E41 /* HTTPLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPLoggerTests.swift; sourceTree = "<group>"; };
-		04A4A9061EFB1FBA00EBD44E /* LogglyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogglyLogger.swift; sourceTree = "<group>"; };
-		04A4A9071EFB1FBA00EBD44E /* LogItLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogItLogger.swift; sourceTree = "<group>"; };
-		04A4A9081EFB1FBA00EBD44E /* LogzLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogzLogger.swift; sourceTree = "<group>"; };
-		04A4A9091EFB1FBA00EBD44E /* PapertrailLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapertrailLogger.swift; sourceTree = "<group>"; };
-		04A4A90A1EFB1FBA00EBD44E /* SocketLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketLogger.swift; sourceTree = "<group>"; };
 		04A4A9131EFB1FBA00EBD44E /* LogCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCache.swift; sourceTree = "<group>"; };
 		04A4A9141EFB1FBA00EBD44E /* LogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
 		04A4A9151EFB1FBA00EBD44E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -144,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				04A4A9101EFB1FBA00EBD44E /* Sources */,
-				04A4A9031EFB1FBA00EBD44E /* ObjC-Sources */,
 				049F00DC1EFED30C00BD9E41 /* Tests */,
 				049F00DA1EFED30C00BD9E41 /* Objc-Tests */,
 				041DF8671E89973B00934C76 /* cosmicPlaygrounds */,
@@ -182,6 +181,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		048F15111F16C57E009ED8F1 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				048F15121F16C57E009ED8F1 /* Services */,
+				048F15171F16C57E009ED8F1 /* SocketLogger.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		048F15121F16C57E009ED8F1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				048F15131F16C57E009ED8F1 /* LogglyLogger.swift */,
+				048F15141F16C57E009ED8F1 /* LogItLogger.swift */,
+				048F15151F16C57E009ED8F1 /* LogzLogger.swift */,
+				048F15161F16C57E009ED8F1 /* PapertrailLogger.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		049F00DA1EFED30C00BD9E41 /* Objc-Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,34 +235,6 @@
 			path = CosmicTests;
 			sourceTree = "<group>";
 		};
-		04A4A9031EFB1FBA00EBD44E /* ObjC-Sources */ = {
-			isa = PBXGroup;
-			children = (
-				04A4A9041EFB1FBA00EBD44E /* Socket */,
-			);
-			path = "ObjC-Sources";
-			sourceTree = "<group>";
-		};
-		04A4A9041EFB1FBA00EBD44E /* Socket */ = {
-			isa = PBXGroup;
-			children = (
-				04A4A9051EFB1FBA00EBD44E /* Services */,
-				04A4A90A1EFB1FBA00EBD44E /* SocketLogger.swift */,
-			);
-			path = Socket;
-			sourceTree = "<group>";
-		};
-		04A4A9051EFB1FBA00EBD44E /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				04A4A9061EFB1FBA00EBD44E /* LogglyLogger.swift */,
-				04A4A9071EFB1FBA00EBD44E /* LogItLogger.swift */,
-				04A4A9081EFB1FBA00EBD44E /* LogzLogger.swift */,
-				04A4A9091EFB1FBA00EBD44E /* PapertrailLogger.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		04A4A9101EFB1FBA00EBD44E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +251,7 @@
 				04A4A91A1EFB1FBA00EBD44E /* Formatters */,
 				04A4A91E1EFB1FBA00EBD44E /* Info.plist */,
 				04A4A91F1EFB1FBA00EBD44E /* Loggers */,
+				048F15111F16C57E009ED8F1 /* Socket */,
 				04A4A9241EFB1FBA00EBD44E /* Utilities */,
 			);
 			path = Cosmic;
@@ -513,23 +505,23 @@
 				048F15101F12B114009ED8F1 /* UniversalSocket.swift in Sources */,
 				04A4A93A1EFB1FD200EBD44E /* LogCache.swift in Sources */,
 				046BDDB21F058CC4008F1C1C /* SyslogFormatter.swift in Sources */,
-				04A4A94E1EFB1FED00EBD44E /* LogzLogger.swift in Sources */,
 				04A4A93F1EFB1FD200EBD44E /* LogReporter.swift in Sources */,
 				04A4A9451EFB1FD200EBD44E /* MemoryLogger.swift in Sources */,
 				04A4A9421EFB1FD200EBD44E /* JSONFormatter.swift in Sources */,
 				04A4A93E1EFB1FD200EBD44E /* LogReceiver.swift in Sources */,
+				048F151A1F16C57E009ED8F1 /* LogzLogger.swift in Sources */,
 				04A4A93C1EFB1FD200EBD44E /* Logger.swift in Sources */,
-				04A4A94D1EFB1FED00EBD44E /* LogItLogger.swift in Sources */,
 				04A4A9441EFB1FD200EBD44E /* HTTPLogger.swift in Sources */,
+				048F15181F16C57E009ED8F1 /* LogglyLogger.swift in Sources */,
 				04A4A93B1EFB1FD200EBD44E /* LogFormatter.swift in Sources */,
-				04A4A94F1EFB1FED00EBD44E /* PapertrailLogger.swift in Sources */,
-				04A4A94C1EFB1FED00EBD44E /* LogglyLogger.swift in Sources */,
-				04A4A9501EFB1FED00EBD44E /* SocketLogger.swift in Sources */,
+				048F151C1F16C57E009ED8F1 /* SocketLogger.swift in Sources */,
 				04A4A9481EFB1FD200EBD44E /* DataUtility.swift in Sources */,
 				04A4A9431EFB1FD200EBD44E /* CompositeLogger.swift in Sources */,
 				0411F6F31F03097B00BE872F /* Operators.swift in Sources */,
+				048F151B1F16C57E009ED8F1 /* PapertrailLogger.swift in Sources */,
 				04A4A93D1EFB1FD200EBD44E /* LogOutputStream.swift in Sources */,
 				04A4A9401EFB1FD200EBD44E /* BlockFormatter.swift in Sources */,
+				048F15191F16C57E009ED8F1 /* LogItLogger.swift in Sources */,
 				0411F6F11F02F5CC00BE872F /* Debug.swift in Sources */,
 				04A4A9461EFB1FD200EBD44E /* PrintLogger.swift in Sources */,
 			);
