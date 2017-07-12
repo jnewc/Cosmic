@@ -6,6 +6,8 @@
 .build/
 build/
 DerivedData/
+Pods/
+*.xcworkspace
 
 ## Various settings
 *.pbxuser
