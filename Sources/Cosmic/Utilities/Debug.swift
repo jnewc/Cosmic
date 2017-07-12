@@ -14,7 +14,7 @@ internal final class Debug {
         let logger = CompositeLogger()
 #if DEBUG
         let printLogger = PrintLogger()
-        printLogger.prefix = "✨Cosmic✨"
+        printLogger.prefix = "✨Cosmic✨ - "
         printLogger.logLevel = .debug
         logger.loggers.append(printLogger)
 #endif

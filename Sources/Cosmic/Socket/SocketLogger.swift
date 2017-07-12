@@ -7,25 +7,27 @@
 //
 
 import Foundation
-import CocoaAsyncSocket
+import Socket
 
 public struct SocketLoggerConfig {
+    let transport: UniversalSocketTransport
     let host: String
-    let port: UInt16
+    let port: Int32
     
-    public init(host: String, port: UInt16) {
+    public init(host: String, port: Int32, transport: UniversalSocketTransport) {
         self.host = host
         self.port = port
+        self.transport = transport
     }
 }
 
-public class SocketLogger: NSObject, LogReceiver, GCDAsyncUdpSocketDelegate {
+public class SocketLogger: NSObject, LogReceiver {
     
     public var logLevel: LogLevel = .info
     
     public var formatters: [LogFormatter] = []
     
-    let socket = GCDAsyncUdpSocket()
+    internal var socket: UniversalSocket?
 
     internal let queue = DispatchQueue(label: "cosmic.socket")
     
@@ -33,20 +35,19 @@ public class SocketLogger: NSObject, LogReceiver, GCDAsyncUdpSocketDelegate {
     
     /// Configurable name of sender; usually the name or bundle ID of
     /// the calling application.
-    public var senderName: String = "Application"
+    public var senderName: String = ""
     
     public var config: SocketLoggerConfig?
     
     override public required init() {
         super.init()
-        socket.setDelegate(self)
-        socket.setDelegateQueue(queue)
     }
     
     convenience public init(config: SocketLoggerConfig) {
         self.init()
         self.config = config
-        attemptConnect()
+        
+        self.socket = try? UniversalSocket(config: config)
     }
     
     func onReceive(_ messages: [String], logLevel: LogLevel) {
@@ -57,32 +58,41 @@ public class SocketLogger: NSObject, LogReceiver, GCDAsyncUdpSocketDelegate {
     // MARK : Internal logging
     
     private func attemptSend() {
-        if socket.isConnected() && !cache.isEmpty {
+        if !cache.isEmpty {
             let message =  format(message: cache.removeFirst())
             if let data = message.data(using: .utf8) {
-                socket.send(data, withTimeout: 1.0, tag: 0)
+                send(data: data)
             }
             if !cache.isEmpty {
                 // TODO FIXME : on what thread should this be dispatched
                 DispatchQueue.main.async { self.attemptSend() }
             }
-        } else {
-            attemptConnect()
         }
     }
     
-    private func attemptConnect() {
-        if let config = config {
-            try? socket.connect(toHost: config.host, onPort: config.port)
+    private func send(data: Data) {
+        do {
+            
+            guard let socket = socket else {
+                Debug.logger.error("Socket is nil")
+                return
+            }
+            
+            if !socket.isConnected {
+                try socket.connect()
+            }
+            
+            try socket.send(data: data)
+
+        } catch let e as Socket.Error {
+            Debug.logger.error(
+                "Attempt connect failed for \(config?.host ?? "UnknownHost"):\(config?.port ?? 0)",
+                " - reason: \(e.errorReason ?? "Unknown")",
+                " - code:   \(e.errorCode)"
+            )
+        } catch let e {
+            Debug.logger.error("Unknown error attempting to connect: \(e.localizedDescription)")
         }
     }
     
-    // MARK: Socket delegate
-    
-    public func udpSocket(_ sock: GCDAsyncUdpSocket, didConnectToAddress address: Data) {
-        DispatchQueue.main.async { self.attemptSend() }
-    }
-    
-    public func udpSocket(_ sock: GCDAsyncUdpSocket, didSendDataWithTag tag: Int) {
-    }
 }
