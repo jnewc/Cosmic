@@ -12,16 +12,11 @@
 		0411F6F11F02F5CC00BE872F /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6F01F02F5CC00BE872F /* Debug.swift */; };
 		0411F6F31F03097B00BE872F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6F21F03097B00BE872F /* Operators.swift */; };
 		041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041DF7FE1E88547100934C76 /* Cosmic.framework */; };
+		043F76D1A753AD879F5C9903 /* Pods_CosmicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81958AC61E937B08DB5441EA /* Pods_CosmicTests.framework */; };
 		0441B8CE1F116CC20088A851 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441B8CD1F116CC20088A851 /* LoggerTests.swift */; };
 		046BDDB21F058CC4008F1C1C /* SyslogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BDDB11F058CC4008F1C1C /* SyslogFormatter.swift */; };
 		046BDDB41F058CEB008F1C1C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BDDB31F058CEB008F1C1C /* Extensions.swift */; };
-		049F00BF1EFEBA4A00BD9E41 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */; };
-		049F00C51EFEBB9F00BD9E41 /* CocoaAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 049F00C31EFEBB9F00BD9E41 /* CocoaAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		049F00CD1EFEBC0300BD9E41 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 049F00C91EFEBC0300BD9E41 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		049F00CE1EFEBC0300BD9E41 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F00CA1EFEBC0300BD9E41 /* GCDAsyncSocket.m */; };
-		049F00CF1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 049F00CB1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		049F00D01EFEBC0300BD9E41 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 049F00CC1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.m */; };
-		049F00D91EFEBF6D00BD9E41 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */; };
+		048F15101F12B114009ED8F1 /* UniversalSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F150F1F12B114009ED8F1 /* UniversalSocket.swift */; };
 		049F00E71EFED30C00BD9E41 /* SocketLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DB1EFED30C00BD9E41 /* SocketLoggerTests.swift */; };
 		049F00E81EFED30C00BD9E41 /* CompositeLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */; };
 		049F00E91EFED30C00BD9E41 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */; };
@@ -51,6 +46,7 @@
 		04A4A9501EFB1FED00EBD44E /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A90A1EFB1FBA00EBD44E /* SocketLogger.swift */; };
 		04FCF0FD1F0D7AC300505A5F /* LogItLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCF0FC1F0D7AC300505A5F /* LogItLoggerTests.swift */; };
 		04FCF0FF1F115EE500505A5F /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */; };
+		21BE76192CF7D72AD787B219 /* Pods_Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94200653A44BD6612B15CC45 /* Pods_Cosmic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,20 +56,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 041DF7FD1E88547000934C76;
 			remoteInfo = cosmic;
-		};
-		049F00C01EFEBB4400BD9E41 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 041DF7F51E88547000934C76 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 049F00B21EFEBA1800BD9E41;
-			remoteInfo = CocoaAsyncSocket;
-		};
-		049F00D71EFEBF6900BD9E41 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 041DF7F51E88547000934C76 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 049F00B21EFEBA1800BD9E41;
-			remoteInfo = CocoaAsyncSocket;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -88,13 +70,7 @@
 		0441B8CD1F116CC20088A851 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		046BDDB11F058CC4008F1C1C /* SyslogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyslogFormatter.swift; sourceTree = "<group>"; };
 		046BDDB31F058CEB008F1C1C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		049F00C31EFEBB9F00BD9E41 /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAsyncSocket.h; sourceTree = "<group>"; };
-		049F00C41EFEBB9F00BD9E41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		049F00C91EFEBC0300BD9E41 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
-		049F00CA1EFEBC0300BD9E41 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
-		049F00CB1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		049F00CC1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		048F150F1F12B114009ED8F1 /* UniversalSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversalSocket.swift; sourceTree = "<group>"; };
 		049F00DB1EFED30C00BD9E41 /* SocketLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketLoggerTests.swift; sourceTree = "<group>"; };
 		049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeLoggerTests.swift; sourceTree = "<group>"; };
 		049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
@@ -126,6 +102,12 @@
 		04A4A9261EFB1FBA00EBD44E /* DataUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtility.swift; sourceTree = "<group>"; };
 		04FCF0FC1F0D7AC300505A5F /* LogItLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogItLoggerTests.swift; sourceTree = "<group>"; };
 		04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
+		60D283CB210C0089A0704073 /* Pods-CosmicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests.debug.xcconfig"; sourceTree = "<group>"; };
+		67D62702415ADE471E9854E0 /* Pods-Cosmic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmic/Pods-Cosmic.release.xcconfig"; sourceTree = "<group>"; };
+		71AA5B2306CCF8F7E30DAFCF /* Pods-Cosmic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmic/Pods-Cosmic.debug.xcconfig"; sourceTree = "<group>"; };
+		81958AC61E937B08DB5441EA /* Pods_CosmicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94200653A44BD6612B15CC45 /* Pods_Cosmic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C0E657308E5EFEC717A37A /* Pods-CosmicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049F00BF1EFEBA4A00BD9E41 /* CocoaAsyncSocket.framework in Frameworks */,
+				21BE76192CF7D72AD787B219 /* Pods_Cosmic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,15 +123,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049F00D91EFEBF6D00BD9E41 /* CocoaAsyncSocket.framework in Frameworks */,
 				041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		049F00AF1EFEBA1800BD9E41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				043F76D1A753AD879F5C9903 /* Pods_CosmicTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,8 +148,9 @@
 				049F00DC1EFED30C00BD9E41 /* Tests */,
 				049F00DA1EFED30C00BD9E41 /* Objc-Tests */,
 				041DF8671E89973B00934C76 /* cosmicPlaygrounds */,
-				049F00C21EFEBB9F00BD9E41 /* CocoaAsyncSocket */,
 				041DF7FF1E88547100934C76 /* Products */,
+				048C4CB550C15323CCA41E99 /* Pods */,
+				BE6EB05743C15C1B28CA232F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,7 +159,6 @@
 			children = (
 				041DF7FE1E88547100934C76 /* Cosmic.framework */,
 				041DF8071E88547100934C76 /* CosmicTests.xctest */,
-				049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,25 +171,15 @@
 			path = cosmicPlaygrounds;
 			sourceTree = "<group>";
 		};
-		049F00C21EFEBB9F00BD9E41 /* CocoaAsyncSocket */ = {
+		048C4CB550C15323CCA41E99 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				049F00C81EFEBC0300BD9E41 /* Vendor */,
-				049F00C31EFEBB9F00BD9E41 /* CocoaAsyncSocket.h */,
-				049F00C41EFEBB9F00BD9E41 /* Info.plist */,
+				71AA5B2306CCF8F7E30DAFCF /* Pods-Cosmic.debug.xcconfig */,
+				67D62702415ADE471E9854E0 /* Pods-Cosmic.release.xcconfig */,
+				60D283CB210C0089A0704073 /* Pods-CosmicTests.debug.xcconfig */,
+				A6C0E657308E5EFEC717A37A /* Pods-CosmicTests.release.xcconfig */,
 			);
-			path = CocoaAsyncSocket;
-			sourceTree = "<group>";
-		};
-		049F00C81EFEBC0300BD9E41 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				049F00C91EFEBC0300BD9E41 /* GCDAsyncSocket.h */,
-				049F00CA1EFEBC0300BD9E41 /* GCDAsyncSocket.m */,
-				049F00CB1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.h */,
-				049F00CC1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.m */,
-			);
-			path = Vendor;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		049F00DA1EFED30C00BD9E41 /* Objc-Tests */ = {
@@ -342,8 +307,18 @@
 				0411F6F01F02F5CC00BE872F /* Debug.swift */,
 				0411F6F21F03097B00BE872F /* Operators.swift */,
 				046BDDB31F058CEB008F1C1C /* Extensions.swift */,
+				048F150F1F12B114009ED8F1 /* UniversalSocket.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BE6EB05743C15C1B28CA232F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94200653A44BD6612B15CC45 /* Pods_Cosmic.framework */,
+				81958AC61E937B08DB5441EA /* Pods_CosmicTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,16 +332,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		049F00B01EFEBA1800BD9E41 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				049F00CF1EFEBC0300BD9E41 /* GCDAsyncUdpSocket.h in Headers */,
-				049F00C51EFEBB9F00BD9E41 /* CocoaAsyncSocket.h in Headers */,
-				049F00CD1EFEBC0300BD9E41 /* GCDAsyncSocket.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -374,15 +339,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 041DF8121E88547100934C76 /* Build configuration list for PBXNativeTarget "Cosmic" */;
 			buildPhases = (
+				F881CC6FCC9CA758AFF2444A /* [CP] Check Pods Manifest.lock */,
 				041DF7F91E88547000934C76 /* Sources */,
 				041DF7FA1E88547000934C76 /* Frameworks */,
 				041DF7FB1E88547000934C76 /* Headers */,
 				041DF7FC1E88547000934C76 /* Resources */,
+				5E445A188BAF473BC30095C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				049F00C11EFEBB4400BD9E41 /* PBXTargetDependency */,
 			);
 			name = Cosmic;
 			productName = cosmic;
@@ -393,36 +359,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 041DF8151E88547100934C76 /* Build configuration list for PBXNativeTarget "CosmicTests" */;
 			buildPhases = (
+				AE42A12CD03D7D61ECEFC6A1 /* [CP] Check Pods Manifest.lock */,
 				041DF8031E88547100934C76 /* Sources */,
 				041DF8041E88547100934C76 /* Frameworks */,
+				71948139AF87D9015C26E530 /* [CP] Embed Pods Frameworks */,
+				1420E216F67AF38F908F0A18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				049F00D81EFEBF6900BD9E41 /* PBXTargetDependency */,
 				041DF80A1E88547100934C76 /* PBXTargetDependency */,
 			);
 			name = CosmicTests;
 			productName = cosmicTests;
 			productReference = 041DF8071E88547100934C76 /* CosmicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		049F00B21EFEBA1800BD9E41 /* CocoaAsyncSocket */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 049F00B81EFEBA1800BD9E41 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */;
-			buildPhases = (
-				049F00AE1EFEBA1800BD9E41 /* Sources */,
-				049F00AF1EFEBA1800BD9E41 /* Frameworks */,
-				049F00B01EFEBA1800BD9E41 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CocoaAsyncSocket;
-			productName = GCDAsyncSocket;
-			productReference = 049F00B31EFEBA1800BD9E41 /* CocoaAsyncSocket.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -443,10 +394,6 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
-					049F00B21EFEBA1800BD9E41 = {
-						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 041DF7F81E88547000934C76 /* Build configuration list for PBXProject "Cosmic" */;
@@ -464,7 +411,6 @@
 			targets = (
 				041DF7FD1E88547000934C76 /* Cosmic */,
 				041DF8061E88547100934C76 /* CosmicTests */,
-				049F00B21EFEBA1800BD9E41 /* CocoaAsyncSocket */,
 			);
 		};
 /* End PBXProject section */
@@ -479,6 +425,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1420E216F67AF38F908F0A18 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E445A188BAF473BC30095C6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cosmic/Pods-Cosmic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71948139AF87D9015C26E530 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE42A12CD03D7D61ECEFC6A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F881CC6FCC9CA758AFF2444A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		041DF7F91E88547000934C76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -486,6 +510,7 @@
 			files = (
 				046BDDB41F058CEB008F1C1C /* Extensions.swift in Sources */,
 				04A4A9471EFB1FD200EBD44E /* Commons.swift in Sources */,
+				048F15101F12B114009ED8F1 /* UniversalSocket.swift in Sources */,
 				04A4A93A1EFB1FD200EBD44E /* LogCache.swift in Sources */,
 				046BDDB21F058CC4008F1C1C /* SyslogFormatter.swift in Sources */,
 				04A4A94E1EFB1FED00EBD44E /* LogzLogger.swift in Sources */,
@@ -529,15 +554,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		049F00AE1EFEBA1800BD9E41 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				049F00D01EFEBC0300BD9E41 /* GCDAsyncUdpSocket.m in Sources */,
-				049F00CE1EFEBC0300BD9E41 /* GCDAsyncSocket.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -545,16 +561,6 @@
 			isa = PBXTargetDependency;
 			target = 041DF7FD1E88547000934C76 /* Cosmic */;
 			targetProxy = 041DF8091E88547100934C76 /* PBXContainerItemProxy */;
-		};
-		049F00C11EFEBB4400BD9E41 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 049F00B21EFEBA1800BD9E41 /* CocoaAsyncSocket */;
-			targetProxy = 049F00C01EFEBB4400BD9E41 /* PBXContainerItemProxy */;
-		};
-		049F00D81EFEBF6900BD9E41 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 049F00B21EFEBA1800BD9E41 /* CocoaAsyncSocket */;
-			targetProxy = 049F00D71EFEBF6900BD9E41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -660,6 +666,7 @@
 		};
 		041DF8131E88547100934C76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71AA5B2306CCF8F7E30DAFCF /* Pods-Cosmic.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -681,6 +688,7 @@
 		};
 		041DF8141E88547100934C76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67D62702415ADE471E9854E0 /* Pods-Cosmic.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -701,6 +709,7 @@
 		};
 		041DF8161E88547100934C76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60D283CB210C0089A0704073 /* Pods-CosmicTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Tests/CosmicTests/Info.plist;
@@ -713,6 +722,7 @@
 		};
 		041DF8171E88547100934C76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6C0E657308E5EFEC717A37A /* Pods-CosmicTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Tests/CosmicTests/Info.plist;
@@ -720,46 +730,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.cosmicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		049F00B91EFEBA1800BD9E41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
-				INFOPLIST_FILE = CocoaAsyncSocket/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.CocoaAsyncSocket;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		049F00BA1EFEBA1800BD9E41 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
-				INFOPLIST_FILE = CocoaAsyncSocket/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.CocoaAsyncSocket;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -789,15 +759,6 @@
 			buildConfigurations = (
 				041DF8161E88547100934C76 /* Debug */,
 				041DF8171E88547100934C76 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		049F00B81EFEBA1800BD9E41 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				049F00B91EFEBA1800BD9E41 /* Debug */,
-				049F00BA1EFEBA1800BD9E41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

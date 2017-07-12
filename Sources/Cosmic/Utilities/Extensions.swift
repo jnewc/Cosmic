@@ -24,3 +24,11 @@ extension JSONSerialization {
     }
     
 }
+
+extension DispatchQueue {
+    
+    convenience init(uniqueWithLabel: String) {
+        let uuid = UUID().uuidString
+        self.init(label: "\(uniqueWithLabel)-\(uuid)")
+    }
+}
