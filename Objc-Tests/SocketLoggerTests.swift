@@ -34,7 +34,7 @@ class SocketLoggerTests: XCTestCase {
         let config = SocketLoggerConfig(host: "127.0.0.1", port: port, transport: transport)
         let serverSocket = try! UniversalSocket(config: config)
         try! serverSocket.listen()
-        try! serverSocket.read { data in
+        serverSocket.read { data in
             callback(data)
         }
         return serverSocket

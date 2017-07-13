@@ -52,4 +52,22 @@ class CompositeLoggerTests: XCTestCase {
         XCTAssertEqual(logger.formatters.count, 0)
     }
     
+    func testCompositeLoggerLogLevel() {
+        
+        let logger1 = MemoryLogger()
+        let logger2 = MemoryLogger()
+        let logger3 = MemoryLogger()
+        
+        let logger = CompositeLogger(loggers: logger1, logger2, logger3)
+        
+        [LogLevel](arrayLiteral: .debug, .info, .warn, .error).forEach {
+            logger.logLevel = $0
+            
+            XCTAssertEqual(logger1.logLevel, $0)
+            XCTAssertEqual(logger2.logLevel, $0)
+            XCTAssertEqual(logger1.logLevel, $0)
+        }
+        
+    }
+    
 }

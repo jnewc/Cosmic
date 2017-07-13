@@ -88,7 +88,7 @@ extension LogReceiver {
         onReceive(messages, logLevel: .error)
     }
     
-    internal func format(message: String) -> String {
+    public func format(message: String) -> String {
         return formatters.reduce(message, { $1.format(message: $0) })
     }
 }
