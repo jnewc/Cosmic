@@ -34,7 +34,7 @@ class LogFilterTests: XCTestCase {
         logger.log("This is a log")
         
         let entries = logger.cache.entriesFor(logLevel: .info)
-        XCTAssertEqual(entries.first!.messages.first!, "This is a log")
+        XCTAssertEqual(entries.first!.message, "This is a log")
         
     }
     
@@ -53,7 +53,7 @@ class LogFilterTests: XCTestCase {
         logger.log("This is a log")
         
         let entries = logger.cache.entriesFor(logLevel: .info)
-        XCTAssertEqual(entries.first!.messages.first!, "This is a log")
+        XCTAssertEqual(entries.first!.message, "This is a log")
         
     }
     

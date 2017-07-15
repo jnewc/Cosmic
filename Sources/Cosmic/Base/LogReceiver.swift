@@ -19,7 +19,7 @@ internal protocol LogReceiver: Logger {
     
     // MARK: Log message receivers
     
-    func onReceive(_ messages: [String], logLevel: LogLevel)
+    func onReceive(_ message: String, logLevel: LogLevel)
     
 }
 
@@ -49,9 +49,9 @@ extension LogReceiver {
     /// domain-specific and diagnostic information.
     ///
     /// - Parameter messages: The messages to log
-    public func debug(_ messages: String...) {
+    public func debug(_ message: String) {
         guard enabled(.debug) else { return }
-        onReceive(messages, logLevel: .debug)
+        onReceive(message, logLevel: .debug)
     }
     
     
@@ -64,9 +64,9 @@ extension LogReceiver {
     /// Info logs should describe all high-level interactions.
     ///
     /// - Parameter messages: The info messages to log
-    public func log(_ messages: String...) {
+    public func log(_ message: String) {
         guard enabled(.info) else { return }
-        onReceive(messages, logLevel: .info)
+        onReceive(message, logLevel: .info)
     }
     
     /// Logs a series of warning messages
@@ -75,9 +75,9 @@ extension LogReceiver {
     /// occur such as the absence of configuration or validation errors
     ///
     /// - Parameter messages: The warning messages to log
-    public func warn(_ messages: String...) {
+    public func warn(_ message: String) {
         guard enabled(.warn) else { return }
-        onReceive(messages, logLevel: .warn)
+        onReceive(message, logLevel: .warn)
     }
     
     /// Logs a series of error messages
@@ -90,9 +90,9 @@ extension LogReceiver {
     /// has occurred (for example, by reaching illegal if/else branches)
     ///
     /// - Parameter messages: The error messages to log
-    public func error(_ messages: String...) {
+    public func error(_ message: String) {
         guard enabled(.error) else { return }
-        onReceive(messages, logLevel: .error)
+        onReceive(message, logLevel: .error)
     }
     
     public func format(message: String) -> String {

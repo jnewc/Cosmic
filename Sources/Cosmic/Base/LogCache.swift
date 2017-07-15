@@ -14,11 +14,11 @@ struct LogCacheEntry {
     
     let logLevel: LogLevel
     
-    let messages: [String]
+    let message: String
     
-    init(logLevel: LogLevel, messages: [String]) {
+    init(logLevel: LogLevel, message: String) {
         self.logLevel = logLevel
-        self.messages = messages
+        self.message = message
     }
     
 }
@@ -30,8 +30,8 @@ class LogCache {
     
     init() { }
     
-    func addEntry(with messages: [String], logLevel: LogLevel) {
-        let entry = LogCacheEntry(logLevel: logLevel, messages: messages)
+    func addEntry(with message: String, logLevel: LogLevel) {
+        let entry = LogCacheEntry(logLevel: logLevel, message: message)
         entries.append(entry)
     }
     

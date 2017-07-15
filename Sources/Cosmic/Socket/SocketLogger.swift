@@ -50,8 +50,8 @@ public class SocketLogger: NSObject, LogReceiver {
         self.socket = try? UniversalSocket(config: config)
     }
     
-    func onReceive(_ messages: [String], logLevel: LogLevel) {
-        cache.append(contentsOf: messages)
+    func onReceive(_ message: String, logLevel: LogLevel) {
+        cache.append(message)
         attemptSend()
     }
     
@@ -85,11 +85,11 @@ public class SocketLogger: NSObject, LogReceiver {
             try socket.send(data: data)
 
         } catch let e as Socket.Error {
-            Debug.logger.error(
+            Debug.logger.error([
                 "Attempt connect failed for \(config?.host ?? "UnknownHost"):\(config?.port ?? 0)",
                 " - reason: \(e.errorReason ?? "Unknown")",
                 " - code:   \(e.errorCode)"
-            )
+            ].joined(separator: "\n"))
         } catch let e {
             Debug.logger.error("Unknown error attempting to connect: \(e.localizedDescription)")
         }

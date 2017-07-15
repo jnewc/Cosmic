@@ -25,8 +25,8 @@ public class PrintLogger: LogReceiver {
     
     public required init() { }
 
-    func onReceive(_ messages: [String], logLevel: LogLevel) {
-        messages.forEach { printLine($0) }
+    func onReceive(_ message: String, logLevel: LogLevel) {
+        printLine(message)
     }
     
     fileprivate func printLine(_ line: String) {

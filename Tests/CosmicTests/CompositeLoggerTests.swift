@@ -38,10 +38,10 @@ class CompositeLoggerTests: XCTestCase {
     
     func assertLoggerHasMessage(logger: CompositeLogger, loggers: [MemoryLogger], level: LogLevel, message: String) {
         
-        logger.onReceive([message], logLevel: level)
-        XCTAssertEqual(loggers[0].cache.entriesFor(logLevel: level).first!.messages.first!, message)
-        XCTAssertEqual(loggers[1].cache.entriesFor(logLevel: level).first!.messages.first!, message)
-        XCTAssertEqual(loggers[2].cache.entriesFor(logLevel: level).first!.messages.first!, message)
+        logger.onReceive(message, logLevel: level)
+        XCTAssertEqual(loggers[0].cache.entriesFor(logLevel: level).first!.message, message)
+        XCTAssertEqual(loggers[1].cache.entriesFor(logLevel: level).first!.message, message)
+        XCTAssertEqual(loggers[2].cache.entriesFor(logLevel: level).first!.message, message)
     }
     
     

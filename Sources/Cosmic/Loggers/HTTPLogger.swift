@@ -73,8 +73,8 @@ public class HTTPLogger: LogReceiver {
         self.config = config
     }
 
-    func onReceive(_ messages: [String], logLevel: LogLevel) {
-        cache.append(contentsOf: messages)
+    func onReceive(_ message: String, logLevel: LogLevel) {
+        cache.append(message)
         attemptSend()
     }
 

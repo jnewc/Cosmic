@@ -55,7 +55,7 @@ public protocol Logger: class {
     ///     - Network request statuses and responses
 	///
 	/// - Parameter messages: The message or messages to log
-	func debug(_ messages: String ...)
+	func debug(_ message: String)
     
 	/// Logs an info message or messages
 	///
@@ -68,7 +68,7 @@ public protocol Logger: class {
     ///     - User interactions
     ///
 	/// - Parameter messages: The message or messages to log
-	func log(_ messages: String...)
+	func log(_ message: String)
 
     /// Logs a warning message or messages
     ///
@@ -81,7 +81,7 @@ public protocol Logger: class {
     ///     - Low memory events
     ///
     /// - Parameter messages: The message or messages to log
-	func warn(_ messages: String...)
+	func warn(_ message: String)
 
     
 	/// Logs an error message or messages
@@ -96,7 +96,7 @@ public protocol Logger: class {
     ///     - Exceptions being thrown
 	///
 	/// - Parameter messages: The message or messages to log
-	func error(_ messages: String...)
+	func error(_ message: String)
 
 }
 

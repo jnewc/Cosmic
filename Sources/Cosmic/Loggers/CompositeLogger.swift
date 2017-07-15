@@ -26,24 +26,22 @@ open class CompositeLogger: LogReceiver {
         self.loggers.append(contentsOf: loggers)
     }
 
-    func onReceive(_ messages: [String], logLevel: LogLevel) {
+    func onReceive(_ message: String, logLevel: LogLevel) {
         loggers.forEach { logger in
-            messages.forEach {
-                switch logLevel {
-                case .debug:
-                    logger.debug($0)
-                    break
-                case .info:
-                    logger.log($0)
-                    break
-                case .warn:
-                    logger.warn($0)
-                    break
-                case .error:
-                    logger.error($0)
-                    break
-                case .none: break
-                }
+            switch logLevel {
+            case .debug:
+                logger.debug(message)
+                break
+            case .info:
+                logger.log(message)
+                break
+            case .warn:
+                logger.warn(message)
+                break
+            case .error:
+                logger.error(message)
+                break
+            case .none: break
             }
         }
     }

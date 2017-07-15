@@ -21,8 +21,8 @@ public class MemoryLogger: LogReceiver {
 
     public required init() { }
 
-    internal func onReceive(_ messages: [String], logLevel: LogLevel) {
-        self.cache.addEntry(with: messages, logLevel: logLevel)
+    internal func onReceive(_ message: String, logLevel: LogLevel) {
+        self.cache.addEntry(with: message, logLevel: logLevel)
     }
     
     
