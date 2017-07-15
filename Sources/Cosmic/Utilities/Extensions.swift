@@ -18,9 +18,11 @@ extension JSONSerialization {
     ///   - opt: JSON serialization options
     /// - Returns: A JSON string, or nil if the object can not be converted to JSON
     /// - Throws: A JSON serialization error
-    open class func string(withJSONObject obj: Any, options opt: JSONSerialization.WritingOptions = []) throws -> String? {
-        let data = try self.data(withJSONObject: obj, options: opt)
-        return String(data: data, encoding: .utf8)
+    open class func string(withJSONObject obj: Any, options opt: JSONSerialization.WritingOptions = []) -> String? {
+        if let data = try? self.data(withJSONObject: obj, options: opt) {
+            return String(data: data, encoding: .utf8)
+        }
+        return nil
     }
     
 }

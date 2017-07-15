@@ -19,7 +19,6 @@ public protocol LogReporter {
 }
 
 public extension LogReporter {
-    
 
     public func createLogger<T: Logger>(with type: T.Type, for identifier: String = Self.className) -> T {
         

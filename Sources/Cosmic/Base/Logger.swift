@@ -19,8 +19,6 @@ public enum LogLevel: UInt {
     }
 }
 
-
-
 public protocol Logger: class {
 
 	init()
@@ -101,6 +99,4 @@ public protocol Logger: class {
 	func error(_ messages: String...)
 
 }
-
-
 

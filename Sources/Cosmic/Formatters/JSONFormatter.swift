@@ -37,12 +37,7 @@ class JSONFormatter: LogFormatter, JSONFormatterConverter  {
     
     func toJSON(message: String) -> String? {
         let dict = self.converter(message)
-        do {
-            return try JSONSerialization.string(withJSONObject: dict, options: options)
-        } catch let err {
-            Debug.logger.error("ERROR: failed to convert to JSON in JSONFormatter - \(err.localizedDescription)")
-            return nil
-        }
+        return JSONSerialization.string(withJSONObject: dict, options: options)
     }
     
     func format(message: String) -> String {

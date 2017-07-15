@@ -26,13 +26,20 @@ internal protocol LogReceiver: Logger {
 extension LogReceiver {
     
     
+    /// Returns true if this logger is currently being filtered.
+    ///
+    /// See LogReporter for more details.
+    private var isFiltered: Bool {
+        return FilterCache.reduce(false) { $0 || $1.isFiltered(logger: self) }
+    }
+    
     /// Returns true if the log level is equal to or more constraining
-    /// than the argument
+    /// than the argument, and the logger is not being filtered
     ///
     /// - Parameter expected: The log level to test
     /// - Returns: A boolean value indicating whether the log level is enabled
     private func enabled(_ expected: LogLevel) -> Bool {
-        return (expected.rawValue >= logLevel.rawValue)
+        return (expected.rawValue >= logLevel.rawValue) && !self.isFiltered
     }
     
     
