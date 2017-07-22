@@ -1,7 +1,7 @@
 before_install:
   - pod repo update > /dev/null
 script:
- - xcodebuild -workspace Cosmic.xcworkspace -scheme Cosmic build test
+ - xcodebuild -destination 'platform=iOS Simulator,name=iPhone 7' -workspace Cosmic.xcworkspace -scheme Cosmic build test
 
 language: objective-c
 osx_image: xcode8.3
