@@ -1,5 +1,5 @@
 before_install:
   - pod repo update > /dev/null
 language: objective-c
-xcode_project: Cosmic.xcworkspace # path to your xcodeproj folder
+xcode_workspace: Cosmic.xcworkspace # path to your xcodeproj folder
 xcode_scheme: Cosmic
