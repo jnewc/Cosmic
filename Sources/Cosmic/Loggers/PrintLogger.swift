@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class PrintLogger: LogReceiver {
+public class PrintLogger: Logger {
     
     public var logLevel: LogLevel = .info
 
@@ -25,7 +25,7 @@ public class PrintLogger: LogReceiver {
     
     public required init() { }
 
-    func onReceive(_ message: String, logLevel: LogLevel) {
+    public func log(_ message: String, logLevel: LogLevel, metadata: LogMetadata) {
         printLine(message)
     }
     

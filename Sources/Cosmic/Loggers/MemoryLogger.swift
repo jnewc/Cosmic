@@ -9,7 +9,8 @@
 import Foundation
 
 
-public class MemoryLogger: LogReceiver {
+public class MemoryLogger: Logger {
+
   
     typealias LogMessage = (logLevel: LogLevel, message: String)
 
@@ -21,9 +22,8 @@ public class MemoryLogger: LogReceiver {
 
     public required init() { }
 
-    internal func onReceive(_ message: String, logLevel: LogLevel) {
-        self.cache.addEntry(with: message, logLevel: logLevel)
+    public func log(_ message: String, logLevel: LogLevel, metadata: LogMetadata) {
+        self.cache.addEntry(with: message, logLevel: logLevel, metadata: metadata)
     }
-    
     
 }

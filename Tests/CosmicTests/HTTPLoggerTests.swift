@@ -49,7 +49,7 @@ class HTTPLoggerTests: XCTestCase {
         }
         logger.session = session
 
-        logger.log(log)
+        logger.info(log)
         
         self.waitForExpectations(timeout: 5.0, handler: nil)
         

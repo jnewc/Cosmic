@@ -1,31 +1,44 @@
+//
+//  Logger.swift
+//  cosmic
+//
+//  Created by Jack Newcombe on 27/03/2017.
+//  Copyright © 2017 Jack Newcombe. All rights reserved.
+//
+
 import Foundation
 
-public enum LogLevel: UInt {
-	case debug  = 0b0001
-	case info	= 0b0011
-	case warn	= 0b0111
-	case error	= 0b1111
-    case none   = 0xFFFF
+
+public struct LogMetadata {
     
+    let file: StaticString
     
-    var simpleName: String {
-        switch self {
-        case .debug:    return "debug"
-        case .info:     return "info"
-        case .warn:     return "warn"
-        case .error:    return "error"
-        default:        return ""
-        }
+    let line: UInt
+    
+    let function: StaticString
+    
+    init(file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
+        self.file = file
+        self.line = line
+        self.function = function
     }
+    
 }
 
+
+/// Logger describes the internal implementation of a Logger object.
+///
+/// Implementors consume log output, performing transformations on the
+/// received messages as needed, and forwarding them to other loggers
+/// and reporting services.
+///
 public protocol Logger: class {
-
-	init()
-
+    
+    init()
+    
     // MARK: Logging properties
     
-	/// Indicates the current level of logging.
+    /// Indicates the current level of logging.
     ///
     /// The log level of a Logger indicates:
     ///  - The class of logs that should be logged
@@ -36,67 +49,96 @@ public protocol Logger: class {
     /// A list of formatters to apply to logs
     ///
     /// Formatters transform logs from one string-based representation to another. Each
-    /// formatter will be applied to every message, so any filtering should be done 
+    /// formatter will be applied to every message, so any filtering should be done
     /// within the formatter itself.
     var formatters: [LogFormatter] { get set }
-
-
-    // MARK: Logging functions
     
-	/// Logs a debug message or messages
-    ///
-    /// Debug messages are used to express useful diagnostic information. These messages
-    /// should describe development details and can contain sensitive information, but
-    /// should be disabled in production builds.
-    ///
-    /// Examples:
-    ///     - Performance statistics
-    ///     - Service operation messages
-    ///     - Network request statuses and responses
-	///
-	/// - Parameter messages: The message or messages to log
-	func debug(_ message: String)
+    func log(_ message: String, logLevel: LogLevel, metadata: LogMetadata)
     
-	/// Logs an info message or messages
-	///
-    /// Info messages are used to describe the general operation of a component. These
-    /// messages should not contain sensitive information.
-    ///
-    /// Examples:
-    ///     - Service start/stop messages
-    ///     - Configuration details
-    ///     - User interactions
-    ///
-	/// - Parameter messages: The message or messages to log
-	func log(_ message: String)
-
-    /// Logs a warning message or messages
-    ///
-    /// Warning messages are used to describe non-fatal issues that occur during general
-    /// use of a component. These messages should not contain sensitive information.
-    ///
-    /// Examples:
-    ///     - Missing configuration
-    ///     - User input validation errors
-    ///     - Low memory events
-    ///
-    /// - Parameter messages: The message or messages to log
-	func warn(_ message: String)
-
-    
-	/// Logs an error message or messages
-    ///
-    /// Error messages indicate fatal or unrecoverable issues that occur during general use
-    /// of a component. These messages should not contain sensitive information.
-    ///
-    /// Examples:
-    ///     - Failed network request
-    ///     - Missing required configuration
-    ///     - Out of memory events
-    ///     - Exceptions being thrown
-	///
-	/// - Parameter messages: The message or messages to log
-	func error(_ message: String)
-
 }
 
+public extension Logger {
+        
+    /// Returns true if this logger is currently being filtered.
+    ///
+    /// See LogReporter for more details.
+    private var isFiltered: Bool {
+        return LogFilters.global.filters.reduce(false) { $0 || $1.isFiltered(logger: self) }
+    }
+    
+    /// Returns true if the log level is equal to or more constraining
+    /// than the argument, and the logger is not being filtered
+    ///
+    /// - Parameter expected: The log level to test
+    /// - Returns: A boolean value indicating whether the log level is enabled
+    private func enabled(_ expected: LogLevel) -> Bool {
+        return (expected.rawValue >= logLevel.rawValue) && !self.isFiltered
+    }
+    
+    public func log(_ message: String, logLevel: LogLevel, metadata: LogMetadata = LogMetadata()) {
+        log(message, logLevel: logLevel, metadata: metadata)
+    }
+    
+    // MARK: debug
+    
+    /// Logs a series of debug messages
+    ///
+    /// Debug log messages should be aimed at developers and can contain
+    /// domain-specific and diagnostic information.
+    ///
+    /// - Parameter messages: The messages to log
+    public func debug(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
+        guard enabled(.debug) else { return }
+        log(message, logLevel: .debug, metadata: LogMetadata(file: file, line: line, function: function))
+    }
+    
+    // MARK: info
+    
+    /// Logs a series of info messages
+    ///
+    /// Info log messages should contain high-level information about
+    /// application state such as indicating a service starting or 
+    /// stopping. 
+    ///
+    /// Info logs should describe all high-level interactions.
+    ///
+    /// - Parameter messages: The info messages to log
+    public func info(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
+        guard enabled(.info) else { return }
+        log(message, logLevel: .info, metadata: LogMetadata(file: file, line: line, function: function))
+    }
+    
+    // MARK: warn
+    
+    /// Logs a series of warning messages
+    ///
+    /// Warning log messages should indicate any non-fatal issues that
+    /// occur such as the absence of configuration or validation errors
+    ///
+    /// - Parameter messages: The warning messages to log
+    public func warn(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
+        guard enabled(.warn) else { return }
+        log(message, logLevel: .warn, metadata: LogMetadata(file: file, line: line, function: function))
+    }
+    
+    // MARK: error
+    
+    /// Logs a series of error messages
+    ///
+    /// Error log messages should contain information about any fatal
+    /// errors, i.e. errors that halt the execution of the application
+    /// whether by runtime exception or blocking further interaction.
+    ///
+    /// Error logs should generally indicate that a programming error
+    /// has occurred (for example, by reaching illegal if/else branches)
+    ///
+    /// - Parameter messages: The error messages to log
+    public func error(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
+        guard enabled(.error) else { return }
+        log(message, logLevel: .error, metadata: LogMetadata(file: file, line: line, function: function))
+    }
+    
+    public func format(message: String) -> String {
+        return formatters.reduce(message, { $1.format(message: $0) })
+    }
+}

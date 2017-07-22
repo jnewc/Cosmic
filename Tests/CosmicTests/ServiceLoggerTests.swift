@@ -21,6 +21,7 @@ class ServiceLoggerTests: XCTestCase {
         super.tearDown()
     }
     
+    
     func testLogzLogger() {
         
         let logger = LogzLogger(withToken: "MY_TOKEN")
@@ -52,6 +53,11 @@ class ServiceLoggerTests: XCTestCase {
         XCTAssertEqual(logger.config?.method, LogglyServiceConfig.method)
         XCTAssertEqual(logger.config?.headers[HTTPHeader.ContentType], HTTPHeader.ContentTypeJSON)
         
+        let formattedString = logger.batchFormatter.format(message: "Test")
+        XCTAssertNotNil(formattedString)
+        
+        let json = try! JSONSerialization.jsonObject(with: formattedString.data(using: .utf8)!, options: []) as! [String: String]
+        XCTAssertEqual(json["message"], "Test")
         
     }
     

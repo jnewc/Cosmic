@@ -8,10 +8,6 @@
 
 import Foundation
 
-/// This cache contains all filters to be applied to loggers
-internal var FilterCache: [LogFilter] = []
-
-
 /// LogFilter
 protocol LogFilter {
     
@@ -22,12 +18,18 @@ protocol LogFilter {
 /// A class that holds global log filters
 class LogFilters {
     
-    public static func addFilter(filter: LogFilter) {
-        FilterCache.append(filter)
+    public static let global = LogFilters()
+    
+    var filters: [LogFilter] = []
+    
+    private init() { }
+    
+    public func addFilter(filter: LogFilter) {
+        filters.append(filter)
     }
     
-    public static func clearFilters() {
-        FilterCache.removeAll()
+    public func clearFilters() {
+        filters.removeAll()
     }
     
 }

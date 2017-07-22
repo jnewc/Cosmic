@@ -30,9 +30,9 @@ public struct HTTPLoggerConfig {
     }
 }
 
-public class HTTPLogger: LogReceiver {
+public class HTTPLogger: Logger {
     
-    // MARK: LogReceiver properties
+    // MARK: Logger properties
     
     /// A list of formatters to apply to logs
     ///
@@ -73,7 +73,7 @@ public class HTTPLogger: LogReceiver {
         self.config = config
     }
 
-    func onReceive(_ message: String, logLevel: LogLevel) {
+    public func log(_ message: String, logLevel: LogLevel, metadata: LogMetadata) {
         cache.append(message)
         attemptSend()
     }
@@ -101,7 +101,7 @@ public class HTTPLogger: LogReceiver {
         let task: URLSessionDataTask = session.dataTask(with: request) { data, response, error in
             error => Debug.logger.error(error!.localizedDescription)
             if let response = (response as? HTTPURLResponse) {
-                Debug.logger.log("Status code: \(response.statusCode)")
+                Debug.logger.info("Status code: \(response.statusCode)")
             }
             
         }

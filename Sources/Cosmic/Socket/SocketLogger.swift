@@ -21,7 +21,7 @@ public struct SocketLoggerConfig {
     }
 }
 
-public class SocketLogger: NSObject, LogReceiver {
+public class SocketLogger: NSObject, Logger {
     
     public var logLevel: LogLevel = .info
     
@@ -50,7 +50,7 @@ public class SocketLogger: NSObject, LogReceiver {
         self.socket = try? UniversalSocket(config: config)
     }
     
-    func onReceive(_ message: String, logLevel: LogLevel) {
+    public func log(_ message: String, logLevel: LogLevel, metadata: LogMetadata) {
         cache.append(message)
         attemptSend()
     }

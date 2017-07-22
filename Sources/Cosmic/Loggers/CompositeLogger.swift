@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class CompositeLogger: LogReceiver {
+open class CompositeLogger: Logger {
     
     public var loggers: [Logger] = []
     
@@ -26,14 +26,14 @@ open class CompositeLogger: LogReceiver {
         self.loggers.append(contentsOf: loggers)
     }
 
-    func onReceive(_ message: String, logLevel: LogLevel) {
+    public func log(_ message: String, logLevel: LogLevel, metadata: LogMetadata) {
         loggers.forEach { logger in
             switch logLevel {
             case .debug:
                 logger.debug(message)
                 break
             case .info:
-                logger.log(message)
+                logger.info(message)
                 break
             case .warn:
                 logger.warn(message)

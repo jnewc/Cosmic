@@ -10,16 +10,13 @@ import Foundation
 
 struct LogCacheEntry {
     
-    let created: Date = Date()
-    
     let logLevel: LogLevel
     
     let message: String
     
-    init(logLevel: LogLevel, message: String) {
-        self.logLevel = logLevel
-        self.message = message
-    }
+    let metadata: LogMetadata
+
+    let created: Date = Date()
     
 }
 
@@ -30,8 +27,8 @@ class LogCache {
     
     init() { }
     
-    func addEntry(with message: String, logLevel: LogLevel) {
-        let entry = LogCacheEntry(logLevel: logLevel, message: message)
+    func addEntry(with message: String, logLevel: LogLevel, metadata: LogMetadata) {
+        let entry = LogCacheEntry(logLevel: logLevel, message: message, metadata: metadata)
         entries.append(entry)
     }
     

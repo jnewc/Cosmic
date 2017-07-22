@@ -37,7 +37,7 @@ class LogItLoggerTests: XCTestCase {
             XCTAssertEqual($0?.value(forHTTPHeaderField: HTTPHeader.ContentType), HTTPHeader.ContentTypeJSON)
         }
         
-        logger.log("Test")
+        logger.info("Test")
         
     }
     

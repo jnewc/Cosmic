@@ -6,7 +6,7 @@ import Cosmic
 let logglyToken: String = ""
 
 let papertrailHost: String = ""
-let papertrailPort: UInt16 = 0
+let papertrailPort: Int32 = 0
 
 let logzToken: String = ""
 
@@ -30,7 +30,7 @@ logglyLoggerView.onSubmit = {
     logger.logLevel = .info
     
     if let text = logglyLoggerView.textField.text {
-        logger.log(text)
+        logger.info(text)
     }
 }
 
@@ -45,11 +45,11 @@ papertrailLoggerView.backgroundColor = papertrailColor
 papertrailLoggerView.serviceLabel.text = "Papertrail"
 
 papertrailLoggerView.onSubmit = {
-    let logger = PapertrailLogger(config: SocketLoggerConfig(host: papertrailHost, port: papertrailPort))
+    let logger = PapertrailLogger(config: SocketLoggerConfig(host: papertrailHost, port: papertrailPort, transport: .udp))
     logger.logLevel = .info
     
     if let text = papertrailLoggerView.textField.text {
-        logger.log(text)
+        logger.info(text)
     }
 }
 
@@ -67,7 +67,7 @@ logzLoggerView.onSubmit = {
     logger.logLevel = .info
     
     if let text = logzLoggerView.textField.text {
-        logger.log()
+        logger.info("")
     }
 }
 
@@ -83,4 +83,3 @@ rootView.addSubview(papertrailLoggerView)
 rootView.addSubview(logzLoggerView)
 
 PlaygroundPage.current.liveView = rootView
-

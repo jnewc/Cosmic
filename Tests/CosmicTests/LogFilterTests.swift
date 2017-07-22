@@ -20,7 +20,7 @@ class LogFilterTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
         
-        LogFilters.clearFilters()
+        LogFilters.global.clearFilters()
     }
     
     func testClassLogFilterNoFilters() {
@@ -29,9 +29,9 @@ class LogFilterTests: XCTestCase {
         
         let filter = ClassBasedLogFilter()
         
-        LogFilters.addFilter(filter: filter)
+        LogFilters.global.addFilter(filter: filter)
         
-        logger.log("This is a log")
+        logger.info("This is a log")
         
         let entries = logger.cache.entriesFor(logLevel: .info)
         XCTAssertEqual(entries.first!.message, "This is a log")
@@ -44,13 +44,13 @@ class LogFilterTests: XCTestCase {
         
         let filter = ClassBasedLogFilter()
         
-        LogFilters.addFilter(filter: filter)
+        LogFilters.global.addFilter(filter: filter)
         
         // Included overrides Excluded
         filter.included.append(MemoryLogger.self)
         filter.excluded.append(MemoryLogger.self)
         
-        logger.log("This is a log")
+        logger.info("This is a log")
         
         let entries = logger.cache.entriesFor(logLevel: .info)
         XCTAssertEqual(entries.first!.message, "This is a log")
@@ -63,11 +63,11 @@ class LogFilterTests: XCTestCase {
         
         let filter = ClassBasedLogFilter()
         
-        LogFilters.addFilter(filter: filter)
+        LogFilters.global.addFilter(filter: filter)
         
         filter.excluded.append(MemoryLogger.self)
         
-        logger.log("This is a log")
+        logger.info("This is a log")
         
         let entries = logger.cache.entriesFor(logLevel: .info)
         XCTAssert(entries.isEmpty)

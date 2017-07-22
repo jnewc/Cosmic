@@ -61,7 +61,7 @@ class SocketLoggerTests: XCTestCase {
         let config = SocketLoggerConfig(host: interface, port: Int32(port), transport: .udp)
         let logger = SocketLogger(config: config)
         
-        logger.log("Test")
+        logger.info("Test")
         
         self.waitForExpectations(timeout: 5.0, handler: nil)
     }
@@ -85,7 +85,7 @@ class SocketLoggerTests: XCTestCase {
         let config = SocketLoggerConfig(host: interface, port: Int32(port), transport: .tcp)
         let logger = SocketLogger(config: config)
         
-        logger.log("Test")
+        logger.info("Test")
         
         self.waitForExpectations(timeout: 5.0, handler: nil)
     }

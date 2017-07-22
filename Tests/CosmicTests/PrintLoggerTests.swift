@@ -78,7 +78,7 @@ class PrintLoggerTests: XCTestCase {
         printLogger.logLevel = .info
         
         logs.forEach {
-            printLogger.log($0)
+            printLogger.info($0)
             XCTAssertEqual(stream.array[logs.index(of: $0)!], $0)
         }
         
@@ -113,7 +113,7 @@ class PrintLoggerTests: XCTestCase {
         printLogger.logLevel = .debug
         
         logs.forEach {
-            printLogger.log($0)
+            printLogger.info($0)
             XCTAssertEqual(stream.array[logs.index(of: $0)!], $0)
         }
     }
@@ -136,7 +136,7 @@ class PrintLoggerTests: XCTestCase {
         printLogger.logLevel = .warn
         
         logs.forEach {
-            printLogger.log($0)
+            printLogger.info($0)
             XCTAssertFalse(stream.array.contains($0))
         }
         

@@ -35,9 +35,9 @@
 		04A0695B1EFB215500DEEE7E /* cosmic.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A4A9191EFB1FBA00EBD44E /* cosmic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04A4A93A1EFB1FD200EBD44E /* LogCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9131EFB1FBA00EBD44E /* LogCache.swift */; };
 		04A4A93B1EFB1FD200EBD44E /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9141EFB1FBA00EBD44E /* LogFormatter.swift */; };
-		04A4A93C1EFB1FD200EBD44E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9151EFB1FBA00EBD44E /* Logger.swift */; };
+		04A4A93C1EFB1FD200EBD44E /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9151EFB1FBA00EBD44E /* LogLevel.swift */; };
 		04A4A93D1EFB1FD200EBD44E /* LogOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9161EFB1FBA00EBD44E /* LogOutputStream.swift */; };
-		04A4A93E1EFB1FD200EBD44E /* LogReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9171EFB1FBA00EBD44E /* LogReceiver.swift */; };
+		04A4A93E1EFB1FD200EBD44E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9171EFB1FBA00EBD44E /* Logger.swift */; };
 		04A4A93F1EFB1FD200EBD44E /* LogReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9181EFB1FBA00EBD44E /* LogReporter.swift */; };
 		04A4A9401EFB1FD200EBD44E /* BlockFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A91B1EFB1FBA00EBD44E /* BlockFormatter.swift */; };
 		04A4A9421EFB1FD200EBD44E /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A91D1EFB1FBA00EBD44E /* JSONFormatter.swift */; };
@@ -47,6 +47,7 @@
 		04A4A9461EFB1FD200EBD44E /* PrintLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9231EFB1FBA00EBD44E /* PrintLogger.swift */; };
 		04A4A9471EFB1FD200EBD44E /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9251EFB1FBA00EBD44E /* Commons.swift */; };
 		04A4A9481EFB1FD200EBD44E /* DataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9261EFB1FBA00EBD44E /* DataUtility.swift */; };
+		04F559D81F2281EF0048F2E0 /* LogMetadataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */; };
 		04FCF0FF1F115EE500505A5F /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */; };
 		21BE76192CF7D72AD787B219 /* Pods_Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94200653A44BD6612B15CC45 /* Pods_Cosmic.framework */; };
 /* End PBXBuildFile section */
@@ -77,12 +78,12 @@
 		048F15141F16C57E009ED8F1 /* LogItLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogItLogger.swift; sourceTree = "<group>"; };
 		048F15151F16C57E009ED8F1 /* LogzLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogzLogger.swift; sourceTree = "<group>"; };
 		048F15161F16C57E009ED8F1 /* PapertrailLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapertrailLogger.swift; sourceTree = "<group>"; };
-		048F15171F16C57E009ED8F1 /* SocketLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketLogger.swift; sourceTree = "<group>"; };
+		048F15171F16C57E009ED8F1 /* SocketLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SocketLogger.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		048F151D1F1973EA009ED8F1 /* LogFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFilter.swift; sourceTree = "<group>"; };
 		048F151F1F1A5D95009ED8F1 /* SocketLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketLoggerTests.swift; sourceTree = "<group>"; };
 		048F15201F1A5D95009ED8F1 /* LogItLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogItLoggerTests.swift; sourceTree = "<group>"; };
 		048F15231F1A64AA009ED8F1 /* LogFilterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFilterTests.swift; sourceTree = "<group>"; };
-		049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeLoggerTests.swift; sourceTree = "<group>"; };
+		049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CompositeLoggerTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
 		049F00E01EFED30C00BD9E41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049F00E21EFED30C00BD9E41 /* LogReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogReporterTests.swift; sourceTree = "<group>"; };
@@ -91,20 +92,21 @@
 		049F00F11EFED83A00BD9E41 /* HTTPLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPLoggerTests.swift; sourceTree = "<group>"; };
 		04A4A9131EFB1FBA00EBD44E /* LogCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCache.swift; sourceTree = "<group>"; };
 		04A4A9141EFB1FBA00EBD44E /* LogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
-		04A4A9151EFB1FBA00EBD44E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		04A4A9151EFB1FBA00EBD44E /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		04A4A9161EFB1FBA00EBD44E /* LogOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutputStream.swift; sourceTree = "<group>"; };
-		04A4A9171EFB1FBA00EBD44E /* LogReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogReceiver.swift; sourceTree = "<group>"; };
+		04A4A9171EFB1FBA00EBD44E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Logger.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		04A4A9181EFB1FBA00EBD44E /* LogReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogReporter.swift; sourceTree = "<group>"; };
 		04A4A9191EFB1FBA00EBD44E /* cosmic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cosmic.h; sourceTree = "<group>"; };
 		04A4A91B1EFB1FBA00EBD44E /* BlockFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockFormatter.swift; sourceTree = "<group>"; };
 		04A4A91D1EFB1FBA00EBD44E /* JSONFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
 		04A4A91E1EFB1FBA00EBD44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04A4A9201EFB1FBA00EBD44E /* CompositeLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeLogger.swift; sourceTree = "<group>"; };
-		04A4A9211EFB1FBA00EBD44E /* HTTPLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLogger.swift; sourceTree = "<group>"; };
-		04A4A9221EFB1FBA00EBD44E /* MemoryLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryLogger.swift; sourceTree = "<group>"; };
-		04A4A9231EFB1FBA00EBD44E /* PrintLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintLogger.swift; sourceTree = "<group>"; };
+		04A4A9201EFB1FBA00EBD44E /* CompositeLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CompositeLogger.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		04A4A9211EFB1FBA00EBD44E /* HTTPLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = HTTPLogger.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		04A4A9221EFB1FBA00EBD44E /* MemoryLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MemoryLogger.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		04A4A9231EFB1FBA00EBD44E /* PrintLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PrintLogger.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		04A4A9251EFB1FBA00EBD44E /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		04A4A9261EFB1FBA00EBD44E /* DataUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtility.swift; sourceTree = "<group>"; };
+		04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMetadataTests.swift; sourceTree = "<group>"; };
 		04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
 		60D283CB210C0089A0704073 /* Pods-CosmicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67D62702415ADE471E9854E0 /* Pods-Cosmic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmic/Pods-Cosmic.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				048F151F1F1A5D95009ED8F1 /* SocketLoggerTests.swift */,
 				048F15201F1A5D95009ED8F1 /* LogItLoggerTests.swift */,
 				048F15231F1A64AA009ED8F1 /* LogFilterTests.swift */,
+				04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */,
 			);
 			path = CosmicTests;
 			sourceTree = "<group>";
@@ -259,9 +262,9 @@
 			children = (
 				04A4A9131EFB1FBA00EBD44E /* LogCache.swift */,
 				04A4A9141EFB1FBA00EBD44E /* LogFormatter.swift */,
-				04A4A9151EFB1FBA00EBD44E /* Logger.swift */,
+				04A4A9151EFB1FBA00EBD44E /* LogLevel.swift */,
 				04A4A9161EFB1FBA00EBD44E /* LogOutputStream.swift */,
-				04A4A9171EFB1FBA00EBD44E /* LogReceiver.swift */,
+				04A4A9171EFB1FBA00EBD44E /* Logger.swift */,
 				04A4A9181EFB1FBA00EBD44E /* LogReporter.swift */,
 				048F151D1F1973EA009ED8F1 /* LogFilter.swift */,
 			);
@@ -506,9 +509,9 @@
 				04A4A93F1EFB1FD200EBD44E /* LogReporter.swift in Sources */,
 				04A4A9451EFB1FD200EBD44E /* MemoryLogger.swift in Sources */,
 				04A4A9421EFB1FD200EBD44E /* JSONFormatter.swift in Sources */,
-				04A4A93E1EFB1FD200EBD44E /* LogReceiver.swift in Sources */,
+				04A4A93E1EFB1FD200EBD44E /* Logger.swift in Sources */,
 				048F151A1F16C57E009ED8F1 /* LogzLogger.swift in Sources */,
-				04A4A93C1EFB1FD200EBD44E /* Logger.swift in Sources */,
+				04A4A93C1EFB1FD200EBD44E /* LogLevel.swift in Sources */,
 				04A4A9441EFB1FD200EBD44E /* HTTPLogger.swift in Sources */,
 				048F15181F16C57E009ED8F1 /* LogglyLogger.swift in Sources */,
 				04A4A93B1EFB1FD200EBD44E /* LogFormatter.swift in Sources */,
@@ -539,6 +542,7 @@
 				049F00E81EFED30C00BD9E41 /* CompositeLoggerTests.swift in Sources */,
 				048F15251F1A6C4E009ED8F1 /* SocketLoggerTests.swift in Sources */,
 				0441B8CE1F116CC20088A851 /* LoggerTests.swift in Sources */,
+				04F559D81F2281EF0048F2E0 /* LogMetadataTests.swift in Sources */,
 				049F00F21EFED83A00BD9E41 /* HTTPLoggerTests.swift in Sources */,
 				0411F6EE1EFF256200BE872F /* MockURLSession.swift in Sources */,
 				049F00EF1EFED30C00BD9E41 /* ServiceLoggerTests.swift in Sources */,
