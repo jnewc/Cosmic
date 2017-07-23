@@ -1,9 +1,8 @@
 codecov:
   notify:
     require_ci_to_pass: yes
-
 coverage:
   ignore:
-    - Tests/*
-    - cosmicPlaygrounds/*
+    - Tests/
+    - cosmicPlaygrounds/
     - Package.swift
