@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   For more information, see the readme at: https://github.com/jnewc/Cosmic.git
   DESC
 
-  s.homepage     = "http://newcombe.io/cosmic"
+  s.homepage     = "http://cosmic.newcombe.io"
 
   s.license      = "Apache 2.0"
 

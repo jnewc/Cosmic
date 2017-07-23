@@ -1,5 +1,7 @@
 # Cosmic
 
+[![Build Status](https://travis-ci.org/jnewc/Cosmic.svg?branch=master)](https://travis-ci.org/jnewc/Cosmic)
+
 Cosmic is a log reporting framework written in Swift.
 
 ## About
@@ -24,48 +26,49 @@ SPM:
 ```swift
 .Package(url: "https://github.com/jnewc/Cosmic", majorVersion: <MAJORVERSION>)
 ```
+
 ## Usage
 
 The simplest way to support a logger in your class is to extend the `DefaultLogReporter` protocol:
 
 ```swift
-	import Cosmic
+import Cosmic
 
- 	class MyClass: DefaultLogReporter {
-		// ...
-	}
+class MyClass: DefaultLogReporter {
+	// ...
+}
 ```
 
 Extending the `DefaultLogReporter` protocol adds a logger property to your class that can be called to report log messages:
 
 ```swift
-	func logSomething() {
-		// Debug level
-		self.logger.debug("Logging something")
-		// Info level
-		self.logger.info("Logging something")
-		// Warn level
-		self.logger.warn("Logging something")
-		// Error level
-		self.logger.error("Logging something")
-	}
+func logSomething() {
+	// Debug level
+	self.logger.debug("Logging something")
+	// Info level
+	self.logger.info("Logging something")
+	// Warn level
+	self.logger.warn("Logging something")
+	// Error level
+	self.logger.error("Logging something")
+}
 ```
 
 By default the logger provided by LogReporter will be an instance of `PrintLogger` - this can be changed by instead implementing the `LogReporter` protocol and it's `DefaultLoggerType` associated type:
 
 ```swift
-	class MyClass: LogReporter {
+class MyClass: LogReporter {
 
-		typealias DefaultLoggerType: Logger = PrintLogger
+	typealias DefaultLoggerType: Logger = PrintLogger
 
-		// ...
-	}
+	// ...
+}
 ```
 
 Alternatively, if you want to manage loggers yourself, you can simply instantiate them as needed:
 
 ```swift
-	let myLogger: Logger = PrintLogger()
+let myLogger: Logger = PrintLogger()
 ```
 
 ## Extension
@@ -87,17 +90,17 @@ You can create your own loggers by implementing the `LogReceiver` protocol:
 You can add formatters in your initialiser:
 
 ```swift
-	init() {
-		formatters.append(SyslogFormatter())
-	}
+init() {
+	formatters.append(SyslogFormatter())
+}
 ```
 
 And you can format your messages using the `format` method:
 
 ```swift
-	func onReceive(_ messages: [String], logLevel: LogLevel) {
-		messages.forEach { print(format($0)) }
-	}
+func onReceive(_ messages: [String], logLevel: LogLevel) {
+	messages.forEach { print(format($0)) }
+}
 ```
 
 ## Composing loggers
@@ -109,11 +112,11 @@ The log level of the composite logger is used transitively for all its component
 The example below describes a logger that logs to console, file, and a TCP socket:
 
 ```swift
-	let printLogger = PrintLogger()
-	let memoryLogger = MemoryLogger()
-	let socketLogger = SocketLogger(...)
+let printLogger = PrintLogger()
+let memoryLogger = MemoryLogger()
+let socketLogger = SocketLogger(...)
 
-	let logger = CompositeLogger(printLogger, fileLogger, socketLogger)
+let logger = CompositeLogger(printLogger, fileLogger, socketLogger)
 ```
 
 ## Filtering loggers
@@ -121,10 +124,10 @@ The example below describes a logger that logs to console, file, and a TCP socke
 You can filter loggers by adding a `LogFilter` to the `LogFilters.global` cache. The following example excludes all instances of a `Logger` based class called `MyLogger`:
 
 ```swift
-	let filter = ClassBasedLogFilter()
-	filter.excluded.append(MyLogger.self)
-	LogFilters.global.addFilter(filter: filter)
+let filter = ClassBasedLogFilter()
+filter.excluded.append(MyLogger.self)
+LogFilters.global.addFilter(filter: filter)
 ```
 
 *NOTE: `included` and `excluded` are mutually exclusive when using `ClassBasedLogFilter`. If both contain types, `included` will be used
-and `excluded` will be ignored
+and `excluded` will be ignored*
