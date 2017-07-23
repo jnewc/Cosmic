@@ -4,8 +4,6 @@ codecov:
 
 coverage:
   ignore:
-    - Examples/*
     - Tests/*
-    - Tests/CosmicTests/*
     - cosmicPlaygrounds/*
     - Package.swift
