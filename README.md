@@ -1,6 +1,7 @@
 # Cosmic
 
-[![Build Status](https://travis-ci.org/jnewc/Cosmic.svg?branch=master)](https://travis-ci.org/jnewc/Cosmic)
+[![Build Status](https://travis-ci.org/jnewc/Cosmic.svg?branch=master)](https://travis-ci.org/jnewc/Cosmic)	 [![codecov](https://codecov.io/gh/jnewc/Cosmic/branch/master/graph/badge.svg)](https://codecov.io/gh/jnewc/Cosmic)
+
 
 Cosmic is a log reporting framework written in Swift.
 
