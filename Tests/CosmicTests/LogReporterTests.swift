@@ -31,4 +31,9 @@ class LogReporterTests: XCTestCase, DefaultLogReporter {
         XCTAssertEqual(a, b)
         
     }
+    
+    func testLoggerClassName() {
+        let name = type(of: self).className
+        XCTAssertEqual(name, "LogReporterTests")
+    }
 }

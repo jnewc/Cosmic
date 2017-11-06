@@ -37,8 +37,8 @@ public extension LogReporter {
     }
     
     
-    private static var className: String  {
-        return String(describing: Self.self)
+    static var className: String  {
+        return String(describing: self)
     }
     
 }
