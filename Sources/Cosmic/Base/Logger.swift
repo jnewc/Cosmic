@@ -76,7 +76,7 @@ public extension Logger {
     }
     
     public func log(_ message: String, logLevel: LogLevel, metadata: LogMetadata = LogMetadata()) {
-        log(message, logLevel: logLevel, metadata: metadata)
+        log(format(message), logLevel: logLevel, metadata: metadata)
     }
     
     // MARK: debug
@@ -138,7 +138,7 @@ public extension Logger {
         log(message, logLevel: .error, metadata: LogMetadata(file: file, line: line, function: function))
     }
     
-    public func format(message: String) -> String {
+    internal func format(_ message: String) -> String {
         return formatters.reduce(message, { $1.format(message: $0) })
     }
 }

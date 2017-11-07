@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Cosmic"
-  s.version      = "1.0.1"
+  s.version      = "1.1.0"
   s.summary      = "A log reporting framework written in Swift"
 
   s.description  = <<-DESC

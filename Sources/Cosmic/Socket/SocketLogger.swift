@@ -59,7 +59,7 @@ public class SocketLogger: NSObject, Logger {
     
     private func attemptSend() {
         if !cache.isEmpty {
-            let message =  format(message: cache.removeFirst())
+            let message =  cache.removeFirst()
             if let data = message.data(using: .utf8) {
                 send(data: data)
             }

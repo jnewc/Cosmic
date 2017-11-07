@@ -91,7 +91,7 @@ public class HTTPLogger: Logger {
             headers.keys.forEach { request.addValue(headers[$0]!, forHTTPHeaderField: $0) }
         }
         
-        let cache = self.cache.map { self.format(message: $0) }
+        let cache = self.cache
         self.cache = []
         
         let body = batchFormatter.format(batch: cache)
