@@ -74,10 +74,7 @@ public extension Logger {
     private func enabled(_ expected: LogLevel) -> Bool {
         return (expected.rawValue >= logLevel.rawValue) && !self.isFiltered
     }
-    
-    public func log(_ message: String, logLevel: LogLevel, metadata: LogMetadata = LogMetadata()) {
-        log(format(message), logLevel: logLevel, metadata: metadata)
-    }
+
     
     // MARK: debug
     
@@ -89,7 +86,7 @@ public extension Logger {
     /// - Parameter messages: The messages to log
     public func debug(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.debug) else { return }
-        log(message, logLevel: .debug, metadata: LogMetadata(file: file, line: line, function: function))
+        log(format(message), logLevel: .debug, metadata: LogMetadata(file: file, line: line, function: function))
     }
     
     // MARK: info
@@ -105,7 +102,7 @@ public extension Logger {
     /// - Parameter messages: The info messages to log
     public func info(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.info) else { return }
-        log(message, logLevel: .info, metadata: LogMetadata(file: file, line: line, function: function))
+        log(format(message), logLevel: .info, metadata: LogMetadata(file: file, line: line, function: function))
     }
     
     // MARK: warn
@@ -118,7 +115,7 @@ public extension Logger {
     /// - Parameter messages: The warning messages to log
     public func warn(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.warn) else { return }
-        log(message, logLevel: .warn, metadata: LogMetadata(file: file, line: line, function: function))
+        log(format(message), logLevel: .warn, metadata: LogMetadata(file: file, line: line, function: function))
     }
     
     // MARK: error
@@ -135,7 +132,7 @@ public extension Logger {
     /// - Parameter messages: The error messages to log
     public func error(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.error) else { return }
-        log(message, logLevel: .error, metadata: LogMetadata(file: file, line: line, function: function))
+        log(format(message), logLevel: .error, metadata: LogMetadata(file: file, line: line, function: function))
     }
     
     internal func format(_ message: String) -> String {

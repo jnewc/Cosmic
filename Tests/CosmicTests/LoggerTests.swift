@@ -40,4 +40,19 @@ class LoggerTests: XCTestCase {
         
     }
     
+    func testFormatters() {
+        
+        let logger = MemoryLogger()
+        logger.logLevel = .info
+        
+        logger.formatters.append(BasicLogFormatter(prefix: "Prefix "))
+        
+        logger.info("Message")
+        
+        let entries = logger.cache.entriesFor(logLevel: .info)
+        
+        XCTAssertEqual(entries.count, 1)
+        XCTAssertEqual(entries.first?.message, "Prefix Message")
+    }
+    
 }
