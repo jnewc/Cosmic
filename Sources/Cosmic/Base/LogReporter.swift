@@ -20,11 +20,10 @@ public protocol LogReporter {
 
 public extension LogReporter {
 
-    public func createLogger<T: Logger>(with type: T.Type, for identifier: String = Self.className) -> T {
-        
-        let className = String(describing: identifier)
+    public func createLogger<T: Logger>(with type: T.Type) -> T {
         
         if !LoggerCache.keys.contains(className) {
+            print("Logging with className: \(className)")
             LoggerCache[className] = T.init()
         }
         
@@ -37,8 +36,8 @@ public extension LogReporter {
     }
     
     
-    static var className: String  {
-        return String(describing: self)
+    var className: String  {
+        return String(describing: type(of: self))
     }
     
 }

@@ -33,7 +33,35 @@ class LogReporterTests: XCTestCase, DefaultLogReporter {
     }
     
     func testLoggerClassName() {
-        let name = type(of: self).className
+        let name = self.className
         XCTAssertEqual(name, "LogReporterTests")
     }
+    
+    func testLoggerInSubclass() {
+        let object = B()
+        
+        let loggerA = object.getLoggerA()
+        let loggerB = object.getLoggerB()
+        
+        XCTAssert(loggerA === loggerB)
+    }
+}
+
+
+class A: LogReporter {
+    
+    typealias DefaultLoggerType = PrintLogger
+    
+    func getLoggerA() -> Logger {
+        return logger
+    }
+    
+}
+
+class B: A {
+    
+    func getLoggerB() -> Logger {
+        return logger
+    }
+    
 }
