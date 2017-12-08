@@ -9,14 +9,14 @@
 import Foundation
 
 /// LogFilter
-protocol LogFilter {
+public protocol LogFilter {
     
     func isFiltered<T: Logger>(logger: T) -> Bool
 }
 
 
 /// A class that holds global log filters
-class LogFilters {
+public final class LogFilters {
     
     public static let global = LogFilters()
     
@@ -36,20 +36,37 @@ class LogFilters {
 
 
 /// Filters logs based on their class
-class ClassBasedLogFilter: LogFilter {
+public class ClassBasedLogFilter: LogFilter {
     
-    var included: [Logger.Type] = []
+    private var included: [String: LogLevel]
     
-    var excluded: [Logger.Type] = []
+    private var excluded: [String: LogLevel]
     
-    func isFiltered<T>(logger: T) -> Bool where T : Logger {
+    init(included: [String: LogLevel] = [:], excluded: [String: LogLevel] = [:]) {
+        self.included = included
+        self.excluded = excluded
+    }
+    
+    public func include<T>(type: T.Type, logLevel: LogLevel) where T: Logger {
+        self.included[String(describing: type)] = logLevel
+    }
+    
+    public func exclude<T>(type: T.Type, logLevel: LogLevel) where T: Logger {
+        self.excluded[String(describing: type)] = logLevel
+    }
+    
+    public func isFiltered<T>(logger: T) -> Bool where T : Logger {
         
         if included.count > 0 {
-            return !included.contains { $0 == T.self }
+            if let level = included[String(describing: T.self)]?.rawValue {
+                return logger.logLevel.rawValue < level
+            } else {
+                return true
+            }
         }
         
-        if excluded.count > 0 {
-            return excluded.contains { $0 == T.self }
+        if excluded.count > 0, let level = excluded[String(describing: T.self)]?.rawValue {
+            return logger.logLevel.rawValue <= level
         }
         
         return false

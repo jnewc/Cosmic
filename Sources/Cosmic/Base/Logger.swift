@@ -86,7 +86,8 @@ public extension Logger {
     /// - Parameter messages: The messages to log
     public func debug(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.debug) else { return }
-        log(format(message), logLevel: .debug, metadata: LogMetadata(file: file, line: line, function: function))
+        let metadata = LogMetadata(file: file, line: line, function: function)
+        log(format(message, metadata), logLevel: .debug, metadata: metadata)
     }
     
     // MARK: info
@@ -102,7 +103,8 @@ public extension Logger {
     /// - Parameter messages: The info messages to log
     public func info(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.info) else { return }
-        log(format(message), logLevel: .info, metadata: LogMetadata(file: file, line: line, function: function))
+        let metadata = LogMetadata(file: file, line: line, function: function)
+        log(format(message, metadata), logLevel: .info, metadata: metadata)
     }
     
     // MARK: warn
@@ -115,7 +117,8 @@ public extension Logger {
     /// - Parameter messages: The warning messages to log
     public func warn(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.warn) else { return }
-        log(format(message), logLevel: .warn, metadata: LogMetadata(file: file, line: line, function: function))
+        let metadata = LogMetadata(file: file, line: line, function: function)
+        log(format(message, metadata), logLevel: .warn, metadata: metadata)
     }
     
     // MARK: error
@@ -132,10 +135,11 @@ public extension Logger {
     /// - Parameter messages: The error messages to log
     public func error(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.error) else { return }
-        log(format(message), logLevel: .error, metadata: LogMetadata(file: file, line: line, function: function))
+        let metadata = LogMetadata(file: file, line: line, function: function)
+        log(format(message, metadata), logLevel: .error, metadata: metadata)
     }
     
-    internal func format(_ message: String) -> String {
-        return formatters.reduce(message, { $1.format(message: $0) })
+    internal func format(_ message: String, _ metadata: LogMetadata) -> String {
+        return formatters.reduce(message, { $1.format(message: $0, metadata: metadata) })
     }
 }

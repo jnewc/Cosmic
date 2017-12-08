@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias BlockFormatterCompletion = (String) -> (String)
+typealias BlockFormatterCompletion = (String, LogMetadata) -> (String)
 
 class BlockFormatter: LogFormatter {
     
@@ -18,8 +18,8 @@ class BlockFormatter: LogFormatter {
         self.completion = completion
     }
     
-    func format(message: String) -> String {
-        return completion(message)
+    func format(message: String, metadata: LogMetadata) -> String {
+        return completion(message, metadata)
     }
     
 }

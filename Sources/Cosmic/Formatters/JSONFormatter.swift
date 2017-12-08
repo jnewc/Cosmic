@@ -19,7 +19,7 @@ protocol JSONFormatterConverter {
     /// <#Description#>
     var converter: JSONFormatterConverterCompletion { get }
     
-    func toJSON(message: String) -> String?
+    func toJSON(message: String, metadata: LogMetadata) -> String?
     
 }
 
@@ -35,13 +35,13 @@ class JSONFormatter: LogFormatter, JSONFormatterConverter  {
         self.converter = converter
     }
     
-    func toJSON(message: String) -> String? {
+    func toJSON(message: String, metadata: LogMetadata) -> String? {
         let dict = self.converter(message)
         return JSONSerialization.string(withJSONObject: dict, options: options)
     }
     
-    func format(message: String) -> String {
-        guard let string = toJSON(message: message) else { return message }
+    func format(message: String, metadata: LogMetadata) -> String {
+        guard let string = toJSON(message: message, metadata: metadata) else { return message }
         return string
     }
     
@@ -58,12 +58,12 @@ public class JSONBatchFormatter: BatchFormatter {
         jsonFormatter = JSONFormatter(converter: converter)
     }
     
-    public func format(message: String) -> String {
-        return jsonFormatter.format(message: message)
+    public func format(message: String, metadata: LogMetadata) -> String {
+        return jsonFormatter.format(message: message, metadata: metadata)
     }
     
-    public func format(batch: [String]) -> String {
-        return batch.map({ format(message: $0) }).joined(separator: "\n")
+    public func format(batch: [(String, LogMetadata)]) -> String {
+        return batch.map({ format(message: $0.0, metadata: $0.1) }).joined(separator: "\n")
     }
     
 }

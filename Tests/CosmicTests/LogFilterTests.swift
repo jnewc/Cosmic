@@ -47,13 +47,13 @@ class LogFilterTests: XCTestCase {
         LogFilters.global.addFilter(filter: filter)
         
         // Included overrides Excluded
-        filter.included.append(MemoryLogger.self)
-        filter.excluded.append(MemoryLogger.self)
+        filter.include(type: MemoryLogger.self, logLevel: .info)
+        filter.exclude(type: MemoryLogger.self, logLevel: .info)
         
         logger.info("This is a log")
         
         let entries = logger.cache.entriesFor(logLevel: .info)
-        XCTAssertEqual(entries.first!.message, "This is a log")
+        XCTAssertEqual(entries.first?.message, "This is a log")
         
     }
     
@@ -65,7 +65,7 @@ class LogFilterTests: XCTestCase {
         
         LogFilters.global.addFilter(filter: filter)
         
-        filter.excluded.append(MemoryLogger.self)
+        filter.exclude(type: MemoryLogger.self, logLevel: .info)
         
         logger.info("This is a log")
         

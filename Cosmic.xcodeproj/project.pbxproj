@@ -26,6 +26,7 @@
 		048F15241F1A64AA009ED8F1 /* LogFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F15231F1A64AA009ED8F1 /* LogFilterTests.swift */; };
 		048F15251F1A6C4E009ED8F1 /* SocketLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F151F1F1A5D95009ED8F1 /* SocketLoggerTests.swift */; };
 		048F15271F1A6C54009ED8F1 /* LogItLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F15201F1A5D95009ED8F1 /* LogItLoggerTests.swift */; };
+		049489241FB4F35500533B46 /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049489231FB4F35500533B46 /* ExtensionsTests.swift */; };
 		049F00E81EFED30C00BD9E41 /* CompositeLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */; };
 		049F00E91EFED30C00BD9E41 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */; };
 		049F00EC1EFED30C00BD9E41 /* LogReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F00E21EFED30C00BD9E41 /* LogReporterTests.swift */; };
@@ -83,6 +84,7 @@
 		048F151F1F1A5D95009ED8F1 /* SocketLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketLoggerTests.swift; sourceTree = "<group>"; };
 		048F15201F1A5D95009ED8F1 /* LogItLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogItLoggerTests.swift; sourceTree = "<group>"; };
 		048F15231F1A64AA009ED8F1 /* LogFilterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFilterTests.swift; sourceTree = "<group>"; };
+		049489231FB4F35500533B46 /* ExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
 		049F00DE1EFED30C00BD9E41 /* CompositeLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CompositeLoggerTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		049F00DF1EFED30C00BD9E41 /* FormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
 		049F00E01EFED30C00BD9E41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				048F15201F1A5D95009ED8F1 /* LogItLoggerTests.swift */,
 				048F15231F1A64AA009ED8F1 /* LogFilterTests.swift */,
 				04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */,
+				049489231FB4F35500533B46 /* ExtensionsTests.swift */,
 			);
 			path = CosmicTests;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				048F15251F1A6C4E009ED8F1 /* SocketLoggerTests.swift in Sources */,
 				0441B8CE1F116CC20088A851 /* LoggerTests.swift in Sources */,
 				04F559D81F2281EF0048F2E0 /* LogMetadataTests.swift in Sources */,
+				049489241FB4F35500533B46 /* ExtensionsTests.swift in Sources */,
 				049F00F21EFED83A00BD9E41 /* HTTPLoggerTests.swift in Sources */,
 				0411F6EE1EFF256200BE872F /* MockURLSession.swift in Sources */,
 				049F00EF1EFED30C00BD9E41 /* ServiceLoggerTests.swift in Sources */,

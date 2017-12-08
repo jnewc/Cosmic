@@ -10,7 +10,7 @@ import Foundation
 
 public protocol LogFormatter {
     
-    func format(message: String) -> String
+    func format(message: String, metadata: LogMetadata) -> String
     
 }
 
@@ -32,8 +32,12 @@ open class BasicLogFormatter: LogFormatter {
         self.suffix = suffix
     }
     
-    public func format(message: String) -> String {
-        return "\(prefix)\(message)\(suffix)"
+    func prefix(for metadata: LogMetadata) -> String {
+        return "[\(metadata.file) → \(metadata.function):\(metadata.line)] "
+    }
+    
+    public func format(message: String, metadata: LogMetadata) -> String {
+        return "\(prefix(for: metadata))\(prefix)\(message)\(suffix)"
     }
 }
 
@@ -44,11 +48,11 @@ open class DateLogFormatter: BasicLogFormatter {
 
     let dateFormatter = DateFormatter()
     
-    override public func format(message: String) -> String {
+    override public func format(message: String, metadata: LogMetadata) -> String {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let date = dateFormatter.string(from: Date())
         self.prefix = date
-        return super.format(message: " \(message)")
+        return super.format(message: " \(message)", metadata: metadata)
     }
     
 }
@@ -57,7 +61,7 @@ open class DateLogFormatter: BasicLogFormatter {
 
 public protocol BatchFormatter: LogFormatter {
     
-    func format (batch: [String]) -> String
+    func format (batch: [(String, LogMetadata)]) -> String
     
 }
 
@@ -65,12 +69,12 @@ public protocol BatchFormatter: LogFormatter {
 
 public class NewLineBatchFormatter: BatchFormatter {
     
-    public func format(message: String) -> String {
+    public func format(message: String, metadata: LogMetadata) -> String {
         return message
     }
     
-    public func format(batch: [String]) -> String {
-        return batch.map({ format(message: $0) }).joined(separator: "\n")
+    public func format(batch: [(String, LogMetadata)]) -> String {
+        return batch.map({ format(message: $0.0, metadata: $0.1) }).joined(separator: "\n")
     }
     
 }

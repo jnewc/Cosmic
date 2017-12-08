@@ -59,8 +59,8 @@ public class HTTPLogger: Logger {
     internal var session: URLSession
     
     internal var config: HTTPLoggerConfig?
-    
-    internal var cache: [String] = []
+    // TODO: use LogCacheEntry
+    internal var cache: [(String, LogMetadata)] = []
     
     required public init() {
         let queue = OperationQueue()
@@ -74,7 +74,7 @@ public class HTTPLogger: Logger {
     }
 
     public func log(_ message: String, logLevel: LogLevel, metadata: LogMetadata) {
-        cache.append(message)
+        cache.append((message, metadata))
         attemptSend()
     }
 
