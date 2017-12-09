@@ -84,8 +84,8 @@ class FormatterTests: XCTestCase {
     
     func testBlockFormatter() {
         
-        let blockFormatter = BlockFormatter {
-            return "« \($0.0) »"
+        let blockFormatter = BlockFormatter { message, _ in
+            return "« \(message) »"
         }
         
         let formattedMessage = blockFormatter.format(message: "Test", metadata: LogMetadata())
