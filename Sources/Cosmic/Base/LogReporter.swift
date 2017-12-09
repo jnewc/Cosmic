@@ -45,6 +45,6 @@ public extension LogReporter {
 
 public protocol DefaultLogReporter: LogReporter {
     
-    associatedtype DefaultLoggerType: Logger = PrintLogger
+    associatedtype DefaultLoggerType = PrintLogger
     
 }

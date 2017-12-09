@@ -8,16 +8,10 @@
 
 import XCTest
 
-extension NSRange: Equatable {
-    public static func ==(lhs: _NSRange, rhs: _NSRange) -> Bool {
-        return lhs.location == rhs.location && lhs.length == rhs.length
-    }
-}
-
 func XCTAssertMatches(input: String, pattern: String) {
     
     let re = try! NSRegularExpression(pattern: pattern, options: [])
-    let  range = NSRange(location: 0, length: input.characters.count)
+    let  range = NSRange(location: 0, length: input.count)
     let matches = re.matches(in: input, options: [], range: range)
     
     // Asserts that the pattern matches the entire range
