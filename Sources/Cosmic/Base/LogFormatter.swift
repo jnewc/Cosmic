@@ -33,7 +33,7 @@ open class BasicLogFormatter: LogFormatter {
     }
     
     func prefix(for metadata: LogMetadata) -> String {
-        return "[\(metadata.file) → \(metadata.function):\(metadata.line)] "
+        return "[\(metadata.filename) → \(metadata.function):\(metadata.line)] "
     }
     
     public func format(message: String, metadata: LogMetadata) -> String {

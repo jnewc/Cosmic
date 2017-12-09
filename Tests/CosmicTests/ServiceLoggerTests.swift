@@ -53,7 +53,7 @@ class ServiceLoggerTests: XCTestCase {
         XCTAssertEqual(logger.config?.method, LogglyServiceConfig.method)
         XCTAssertEqual(logger.config?.headers[HTTPHeader.ContentType], HTTPHeader.ContentTypeJSON)
         
-        let formattedString = logger.batchFormatter.format(message: "Test")
+        let formattedString = logger.batchFormatter.format(message: "Test", metadata: LogMetadata())
         XCTAssertNotNil(formattedString)
         
         let json = try! JSONSerialization.jsonObject(with: formattedString.data(using: .utf8)!, options: []) as! [String: String]

@@ -52,7 +52,7 @@ class LoggerTests: XCTestCase {
         let entries = logger.cache.entriesFor(logLevel: .info)
         
         XCTAssertEqual(entries.count, 1)
-        XCTAssertEqual(entries.first?.message, "Prefix Message")
+        XCTAssertEqual(entries.first!.message, "[LoggerTests.swift → testFormatters():50] Prefix Message")
     }
     
 }

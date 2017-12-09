@@ -23,6 +23,11 @@ public struct LogMetadata {
         self.function = function
     }
     
+    // MARK: Computed properties
+    
+    var filename: String {
+        return "\(file)".components(separatedBy: "/").last ?? "\(file)"
+    }
 }
 
 
