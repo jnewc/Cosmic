@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
 
   s.source_files  = "ObjC-Sources/**/*.swift", "Sources/**/*.swift"
 
-  s.dependency "BlueSocket", "~> 0.12.0"
+  s.dependency "BlueSocket", "~> 1.0"
 
 end
