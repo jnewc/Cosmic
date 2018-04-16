@@ -18,7 +18,7 @@ public class MemoryLogger: Logger {
     
     public var formatters: [LogFormatter] = []
     
-    internal var cache: LogCache = LogCache()
+    internal(set) var cache: LogCache = LogCache()
 
     public required init() { }
 

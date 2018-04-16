@@ -84,7 +84,7 @@ class FormatterTests: XCTestCase {
     
     func testBlockFormatter() {
         
-        let blockFormatter = BlockFormatter { message, _ in
+        let blockFormatter = LambdaFormatter { message, _ in
             return "« \(message) »"
         }
         
