@@ -13,6 +13,7 @@
 		0411F6EF1EFF256200BE872F /* RegularExpressionAsserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6ED1EFF256200BE872F /* RegularExpressionAsserts.swift */; };
 		0411F6F11F02F5CC00BE872F /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6F01F02F5CC00BE872F /* Debug.swift */; };
 		0411F6F31F03097B00BE872F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6F21F03097B00BE872F /* Operators.swift */; };
+		04126BF320868AAF00A4059D /* UniversalSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04126BF220868AAF00A4059D /* UniversalSocket.swift */; };
 		041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041DF7FE1E88547100934C76 /* Cosmic.framework */; };
 		043F76D1A753AD879F5C9903 /* Pods_CosmicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81958AC61E937B08DB5441EA /* Pods_CosmicTests.framework */; };
 		0441B8CE1F116CC20088A851 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441B8CD1F116CC20088A851 /* LoggerTests.swift */; };
@@ -72,6 +73,7 @@
 		0411F6ED1EFF256200BE872F /* RegularExpressionAsserts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionAsserts.swift; sourceTree = "<group>"; };
 		0411F6F01F02F5CC00BE872F /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		0411F6F21F03097B00BE872F /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		04126BF220868AAF00A4059D /* UniversalSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalSocket.swift; sourceTree = "<group>"; };
 		041DF7FE1E88547100934C76 /* Cosmic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041DF8071E88547100934C76 /* CosmicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0441B8CD1F116CC20088A851 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */,
 				049489231FB4F35500533B46 /* ExtensionsTests.swift */,
 				0409989D2085362600DBD481 /* LamdaLoggerTests.swift */,
+				04126BF220868AAF00A4059D /* UniversalSocket.swift */,
 			);
 			path = CosmicTests;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				048F15271F1A6C54009ED8F1 /* LogItLoggerTests.swift in Sources */,
 				0409989E2085362600DBD481 /* LamdaLoggerTests.swift in Sources */,
 				049F00EC1EFED30C00BD9E41 /* LogReporterTests.swift in Sources */,
+				04126BF320868AAF00A4059D /* UniversalSocket.swift in Sources */,
 				04FCF0FF1F115EE500505A5F /* OperatorsTests.swift in Sources */,
 				049F00F71EFF0CCA00BD9E41 /* PrintLoggerTests.swift in Sources */,
 				049F00E81EFED30C00BD9E41 /* CompositeLoggerTests.swift in Sources */,

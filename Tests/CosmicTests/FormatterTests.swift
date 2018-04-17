@@ -25,11 +25,20 @@ class FormatterTests: XCTestCase {
     
     func testBasicLogFormatter() {
         
+        let formatter = BasicLogFormatter()
+        
+        let string = formatter.format(message: "a", metadata: LogMetadata()); let line = #line
+        
+        XCTAssertEqual(string, "[FormatterTests.swift → testBasicLogFormatter():\(line)] a")
+    }
+    
+    func testBasicLogFormatterWithPrefixAndSuffix() {
+        
         let formatter = BasicLogFormatter(prefix: "a", suffix: "c")
         
-        let string = formatter.format(message: "b", metadata: LogMetadata())
+        let string = formatter.format(message: "b", metadata: LogMetadata()); let line = #line
         
-        XCTAssertEqual(string, "[FormatterTests.swift → testBasicLogFormatter():30] abc")
+        XCTAssertEqual(string, "[FormatterTests.swift → testBasicLogFormatterWithPrefixAndSuffix():\(line)] abc")
         
     }
     
@@ -94,12 +103,12 @@ class FormatterTests: XCTestCase {
     }
     
     func testDateFormatter() {        
-//        let dateFormatter = DateLogFormatter()
-//
-//        let formattedMessage = dateFormatter.format(message: "Test", metadata: LogMetadata())
-//
-//        // TODO
-//        XCTAssertMatches(input: formattedMessage, pattern: "[FormatterTests.swift → testDateFormatter():100] \(dateTimeExpr) Test")
+        let dateFormatter = DateLogFormatter()
+
+        let formattedMessage = dateFormatter.format(message: "Test", metadata: LogMetadata()); let line = #line
+
+        // TODO
+        XCTAssertMatches(input: formattedMessage, pattern: "\\[FormatterTests\\.swift → testDateFormatter\\(\\):\(line)\\] \(dateTimeExpr) Test")
     }
     
     // MARK: Batch formatters
