@@ -5,11 +5,11 @@ coverage:
   status:
     project:
       default:
-        target: 80...90
+        target: auto
   range: 80...90
   round: down
   precision: 1
   ignore:
-    - Tests/
-    - cosmicPlaygrounds/
-    - Package.swift
+    - "Tests/**/*"
+    - "cosmicPlaygrounds/**/*"
+    - "Package.swift"

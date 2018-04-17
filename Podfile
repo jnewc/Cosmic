@@ -6,7 +6,7 @@ target 'Cosmic' do
   use_frameworks!
 
   # Pods for Cosmic
-  pod 'BlueSocket', "~> 0.12.0"
+  pod 'BlueSocket', "~> 1.0"
 
   target 'CosmicTests' do
     inherit! :search_paths

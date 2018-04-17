@@ -71,8 +71,25 @@ class LogFilterTests: XCTestCase {
         
         let entries = logger.cache.entriesFor(logLevel: .info)
         XCTAssert(entries.isEmpty)
-
+        
+    }
     
+    func testClassLogFilterIncluded() {
+        
+        let memoryLogger = MemoryLogger()
+        let printLogger = PrintLogger()
+        
+        let filter = ClassBasedLogFilter()
+        
+        LogFilters.global.addFilter(filter: filter)
+        
+        filter.include(type: PrintLogger.self, logLevel: .info)
+        
+        memoryLogger.info("This is a log")
+        
+        let entries = memoryLogger.cache.entriesFor(logLevel: .info)
+        XCTAssert(entries.isEmpty)
+        
     }
     
 }

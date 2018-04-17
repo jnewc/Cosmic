@@ -21,6 +21,16 @@ class ServiceLoggerTests: XCTestCase {
         super.tearDown()
     }
     
+    func testLogzLoggerFormatters() {
+        
+        let logger = LogzLogger()
+        
+        let formatter = logger.formatters.first as? JSONFormatter
+        
+        XCTAssertNotNil(formatter)
+        XCTAssertEqual(formatter?.converter("Test")["message"] as? String, "Test")
+        
+    }
     
     func testLogzLogger() {
         
@@ -35,6 +45,16 @@ class ServiceLoggerTests: XCTestCase {
         XCTAssertEqual(logger.config!.method, LogzServiceConfig.method)
         
         XCTAssertEqual(logger.config!.query[LogzServiceConfig.tokenKey]!, "MY_TOKEN")
+    }
+    
+    func testLogzLoggerLevel() {
+        
+        let logger = LogzLogger(withToken: "MY_TOKEN")
+        
+        logger.logLevel = .warn
+        
+        XCTAssertEqual(logger.config?.query[LogzServiceConfig.typeKey], LogLevel.warn.simpleName)
+
     }
     
     func testPapertrailLogger() {

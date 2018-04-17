@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0409989C2085354800DBD481 /* LambdaLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409989B2085354800DBD481 /* LambdaLogger.swift */; };
+		0409989E2085362600DBD481 /* LamdaLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409989D2085362600DBD481 /* LamdaLoggerTests.swift */; };
 		0411F6EE1EFF256200BE872F /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6EC1EFF256200BE872F /* MockURLSession.swift */; };
 		0411F6EF1EFF256200BE872F /* RegularExpressionAsserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6ED1EFF256200BE872F /* RegularExpressionAsserts.swift */; };
 		0411F6F11F02F5CC00BE872F /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6F01F02F5CC00BE872F /* Debug.swift */; };
 		0411F6F31F03097B00BE872F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6F21F03097B00BE872F /* Operators.swift */; };
+		04126BF320868AAF00A4059D /* UniversalSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04126BF220868AAF00A4059D /* UniversalSocket.swift */; };
 		041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041DF7FE1E88547100934C76 /* Cosmic.framework */; };
 		043F76D1A753AD879F5C9903 /* Pods_CosmicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81958AC61E937B08DB5441EA /* Pods_CosmicTests.framework */; };
 		0441B8CE1F116CC20088A851 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441B8CD1F116CC20088A851 /* LoggerTests.swift */; };
@@ -40,7 +43,7 @@
 		04A4A93D1EFB1FD200EBD44E /* LogOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9161EFB1FBA00EBD44E /* LogOutputStream.swift */; };
 		04A4A93E1EFB1FD200EBD44E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9171EFB1FBA00EBD44E /* Logger.swift */; };
 		04A4A93F1EFB1FD200EBD44E /* LogReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9181EFB1FBA00EBD44E /* LogReporter.swift */; };
-		04A4A9401EFB1FD200EBD44E /* BlockFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A91B1EFB1FBA00EBD44E /* BlockFormatter.swift */; };
+		04A4A9401EFB1FD200EBD44E /* CompletionFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A91B1EFB1FBA00EBD44E /* CompletionFormatter.swift */; };
 		04A4A9421EFB1FD200EBD44E /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A91D1EFB1FBA00EBD44E /* JSONFormatter.swift */; };
 		04A4A9431EFB1FD200EBD44E /* CompositeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9201EFB1FBA00EBD44E /* CompositeLogger.swift */; };
 		04A4A9441EFB1FD200EBD44E /* HTTPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9211EFB1FBA00EBD44E /* HTTPLogger.swift */; };
@@ -64,13 +67,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0409989B2085354800DBD481 /* LambdaLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambdaLogger.swift; sourceTree = "<group>"; };
+		0409989D2085362600DBD481 /* LamdaLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LamdaLoggerTests.swift; sourceTree = "<group>"; };
 		0411F6EC1EFF256200BE872F /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		0411F6ED1EFF256200BE872F /* RegularExpressionAsserts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionAsserts.swift; sourceTree = "<group>"; };
 		0411F6F01F02F5CC00BE872F /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		0411F6F21F03097B00BE872F /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		04126BF220868AAF00A4059D /* UniversalSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalSocket.swift; sourceTree = "<group>"; };
 		041DF7FE1E88547100934C76 /* Cosmic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041DF8071E88547100934C76 /* CosmicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		041DF8681E89975300934C76 /* LoggerPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LoggerPlayground.playground; sourceTree = "<group>"; };
 		0441B8CD1F116CC20088A851 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		046BDDB11F058CC4008F1C1C /* SyslogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyslogFormatter.swift; sourceTree = "<group>"; };
 		046BDDB31F058CEB008F1C1C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -99,7 +104,7 @@
 		04A4A9171EFB1FBA00EBD44E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Logger.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		04A4A9181EFB1FBA00EBD44E /* LogReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogReporter.swift; sourceTree = "<group>"; };
 		04A4A9191EFB1FBA00EBD44E /* cosmic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cosmic.h; sourceTree = "<group>"; };
-		04A4A91B1EFB1FBA00EBD44E /* BlockFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockFormatter.swift; sourceTree = "<group>"; };
+		04A4A91B1EFB1FBA00EBD44E /* CompletionFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionFormatter.swift; sourceTree = "<group>"; };
 		04A4A91D1EFB1FBA00EBD44E /* JSONFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
 		04A4A91E1EFB1FBA00EBD44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A4A9201EFB1FBA00EBD44E /* CompositeLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CompositeLogger.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -153,7 +158,6 @@
 			children = (
 				04A4A9101EFB1FBA00EBD44E /* Sources */,
 				049F00DC1EFED30C00BD9E41 /* Tests */,
-				041DF8671E89973B00934C76 /* cosmicPlaygrounds */,
 				041DF7FF1E88547100934C76 /* Products */,
 				048C4CB550C15323CCA41E99 /* Pods */,
 				BE6EB05743C15C1B28CA232F /* Frameworks */,
@@ -167,14 +171,6 @@
 				041DF8071E88547100934C76 /* CosmicTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		041DF8671E89973B00934C76 /* cosmicPlaygrounds */ = {
-			isa = PBXGroup;
-			children = (
-				041DF8681E89975300934C76 /* LoggerPlayground.playground */,
-			);
-			path = cosmicPlaygrounds;
 			sourceTree = "<group>";
 		};
 		048C4CB550C15323CCA41E99 /* Pods */ = {
@@ -234,6 +230,8 @@
 				048F15231F1A64AA009ED8F1 /* LogFilterTests.swift */,
 				04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */,
 				049489231FB4F35500533B46 /* ExtensionsTests.swift */,
+				0409989D2085362600DBD481 /* LamdaLoggerTests.swift */,
+				04126BF220868AAF00A4059D /* UniversalSocket.swift */,
 			);
 			path = CosmicTests;
 			sourceTree = "<group>";
@@ -277,7 +275,7 @@
 		04A4A91A1EFB1FBA00EBD44E /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
-				04A4A91B1EFB1FBA00EBD44E /* BlockFormatter.swift */,
+				04A4A91B1EFB1FBA00EBD44E /* CompletionFormatter.swift */,
 				04A4A91D1EFB1FBA00EBD44E /* JSONFormatter.swift */,
 				046BDDB11F058CC4008F1C1C /* SyslogFormatter.swift */,
 			);
@@ -291,6 +289,7 @@
 				04A4A9211EFB1FBA00EBD44E /* HTTPLogger.swift */,
 				04A4A9221EFB1FBA00EBD44E /* MemoryLogger.swift */,
 				04A4A9231EFB1FBA00EBD44E /* PrintLogger.swift */,
+				0409989B2085354800DBD481 /* LambdaLogger.swift */,
 			);
 			path = Loggers;
 			sourceTree = "<group>";
@@ -340,7 +339,6 @@
 				041DF7FA1E88547000934C76 /* Frameworks */,
 				041DF7FB1E88547000934C76 /* Headers */,
 				041DF7FC1E88547000934C76 /* Resources */,
-				5E445A188BAF473BC30095C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -359,7 +357,6 @@
 				041DF8031E88547100934C76 /* Sources */,
 				041DF8041E88547100934C76 /* Frameworks */,
 				71948139AF87D9015C26E530 /* [CP] Embed Pods Frameworks */,
-				1420E216F67AF38F908F0A18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,7 +375,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Jack Newcombe";
 				TargetAttributes = {
 					041DF7FD1E88547000934C76 = {
@@ -422,36 +419,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1420E216F67AF38F908F0A18 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5E445A188BAF473BC30095C6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cosmic/Pods-Cosmic-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		71948139AF87D9015C26E530 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -521,6 +488,7 @@
 				04A4A93F1EFB1FD200EBD44E /* LogReporter.swift in Sources */,
 				04A4A9451EFB1FD200EBD44E /* MemoryLogger.swift in Sources */,
 				04A4A9421EFB1FD200EBD44E /* JSONFormatter.swift in Sources */,
+				0409989C2085354800DBD481 /* LambdaLogger.swift in Sources */,
 				04A4A93E1EFB1FD200EBD44E /* Logger.swift in Sources */,
 				048F151A1F16C57E009ED8F1 /* LogzLogger.swift in Sources */,
 				04A4A93C1EFB1FD200EBD44E /* LogLevel.swift in Sources */,
@@ -534,7 +502,7 @@
 				048F151B1F16C57E009ED8F1 /* PapertrailLogger.swift in Sources */,
 				04A4A93D1EFB1FD200EBD44E /* LogOutputStream.swift in Sources */,
 				048F151E1F1973EA009ED8F1 /* LogFilter.swift in Sources */,
-				04A4A9401EFB1FD200EBD44E /* BlockFormatter.swift in Sources */,
+				04A4A9401EFB1FD200EBD44E /* CompletionFormatter.swift in Sources */,
 				048F15191F16C57E009ED8F1 /* LogItLogger.swift in Sources */,
 				0411F6F11F02F5CC00BE872F /* Debug.swift in Sources */,
 				04A4A9461EFB1FD200EBD44E /* PrintLogger.swift in Sources */,
@@ -548,7 +516,9 @@
 				048F15241F1A64AA009ED8F1 /* LogFilterTests.swift in Sources */,
 				049F00E91EFED30C00BD9E41 /* FormatterTests.swift in Sources */,
 				048F15271F1A6C54009ED8F1 /* LogItLoggerTests.swift in Sources */,
+				0409989E2085362600DBD481 /* LamdaLoggerTests.swift in Sources */,
 				049F00EC1EFED30C00BD9E41 /* LogReporterTests.swift in Sources */,
+				04126BF320868AAF00A4059D /* UniversalSocket.swift in Sources */,
 				04FCF0FF1F115EE500505A5F /* OperatorsTests.swift in Sources */,
 				049F00F71EFF0CCA00BD9E41 /* PrintLoggerTests.swift in Sources */,
 				049F00E81EFED30C00BD9E41 /* CompositeLoggerTests.swift in Sources */,
@@ -587,6 +557,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -594,6 +565,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -646,6 +618,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -653,6 +626,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -25,3 +25,4 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 .cocoapods-store.yml
+.DS_Store
