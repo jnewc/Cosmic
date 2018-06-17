@@ -21,7 +21,7 @@ struct LogCacheEntry {
 }
 
 
-class LogCache {
+public class LogCache {
     
     fileprivate var entries: [LogCacheEntry] = []
     
