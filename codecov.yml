@@ -1,4 +1,14 @@
 codecov:
+  notify:
+    require_ci_to_pass: yes
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+  range: 80...90
+  round: down
+  precision: 1
   ignore:
     - "Tests/**/*"
     - "cosmicPlaygrounds/**/*"
