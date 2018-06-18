@@ -8,22 +8,22 @@
 
 import Foundation
 
-struct LogCacheEntry {
+public struct LogCacheEntry {
     
-    let logLevel: LogLevel
+    public let logLevel: LogLevel
     
-    let message: String
+    public let message: String
     
-    let metadata: LogMetadata
+    public let metadata: LogMetadata
 
-    let created: Date = Date()
+    public let created: Date = Date()
     
 }
 
 
 public class LogCache {
     
-    fileprivate var entries: [LogCacheEntry] = []
+    public private(set) var entries: [LogCacheEntry] = []
     
     init() { }
     
@@ -32,7 +32,7 @@ public class LogCache {
         entries.append(entry)
     }
     
-    func entriesFor(logLevel: LogLevel) -> [LogCacheEntry] {
+    public func entriesFor(logLevel: LogLevel) -> [LogCacheEntry] {
         return entries.filter { $0.logLevel == logLevel }
     }
     
