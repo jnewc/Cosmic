@@ -26,7 +26,6 @@ class AssertionOutputStream: LogOutputStream {
     }
     
     override func write(_ string: String) {
-        //print("ASSERT: \(string.replacingOccurrences(of: "\n", with: "\\n"))")
         output += string
     }
     
