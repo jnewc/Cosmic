@@ -23,7 +23,6 @@ public extension LogReporter {
     public func createLogger<T: Logger>(with type: T.Type) -> T {
         
         if !LoggerCache.keys.contains(className) {
-            print("Logging with className: \(className)")
             LoggerCache[className] = T.init()
         }
         
@@ -31,7 +30,7 @@ public extension LogReporter {
         
     }
     
-    public var logger: Logger {
+    public var logger: DefaultLoggerType {
         return self.createLogger(with: DefaultLoggerType.self)
     }
     

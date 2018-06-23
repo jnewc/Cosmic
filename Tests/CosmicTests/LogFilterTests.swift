@@ -77,7 +77,6 @@ class LogFilterTests: XCTestCase {
     func testClassLogFilterIncluded() {
         
         let memoryLogger = MemoryLogger()
-        let printLogger = PrintLogger()
         
         let filter = ClassBasedLogFilter()
         
