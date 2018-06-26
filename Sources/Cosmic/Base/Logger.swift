@@ -17,7 +17,7 @@ public struct LogMetadata {
     
     let function: StaticString
     
-    init(file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
+    public init(file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         self.file = file
         self.line = line
         self.function = function
