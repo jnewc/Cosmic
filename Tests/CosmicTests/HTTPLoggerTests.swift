@@ -10,23 +10,23 @@ import XCTest
 @testable import Cosmic
 
 class HTTPLoggerTests: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each tevarmethod in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testHTTPLoggerConfig() {
 
         let loggingUrl = "http://127.0.0.1:8089/log"
         let loggingMethod = "GET"
         let log = "Test"
-        
+
         let expected = self.expectation(description: "Expect to receive log in server")
 
         let config = HTTPLoggerConfig(
@@ -35,10 +35,10 @@ class HTTPLoggerTests: XCTestCase {
             query: ["search": "term", "charset": "utf-8"],
             headers: [ HTTPHeader.ContentType: HTTPHeader.ContentTypePlainText ]
         )
-        
+
         // SUT
         let logger = HTTPLogger(config: config)
-        
+
         let session = URLSessionMock()
         session.completionHandler = { request in
             expected.fulfill()
@@ -50,9 +50,15 @@ class HTTPLoggerTests: XCTestCase {
         logger.session = session
 
         logger.info(log)
-        
+
         self.waitForExpectations(timeout: 5.0, handler: nil)
-        
+
     }
-    
+
+    func testHTTPLoggerQueue() {
+
+      let config = HTTPLogger()
+      XCTAssertEqual(config.session.delegateQueue.underlyingQueue, config.underlyingQueue)
+    }
+
 }
