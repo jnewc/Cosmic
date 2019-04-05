@@ -53,9 +53,8 @@
 		04B6F626220A1B57002395CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6F624220A1AB0002395CB /* Extensions.swift */; };
 		04F559D81F2281EF0048F2E0 /* LogMetadataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */; };
 		04FCF0FF1F115EE500505A5F /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */; };
-		2424FB74A45D24C34DE182DE /* Pods_Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073B57C1D9628A41B5913474 /* Pods_Cosmic.framework */; };
-		84DC3C6D15C75162537E06F0 /* Pods_Cosmic_CosmicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474E6F962F4A9A46C67AB0 /* Pods_Cosmic_CosmicTests.framework */; };
-		90E6C690C1F7DD03137682F5 /* Pods_CosmicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E195DCFA62426EB7B2D15DAF /* Pods_CosmicTests.framework */; };
+		B7269400CC9BB5968B46D37D /* Pods_Cosmic_CosmicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40971D2E3513CD347342079 /* Pods_Cosmic_CosmicTests.framework */; };
+		E3D291F5B0C7B6B4F70E755F /* Pods_Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF8F3FB7210F66EF3963974 /* Pods_Cosmic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +68,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00FC2DBF02A694C144DEE247 /* Pods-Cosmic-CosmicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic-CosmicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmic-CosmicTests/Pods-Cosmic-CosmicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0409989B2085354800DBD481 /* LambdaLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambdaLogger.swift; sourceTree = "<group>"; };
 		0409989D2085362600DBD481 /* LamdaLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LamdaLoggerTests.swift; sourceTree = "<group>"; };
 		0411F6EC1EFF256200BE872F /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
@@ -119,14 +117,12 @@
 		04B6F624220A1AB0002395CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMetadataTests.swift; sourceTree = "<group>"; };
 		04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
-		073B57C1D9628A41B5913474 /* Pods_Cosmic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		60D283CB210C0089A0704073 /* Pods-CosmicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests.debug.xcconfig"; sourceTree = "<group>"; };
-		67D62702415ADE471E9854E0 /* Pods-Cosmic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmic/Pods-Cosmic.release.xcconfig"; sourceTree = "<group>"; };
-		71AA5B2306CCF8F7E30DAFCF /* Pods-Cosmic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmic/Pods-Cosmic.debug.xcconfig"; sourceTree = "<group>"; };
-		948DF1F6FB67076ED2D1EB46 /* Pods-Cosmic-CosmicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic-CosmicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmic-CosmicTests/Pods-Cosmic-CosmicTests.release.xcconfig"; sourceTree = "<group>"; };
-		A6C0E657308E5EFEC717A37A /* Pods-CosmicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests.release.xcconfig"; sourceTree = "<group>"; };
-		D9474E6F962F4A9A46C67AB0 /* Pods_Cosmic_CosmicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmic_CosmicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E195DCFA62426EB7B2D15DAF /* Pods_CosmicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5746EE44325AA0D496907733 /* Pods-Cosmic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic.release.xcconfig"; path = "Target Support Files/Pods-Cosmic/Pods-Cosmic.release.xcconfig"; sourceTree = "<group>"; };
+		713BE102665C449D210B9ADD /* Pods-Cosmic-CosmicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic-CosmicTests.release.xcconfig"; path = "Target Support Files/Pods-Cosmic-CosmicTests/Pods-Cosmic-CosmicTests.release.xcconfig"; sourceTree = "<group>"; };
+		799A1DF9AA1AFE1DD4562083 /* Pods-Cosmic-CosmicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic-CosmicTests.debug.xcconfig"; path = "Target Support Files/Pods-Cosmic-CosmicTests/Pods-Cosmic-CosmicTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8CF8F3FB7210F66EF3963974 /* Pods_Cosmic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C379517DF25C6130ADF54279 /* Pods-Cosmic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic.debug.xcconfig"; path = "Target Support Files/Pods-Cosmic/Pods-Cosmic.debug.xcconfig"; sourceTree = "<group>"; };
+		F40971D2E3513CD347342079 /* Pods_Cosmic_CosmicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmic_CosmicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2424FB74A45D24C34DE182DE /* Pods_Cosmic.framework in Frameworks */,
+				E3D291F5B0C7B6B4F70E755F /* Pods_Cosmic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */,
-				90E6C690C1F7DD03137682F5 /* Pods_CosmicTests.framework in Frameworks */,
-				84DC3C6D15C75162537E06F0 /* Pods_Cosmic_CosmicTests.framework in Frameworks */,
+				B7269400CC9BB5968B46D37D /* Pods_Cosmic_CosmicTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,8 +162,8 @@
 				04A4A9101EFB1FBA00EBD44E /* Sources */,
 				049F00DC1EFED30C00BD9E41 /* Tests */,
 				041DF7FF1E88547100934C76 /* Products */,
-				048C4CB550C15323CCA41E99 /* Pods */,
-				BE6EB05743C15C1B28CA232F /* Frameworks */,
+				2F2A4954145D9053BAD79B0D /* Pods */,
+				C9A10A1DBC5541F113DCE574 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,19 +174,6 @@
 				041DF8071E88547100934C76 /* CosmicTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		048C4CB550C15323CCA41E99 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				71AA5B2306CCF8F7E30DAFCF /* Pods-Cosmic.debug.xcconfig */,
-				67D62702415ADE471E9854E0 /* Pods-Cosmic.release.xcconfig */,
-				60D283CB210C0089A0704073 /* Pods-CosmicTests.debug.xcconfig */,
-				A6C0E657308E5EFEC717A37A /* Pods-CosmicTests.release.xcconfig */,
-				00FC2DBF02A694C144DEE247 /* Pods-Cosmic-CosmicTests.debug.xcconfig */,
-				948DF1F6FB67076ED2D1EB46 /* Pods-Cosmic-CosmicTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		048F15111F16C57E009ED8F1 /* Socket */ = {
@@ -317,12 +299,23 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		BE6EB05743C15C1B28CA232F /* Frameworks */ = {
+		2F2A4954145D9053BAD79B0D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				073B57C1D9628A41B5913474 /* Pods_Cosmic.framework */,
-				E195DCFA62426EB7B2D15DAF /* Pods_CosmicTests.framework */,
-				D9474E6F962F4A9A46C67AB0 /* Pods_Cosmic_CosmicTests.framework */,
+				C379517DF25C6130ADF54279 /* Pods-Cosmic.debug.xcconfig */,
+				5746EE44325AA0D496907733 /* Pods-Cosmic.release.xcconfig */,
+				799A1DF9AA1AFE1DD4562083 /* Pods-Cosmic-CosmicTests.debug.xcconfig */,
+				713BE102665C449D210B9ADD /* Pods-Cosmic-CosmicTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C9A10A1DBC5541F113DCE574 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CF8F3FB7210F66EF3963974 /* Pods_Cosmic.framework */,
+				F40971D2E3513CD347342079 /* Pods_Cosmic_CosmicTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -345,7 +338,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 041DF8121E88547100934C76 /* Build configuration list for PBXNativeTarget "Cosmic" */;
 			buildPhases = (
-				76110DFCCC4700F06B64F610 /* [CP] Check Pods Manifest.lock */,
+				D77CD76F6A0DD3CF694C24A6 /* [CP] Check Pods Manifest.lock */,
 				041DF7F91E88547000934C76 /* Sources */,
 				041DF7FA1E88547000934C76 /* Frameworks */,
 				041DF7FB1E88547000934C76 /* Headers */,
@@ -364,10 +357,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 041DF8151E88547100934C76 /* Build configuration list for PBXNativeTarget "CosmicTests" */;
 			buildPhases = (
-				FEFAD892C51DA0E4A6746923 /* [CP] Check Pods Manifest.lock */,
+				645EEEBBCD6D525A1C812DA8 /* [CP] Check Pods Manifest.lock */,
 				041DF8031E88547100934C76 /* Sources */,
 				041DF8041E88547100934C76 /* Frameworks */,
-				EFFE4E52619EF22B1FBD100B /* [CP] Embed Pods Frameworks */,
+				2CBAD1F5CC8DFDE03DE89E90 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -432,29 +425,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		76110DFCCC4700F06B64F610 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Cosmic-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EFFE4E52619EF22B1FBD100B /* [CP] Embed Pods Frameworks */ = {
+		2CBAD1F5CC8DFDE03DE89E90 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -476,7 +447,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cosmic-CosmicTests/Pods-Cosmic-CosmicTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FEFAD892C51DA0E4A6746923 /* [CP] Check Pods Manifest.lock */ = {
+		645EEEBBCD6D525A1C812DA8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -492,6 +463,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Cosmic-CosmicTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D77CD76F6A0DD3CF694C24A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cosmic-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -689,7 +682,7 @@
 		};
 		041DF8131E88547100934C76 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71AA5B2306CCF8F7E30DAFCF /* Pods-Cosmic.debug.xcconfig */;
+			baseConfigurationReference = C379517DF25C6130ADF54279 /* Pods-Cosmic.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -709,7 +702,7 @@
 		};
 		041DF8141E88547100934C76 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67D62702415ADE471E9854E0 /* Pods-Cosmic.release.xcconfig */;
+			baseConfigurationReference = 5746EE44325AA0D496907733 /* Pods-Cosmic.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -728,7 +721,7 @@
 		};
 		041DF8161E88547100934C76 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00FC2DBF02A694C144DEE247 /* Pods-Cosmic-CosmicTests.debug.xcconfig */;
+			baseConfigurationReference = 799A1DF9AA1AFE1DD4562083 /* Pods-Cosmic-CosmicTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -741,7 +734,7 @@
 		};
 		041DF8171E88547100934C76 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 948DF1F6FB67076ED2D1EB46 /* Pods-Cosmic-CosmicTests.release.xcconfig */;
+			baseConfigurationReference = 713BE102665C449D210B9ADD /* Pods-Cosmic-CosmicTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
