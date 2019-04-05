@@ -15,7 +15,6 @@
 		0411F6F31F03097B00BE872F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6F21F03097B00BE872F /* Operators.swift */; };
 		04126BF320868AAF00A4059D /* UniversalSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04126BF220868AAF00A4059D /* UniversalSocket.swift */; };
 		041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041DF7FE1E88547100934C76 /* Cosmic.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		043F76D1A753AD879F5C9903 /* Pods_CosmicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81958AC61E937B08DB5441EA /* Pods_CosmicTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		0441B8CE1F116CC20088A851 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441B8CD1F116CC20088A851 /* LoggerTests.swift */; };
 		046BDDB21F058CC4008F1C1C /* SyslogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BDDB11F058CC4008F1C1C /* SyslogFormatter.swift */; };
 		046BDDB41F058CEB008F1C1C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BDDB31F058CEB008F1C1C /* Extensions.swift */; };
@@ -54,8 +53,9 @@
 		04B6F626220A1B57002395CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6F624220A1AB0002395CB /* Extensions.swift */; };
 		04F559D81F2281EF0048F2E0 /* LogMetadataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */; };
 		04FCF0FF1F115EE500505A5F /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */; };
-		21BE76192CF7D72AD787B219 /* Pods_Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94200653A44BD6612B15CC45 /* Pods_Cosmic.framework */; };
-		E1AEDE90E7F17D0F9DF7B323 /* Pods_Cosmic_CosmicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5AF43087121872A0D1FE95 /* Pods_Cosmic_CosmicTests.framework */; };
+		2424FB74A45D24C34DE182DE /* Pods_Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073B57C1D9628A41B5913474 /* Pods_Cosmic.framework */; };
+		84DC3C6D15C75162537E06F0 /* Pods_Cosmic_CosmicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474E6F962F4A9A46C67AB0 /* Pods_Cosmic_CosmicTests.framework */; };
+		90E6C690C1F7DD03137682F5 /* Pods_CosmicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E195DCFA62426EB7B2D15DAF /* Pods_CosmicTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,14 +119,14 @@
 		04B6F624220A1AB0002395CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMetadataTests.swift; sourceTree = "<group>"; };
 		04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
+		073B57C1D9628A41B5913474 /* Pods_Cosmic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D283CB210C0089A0704073 /* Pods-CosmicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67D62702415ADE471E9854E0 /* Pods-Cosmic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmic/Pods-Cosmic.release.xcconfig"; sourceTree = "<group>"; };
 		71AA5B2306CCF8F7E30DAFCF /* Pods-Cosmic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmic/Pods-Cosmic.debug.xcconfig"; sourceTree = "<group>"; };
-		81958AC61E937B08DB5441EA /* Pods_CosmicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		94200653A44BD6612B15CC45 /* Pods_Cosmic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		948DF1F6FB67076ED2D1EB46 /* Pods-Cosmic-CosmicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic-CosmicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmic-CosmicTests/Pods-Cosmic-CosmicTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6C0E657308E5EFEC717A37A /* Pods-CosmicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests.release.xcconfig"; sourceTree = "<group>"; };
-		BF5AF43087121872A0D1FE95 /* Pods_Cosmic_CosmicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmic_CosmicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9474E6F962F4A9A46C67AB0 /* Pods_Cosmic_CosmicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmic_CosmicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E195DCFA62426EB7B2D15DAF /* Pods_CosmicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21BE76192CF7D72AD787B219 /* Pods_Cosmic.framework in Frameworks */,
+				2424FB74A45D24C34DE182DE /* Pods_Cosmic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */,
-				043F76D1A753AD879F5C9903 /* Pods_CosmicTests.framework in Frameworks */,
-				E1AEDE90E7F17D0F9DF7B323 /* Pods_Cosmic_CosmicTests.framework in Frameworks */,
+				90E6C690C1F7DD03137682F5 /* Pods_CosmicTests.framework in Frameworks */,
+				84DC3C6D15C75162537E06F0 /* Pods_Cosmic_CosmicTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,9 +320,9 @@
 		BE6EB05743C15C1B28CA232F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				94200653A44BD6612B15CC45 /* Pods_Cosmic.framework */,
-				81958AC61E937B08DB5441EA /* Pods_CosmicTests.framework */,
-				BF5AF43087121872A0D1FE95 /* Pods_Cosmic_CosmicTests.framework */,
+				073B57C1D9628A41B5913474 /* Pods_Cosmic.framework */,
+				E195DCFA62426EB7B2D15DAF /* Pods_CosmicTests.framework */,
+				D9474E6F962F4A9A46C67AB0 /* Pods_Cosmic_CosmicTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -345,7 +345,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 041DF8121E88547100934C76 /* Build configuration list for PBXNativeTarget "Cosmic" */;
 			buildPhases = (
-				F881CC6FCC9CA758AFF2444A /* [CP] Check Pods Manifest.lock */,
+				76110DFCCC4700F06B64F610 /* [CP] Check Pods Manifest.lock */,
 				041DF7F91E88547000934C76 /* Sources */,
 				041DF7FA1E88547000934C76 /* Frameworks */,
 				041DF7FB1E88547000934C76 /* Headers */,
@@ -364,10 +364,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 041DF8151E88547100934C76 /* Build configuration list for PBXNativeTarget "CosmicTests" */;
 			buildPhases = (
-				AE42A12CD03D7D61ECEFC6A1 /* [CP] Check Pods Manifest.lock */,
+				FEFAD892C51DA0E4A6746923 /* [CP] Check Pods Manifest.lock */,
 				041DF8031E88547100934C76 /* Sources */,
 				041DF8041E88547100934C76 /* Frameworks */,
-				D5DD4EDAE3FBD758E12611FE /* [CP] Embed Pods Frameworks */,
+				EFFE4E52619EF22B1FBD100B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -432,25 +432,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AE42A12CD03D7D61ECEFC6A1 /* [CP] Check Pods Manifest.lock */ = {
+		76110DFCCC4700F06B64F610 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Cosmic-CosmicTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Cosmic-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D5DD4EDAE3FBD758E12611FE /* [CP] Embed Pods Frameworks */ = {
+		EFFE4E52619EF22B1FBD100B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -472,18 +476,22 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cosmic-CosmicTests/Pods-Cosmic-CosmicTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F881CC6FCC9CA758AFF2444A /* [CP] Check Pods Manifest.lock */ = {
+		FEFAD892C51DA0E4A6746923 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Cosmic-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Cosmic-CosmicTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -691,7 +699,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Sources/Cosmic/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.cosmic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -712,7 +719,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Sources/Cosmic/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.cosmic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -724,7 +730,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 00FC2DBF02A694C144DEE247 /* Pods-Cosmic-CosmicTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Tests/CosmicTests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.cosmicTests;
@@ -737,7 +743,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 948DF1F6FB67076ED2D1EB46 /* Pods-Cosmic-CosmicTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Tests/CosmicTests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = io.newcombe.cosmicTests;
