@@ -1,7 +1,7 @@
 before_install:
   - pod repo update > /dev/null
 script:
-  - xcodebuild -destination 'platform=iOS Simulator,name=iPhone XR' -workspace Cosmic.xcworkspace -scheme Cosmic -enableCodeCoverage YES build test
+  - xcodebuild -destination 'platform=iOS Simulator,name=iPhone X' -workspace Cosmic.xcworkspace -scheme Cosmic -enableCodeCoverage YES build test
 after_script:
   - bash <(curl -s https://codecov.io/bash) -J Cosmic
 
