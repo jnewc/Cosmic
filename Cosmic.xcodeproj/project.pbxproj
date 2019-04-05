@@ -359,7 +359,6 @@
 				AE42A12CD03D7D61ECEFC6A1 /* [CP] Check Pods Manifest.lock */,
 				041DF8031E88547100934C76 /* Sources */,
 				041DF8041E88547100934C76 /* Frameworks */,
-				71948139AF87D9015C26E530 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -424,24 +423,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		71948139AF87D9015C26E530 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BlueSocket/Socket.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Socket.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AE42A12CD03D7D61ECEFC6A1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
