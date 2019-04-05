@@ -7,6 +7,6 @@ after_script:
 
 
 language: objective-c
-osx_image: xcode9.3
+osx_image: xcode10.2
 xcode_workspace: Cosmic.xcworkspace # path to your xcodeproj folder
 xcode_scheme: Cosmic
