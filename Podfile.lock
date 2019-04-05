@@ -2,15 +2,21 @@ PODS:
   - BlueSocket (1.0.45)
 
 DEPENDENCIES:
-  - BlueSocket (~> 1.0.44)
+  - "BlueSocket (from `git@github.com:IBM-Swift/BlueSocket.git`, branch `swift5`)"
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - BlueSocket
+EXTERNAL SOURCES:
+  BlueSocket:
+    :branch: swift5
+    :git: "git@github.com:IBM-Swift/BlueSocket.git"
+
+CHECKOUT OPTIONS:
+  BlueSocket:
+    :commit: 0c7f01126f3c6b249dbf4b17573c0db4d9f13673
+    :git: "git@github.com:IBM-Swift/BlueSocket.git"
 
 SPEC CHECKSUMS:
   BlueSocket: b59f969c51b723f1297aceecf12ad5113a6db70d
 
-PODFILE CHECKSUM: 099465c828760a514416c808916e0b1619383a81
+PODFILE CHECKSUM: 94b68521901ecb220dcc63e939a14ef1e07f85b9
 
 COCOAPODS: 1.6.1

@@ -89,7 +89,7 @@ public extension Logger {
     /// domain-specific and diagnostic information.
     ///
     /// - Parameter messages: The messages to log
-    public func debug(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
+    func debug(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.debug) else { return }
         let metadata = LogMetadata(file: file, line: line, function: function)
         log(format(message, metadata), logLevel: .debug, metadata: metadata)
@@ -106,7 +106,7 @@ public extension Logger {
     /// Info logs should describe all high-level interactions.
     ///
     /// - Parameter messages: The info messages to log
-    public func info(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
+    func info(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.info) else { return }
         let metadata = LogMetadata(file: file, line: line, function: function)
         log(format(message, metadata), logLevel: .info, metadata: metadata)
@@ -120,7 +120,7 @@ public extension Logger {
     /// occur such as the absence of configuration or validation errors
     ///
     /// - Parameter messages: The warning messages to log
-    public func warn(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
+    func warn(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.warn) else { return }
         let metadata = LogMetadata(file: file, line: line, function: function)
         log(format(message, metadata), logLevel: .warn, metadata: metadata)
@@ -138,7 +138,7 @@ public extension Logger {
     /// has occurred (for example, by reaching illegal if/else branches)
     ///
     /// - Parameter messages: The error messages to log
-    public func error(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
+    func error(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.error) else { return }
         let metadata = LogMetadata(file: file, line: line, function: function)
         log(format(message, metadata), logLevel: .error, metadata: metadata)

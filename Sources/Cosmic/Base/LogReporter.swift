@@ -20,7 +20,7 @@ public protocol LogReporter {
 
 public extension LogReporter {
 
-    public func createLogger<T: Logger>(with type: T.Type) -> T {
+    func createLogger<T: Logger>(with type: T.Type) -> T {
         
         if !LoggerCache.keys.contains(className) {
             LoggerCache[className] = T.init()
@@ -30,7 +30,7 @@ public extension LogReporter {
         
     }
     
-    public var logger: DefaultLoggerType {
+    var logger: DefaultLoggerType {
         return self.createLogger(with: DefaultLoggerType.self)
     }
     
