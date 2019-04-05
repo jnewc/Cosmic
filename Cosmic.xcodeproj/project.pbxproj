@@ -685,11 +685,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Cosmic/Vendor";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-<<<<<<< Updated upstream
-				SWIFT_VERSION = 4.2;
-=======
 				SWIFT_VERSION = 5.0;
->>>>>>> Stashed changes
 			};
 			name = Debug;
 		};
@@ -710,11 +706,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Cosmic/Vendor";
-<<<<<<< Updated upstream
-				SWIFT_VERSION = 4.2;
-=======
 				SWIFT_VERSION = 5.0;
->>>>>>> Stashed changes
 			};
 			name = Release;
 		};
