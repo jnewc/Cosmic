@@ -47,7 +47,7 @@ class LogMetadataTests: XCTestCase {
         XCTAssertEqual(entry.message, "A log")
         
         XCTAssertEqual(metadata.file.description.components(separatedBy: "/").last, "LogMetadataTests.swift")
-        XCTAssertEqual(metadata.function.description, "createLog")
+        XCTAssertEqual(metadata.function.description, "createLog(_:)")
         XCTAssertEqual(metadata.line, 2)
     }
 

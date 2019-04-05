@@ -67,7 +67,7 @@ class PrintLoggerTests: XCTestCase {
         
         logs.forEach {
             printLogger.debug($0)
-            XCTAssertEqual(stream.array[logs.index(of: $0)!], $0)
+            XCTAssertEqual(stream.array[logs.firstIndex(of: $0)!], $0)
         }
 
     }
@@ -78,7 +78,7 @@ class PrintLoggerTests: XCTestCase {
         
         logs.forEach {
             printLogger.info($0)
-            XCTAssertEqual(stream.array[logs.index(of: $0)!], $0)
+            XCTAssertEqual(stream.array[logs.firstIndex(of: $0)!], $0)
         }
         
     }
@@ -89,7 +89,7 @@ class PrintLoggerTests: XCTestCase {
         
         logs.forEach {
             printLogger.warn($0)
-            XCTAssertEqual(stream.array[logs.index(of: $0)!], $0)
+            XCTAssertEqual(stream.array[logs.firstIndex(of: $0)!], $0)
         }
         
     }
@@ -100,7 +100,7 @@ class PrintLoggerTests: XCTestCase {
         
         logs.forEach {
             printLogger.error($0)
-            XCTAssertEqual(stream.array[logs.index(of: $0)!], $0)
+            XCTAssertEqual(stream.array[logs.firstIndex(of: $0)!], $0)
         }
         
     }
@@ -113,7 +113,7 @@ class PrintLoggerTests: XCTestCase {
         
         logs.forEach {
             printLogger.info($0)
-            XCTAssertEqual(stream.array[logs.index(of: $0)!], $0)
+            XCTAssertEqual(stream.array[logs.firstIndex(of: $0)!], $0)
         }
     }
     
