@@ -102,10 +102,6 @@ class UniversalSocket {
         return false
     }
     
-    func close() {
-        socket.close()
-    }
-    
     func forProtocol(_ proto: Socket.SocketProtocol, _ callback: () throws -> ()) throws {
         if let currentProto = socket.signature?.proto, currentProto == proto {
             try callback()

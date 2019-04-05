@@ -13,7 +13,6 @@
 		0411F6EF1EFF256200BE872F /* RegularExpressionAsserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6ED1EFF256200BE872F /* RegularExpressionAsserts.swift */; };
 		0411F6F11F02F5CC00BE872F /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6F01F02F5CC00BE872F /* Debug.swift */; };
 		0411F6F31F03097B00BE872F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F6F21F03097B00BE872F /* Operators.swift */; };
-		04126BF320868AAF00A4059D /* UniversalSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04126BF220868AAF00A4059D /* UniversalSocket.swift */; };
 		041DF8081E88547100934C76 /* Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041DF7FE1E88547100934C76 /* Cosmic.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		0441B8CE1F116CC20088A851 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441B8CD1F116CC20088A851 /* LoggerTests.swift */; };
 		046BDDB21F058CC4008F1C1C /* SyslogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BDDB11F058CC4008F1C1C /* SyslogFormatter.swift */; };
@@ -51,6 +50,7 @@
 		04A4A9471EFB1FD200EBD44E /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9251EFB1FBA00EBD44E /* Commons.swift */; };
 		04A4A9481EFB1FD200EBD44E /* DataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9261EFB1FBA00EBD44E /* DataUtility.swift */; };
 		04B6F626220A1B57002395CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6F624220A1AB0002395CB /* Extensions.swift */; };
+		04E70363225808050044801D /* UniversalSocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E70361225807F50044801D /* UniversalSocketTests.swift */; };
 		04F559D81F2281EF0048F2E0 /* LogMetadataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */; };
 		04FCF0FF1F115EE500505A5F /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */; };
 		B7269400CC9BB5968B46D37D /* Pods_Cosmic_CosmicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40971D2E3513CD347342079 /* Pods_Cosmic_CosmicTests.framework */; };
@@ -74,7 +74,6 @@
 		0411F6ED1EFF256200BE872F /* RegularExpressionAsserts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionAsserts.swift; sourceTree = "<group>"; };
 		0411F6F01F02F5CC00BE872F /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		0411F6F21F03097B00BE872F /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
-		04126BF220868AAF00A4059D /* UniversalSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalSocket.swift; sourceTree = "<group>"; };
 		041DF7FE1E88547100934C76 /* Cosmic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041DF8071E88547100934C76 /* CosmicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0441B8CD1F116CC20088A851 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		04A4A9251EFB1FBA00EBD44E /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		04A4A9261EFB1FBA00EBD44E /* DataUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtility.swift; sourceTree = "<group>"; };
 		04B6F624220A1AB0002395CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		04E70361225807F50044801D /* UniversalSocketTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversalSocketTests.swift; sourceTree = "<group>"; };
 		04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMetadataTests.swift; sourceTree = "<group>"; };
 		04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
 		5746EE44325AA0D496907733 /* Pods-Cosmic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmic.release.xcconfig"; path = "Target Support Files/Pods-Cosmic/Pods-Cosmic.release.xcconfig"; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 				04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */,
 				049489231FB4F35500533B46 /* ExtensionsTests.swift */,
 				0409989D2085362600DBD481 /* LamdaLoggerTests.swift */,
-				04126BF220868AAF00A4059D /* UniversalSocket.swift */,
+				04E70361225807F50044801D /* UniversalSocketTests.swift */,
 			);
 			path = CosmicTests;
 			sourceTree = "<group>";
@@ -307,7 +307,6 @@
 				799A1DF9AA1AFE1DD4562083 /* Pods-Cosmic-CosmicTests.debug.xcconfig */,
 				713BE102665C449D210B9ADD /* Pods-Cosmic-CosmicTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -537,7 +536,6 @@
 				048F15271F1A6C54009ED8F1 /* LogItLoggerTests.swift in Sources */,
 				0409989E2085362600DBD481 /* LamdaLoggerTests.swift in Sources */,
 				049F00EC1EFED30C00BD9E41 /* LogReporterTests.swift in Sources */,
-				04126BF320868AAF00A4059D /* UniversalSocket.swift in Sources */,
 				04FCF0FF1F115EE500505A5F /* OperatorsTests.swift in Sources */,
 				049F00F71EFF0CCA00BD9E41 /* PrintLoggerTests.swift in Sources */,
 				049F00E81EFED30C00BD9E41 /* CompositeLoggerTests.swift in Sources */,
@@ -546,6 +544,7 @@
 				04F559D81F2281EF0048F2E0 /* LogMetadataTests.swift in Sources */,
 				049489241FB4F35500533B46 /* ExtensionsTests.swift in Sources */,
 				049F00F21EFED83A00BD9E41 /* HTTPLoggerTests.swift in Sources */,
+				04E70363225808050044801D /* UniversalSocketTests.swift in Sources */,
 				0411F6EE1EFF256200BE872F /* MockURLSession.swift in Sources */,
 				049F00EF1EFED30C00BD9E41 /* ServiceLoggerTests.swift in Sources */,
 				0411F6EF1EFF256200BE872F /* RegularExpressionAsserts.swift in Sources */,
