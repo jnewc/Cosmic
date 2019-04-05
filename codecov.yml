@@ -5,7 +5,7 @@ coverage:
   status:
     project:
       default:
-        target: auto
+        target: 90%
   range: 80...90
   round: down
   precision: 1
