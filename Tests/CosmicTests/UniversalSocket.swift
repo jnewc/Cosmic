@@ -30,7 +30,13 @@ class UniversalSocketTests: XCTestCase {
         
         XCTAssert(socket.socket.isListening)
         XCTAssertEqual(socket.socket.remoteHostname, "0.0.0.0")
+<<<<<<< Updated upstream
         XCTAssertEqual(socket.socket.listeningPort, 8084)
+=======
+        XCTAssertEqual(socket.socket.listeningPort, 8080)
+        
+        socket.close()
+>>>>>>> Stashed changes
     }
     
 }

@@ -28,6 +28,7 @@ protocol JSONFormatterConverter {
 class JSONFormatter: LogFormatter, JSONFormatterConverter  {
 
     let converter: JSONFormatterConverterCompletion
+<<<<<<< Updated upstream
 
     var options: JSONSerialization.WritingOptions = {
       if #available(macOS 10.13, *) {
@@ -35,6 +36,11 @@ class JSONFormatter: LogFormatter, JSONFormatterConverter  {
       }
       return []
     }()
+=======
+    
+    var options: JSONSerialization.WritingOptions = [ .sortedKeys ]
+    
+>>>>>>> Stashed changes
     init(converter: @escaping JSONFormatterConverterCompletion) {
         self.converter = converter
     }
