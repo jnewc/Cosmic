@@ -23,14 +23,14 @@ class UniversalSocketTests: XCTestCase {
     
     func testSocketSetup() {
         
-        let config = SocketLoggerConfig(host: "", port: 8080, transport: .tcp)
+        let config = SocketLoggerConfig(host: "", port: 8084, transport: .tcp)
         
         let socket = try! UniversalSocket(config: config)
         try! socket.listen()
         
         XCTAssert(socket.socket.isListening)
         XCTAssertEqual(socket.socket.remoteHostname, "0.0.0.0")
-        XCTAssertEqual(socket.socket.listeningPort, 8080)
+        XCTAssertEqual(socket.socket.listeningPort, 8084)
     }
     
 }

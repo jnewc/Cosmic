@@ -51,6 +51,7 @@
 		04A4A9461EFB1FD200EBD44E /* PrintLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9231EFB1FBA00EBD44E /* PrintLogger.swift */; };
 		04A4A9471EFB1FD200EBD44E /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9251EFB1FBA00EBD44E /* Commons.swift */; };
 		04A4A9481EFB1FD200EBD44E /* DataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4A9261EFB1FBA00EBD44E /* DataUtility.swift */; };
+		04B6F626220A1B57002395CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6F624220A1AB0002395CB /* Extensions.swift */; };
 		04F559D81F2281EF0048F2E0 /* LogMetadataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */; };
 		04FCF0FF1F115EE500505A5F /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */; };
 		21BE76192CF7D72AD787B219 /* Pods_Cosmic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94200653A44BD6612B15CC45 /* Pods_Cosmic.framework */; };
@@ -113,6 +114,7 @@
 		04A4A9231EFB1FBA00EBD44E /* PrintLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PrintLogger.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		04A4A9251EFB1FBA00EBD44E /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		04A4A9261EFB1FBA00EBD44E /* DataUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtility.swift; sourceTree = "<group>"; };
+		04B6F624220A1AB0002395CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04F559D71F2281EF0048F2E0 /* LogMetadataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMetadataTests.swift; sourceTree = "<group>"; };
 		04FCF0FE1F115EE500505A5F /* OperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
 		60D283CB210C0089A0704073 /* Pods-CosmicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CosmicTests/Pods-CosmicTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				0411F6EC1EFF256200BE872F /* MockURLSession.swift */,
 				0411F6ED1EFF256200BE872F /* RegularExpressionAsserts.swift */,
+				04B6F624220A1AB0002395CB /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				048F15241F1A64AA009ED8F1 /* LogFilterTests.swift in Sources */,
+				04B6F626220A1B57002395CB /* Extensions.swift in Sources */,
 				049F00E91EFED30C00BD9E41 /* FormatterTests.swift in Sources */,
 				048F15271F1A6C54009ED8F1 /* LogItLoggerTests.swift in Sources */,
 				0409989E2085362600DBD481 /* LamdaLoggerTests.swift in Sources */,

@@ -48,7 +48,7 @@ class FormatterTests: XCTestCase {
 
         let formattedMessage = formatter.format(message: "Testing", metadata: LogMetadata())
         
-        XCTAssertMatches(input: formattedMessage, pattern: "<\\d{2}>\\d \(dateTimeExpr) Cosmic Unknown - - - Testing")
+        XCTAssertMatches(input: formattedMessage, pattern: "<\\d{2}>\\d \(dateTimeExpr) Cosmic com.apple.dt.xctest.tool - - - Testing")
     }
     
     func testJSONFormatter() {

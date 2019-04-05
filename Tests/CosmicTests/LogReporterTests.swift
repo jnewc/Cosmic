@@ -34,7 +34,8 @@ class LogReporterTests: XCTestCase, DefaultLogReporter {
 
     func testLoggerClassName() {
         let name = self.className
-        XCTAssertEqual(name, "CosmicTests.LogReporterTests")
+
+        XCTAssertEqual(name, "LogReporterTests")
     }
 
     func testLoggerInSubclass() {
