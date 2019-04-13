@@ -2,10 +2,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "Cosmic",
-	dependencies: [
+  name: "Cosmic",
+
+  products: [
+    .library(name: "Cosmic", type: .dynamic, targets: [ "Cosmic" ])
+  ],
+
+  dependencies: [
 		.package(url: "https://github.com/IBM-Swift/BlueSocket", from: "1.0.0")
 	],
+
   targets: [
     .target(
       name: "Cosmic",
@@ -18,5 +24,6 @@ let package = Package(
       dependencies: [ "Cosmic" ]
     )
   ],
+
   swiftLanguageVersions: [.v4_2]
 )
