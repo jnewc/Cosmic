@@ -30,7 +30,7 @@ class SyslogFormatter: LogFormatter {
     /// a name describing the calling application or service
     var sender: String = Bundle.main.bundleIdentifier ?? "Unknown"
     
-    func format(message: String, metadata: LogMetadata) -> String {
+    func format(message: String, logLevel: LogLevel, metadata: LogMetadata) -> String {
         let timestamp = Date().iso8601
         return "\(SyslogHeader) \(timestamp) \(SyslogSenderName) \(sender) - - - \(message)"
     }

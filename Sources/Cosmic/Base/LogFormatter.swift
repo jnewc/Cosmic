@@ -10,7 +10,7 @@ import Foundation
 
 public protocol LogFormatter {
     
-    func format(message: String, metadata: LogMetadata) -> String
+    func format(message: String, logLevel: LogLevel, metadata: LogMetadata) -> String
     
 }
 
@@ -36,7 +36,7 @@ open class BasicLogFormatter: LogFormatter {
         return "[\(metadata.filename) → \(metadata.function):\(metadata.line)] "
     }
     
-    public func format(message: String, metadata: LogMetadata) -> String {
+    public func format(message: String, logLevel: LogLevel, metadata: LogMetadata) -> String {
         return "\(prefix(for: metadata))\(prefix)\(message)\(suffix)"
     }
 }
@@ -48,11 +48,11 @@ open class DateLogFormatter: BasicLogFormatter {
 
     let dateFormatter = DateFormatter()
     
-    override public func format(message: String, metadata: LogMetadata) -> String {
+    override public func format(message: String, logLevel: LogLevel, metadata: LogMetadata) -> String {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let date = dateFormatter.string(from: Date())
         self.prefix = date
-        return super.format(message: " \(message)", metadata: metadata)
+        return super.format(message: " \(message)", logLevel: logLevel, metadata: metadata)
     }
     
 }
@@ -61,7 +61,7 @@ open class DateLogFormatter: BasicLogFormatter {
 
 public protocol BatchFormatter: LogFormatter {
     
-    func format (batch: [(String, LogMetadata)]) -> String
+    func format (batch: [(String, LogLevel, LogMetadata)]) -> String
     
 }
 
@@ -69,12 +69,12 @@ public protocol BatchFormatter: LogFormatter {
 
 public class NewLineBatchFormatter: BatchFormatter {
     
-    public func format(message: String, metadata: LogMetadata) -> String {
+    public func format(message: String, logLevel: LogLevel, metadata: LogMetadata) -> String {
         return message
     }
     
-    public func format(batch: [(String, LogMetadata)]) -> String {
-        return batch.map({ format(message: $0.0, metadata: $0.1) }).joined(separator: "\n")
+    public func format(batch: [(String, LogLevel, LogMetadata)]) -> String {
+        return batch.map({ format(message: $0.0, logLevel: $0.1, metadata: $0.2) }).joined(separator: "\n")
     }
     
 }

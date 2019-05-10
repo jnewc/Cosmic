@@ -27,7 +27,7 @@ class FormatterTests: XCTestCase {
         
         let formatter = BasicLogFormatter()
         
-        let string = formatter.format(message: "a", metadata: LogMetadata()); let line = #line
+        let string = formatter.format(message: "a", logLevel: .info, metadata: LogMetadata()); let line = #line
         
         XCTAssertEqual(string, "[FormatterTests.swift → testBasicLogFormatter():\(line)] a")
     }
@@ -36,7 +36,7 @@ class FormatterTests: XCTestCase {
         
         let formatter = BasicLogFormatter(prefix: "a", suffix: "c")
         
-        let string = formatter.format(message: "b", metadata: LogMetadata()); let line = #line
+        let string = formatter.format(message: "b", logLevel: .info, metadata: LogMetadata()); let line = #line
         
         XCTAssertEqual(string, "[FormatterTests.swift → testBasicLogFormatterWithPrefixAndSuffix():\(line)] abc")
         
@@ -46,7 +46,7 @@ class FormatterTests: XCTestCase {
        
         let formatter = SyslogFormatter()
 
-        let formattedMessage = formatter.format(message: "Testing", metadata: LogMetadata())
+        let formattedMessage = formatter.format(message: "Testing", logLevel: .info, metadata: LogMetadata())
         
         XCTAssertMatches(input: formattedMessage, pattern: "<\\d{2}>\\d \(dateTimeExpr) Cosmic com.apple.dt.xctest.tool - - - Testing")
     }
@@ -61,7 +61,7 @@ class FormatterTests: XCTestCase {
             ]
         }
         
-        let formattedMessage = formatter.format(message: "Test", metadata: LogMetadata())
+        let formattedMessage = formatter.format(message: "Test", logLevel: .info, metadata: LogMetadata())
         
         let expectedMessage = "{\"id\":\"123\",\"message\":\"Test\",\"tag\":\"my tag\"}"
         
@@ -80,24 +80,24 @@ class FormatterTests: XCTestCase {
             ]
         }
         
-        let message1 = formatter.format(message: "Message #1", metadata: LogMetadata())
+        let message1 = formatter.format(message: "Message #1", logLevel: .info, metadata: LogMetadata())
         XCTAssertEqual(message1, "{\"id\":1,\"message\":\"Message #1\"}")
 
-        let message2 = formatter.format(message: "Message #2", metadata: LogMetadata())
+        let message2 = formatter.format(message: "Message #2", logLevel: .info, metadata: LogMetadata())
         XCTAssertEqual(message2, "{\"id\":2,\"message\":\"Message #2\"}")
 
-        let message3 = formatter.format(message: "Message #3", metadata: LogMetadata())
+        let message3 = formatter.format(message: "Message #3", logLevel: .info, metadata: LogMetadata())
         XCTAssertEqual(message3, "{\"id\":3,\"message\":\"Message #3\"}")
 
     }
     
     func testBlockFormatter() {
         
-        let blockFormatter = LambdaFormatter { message, _ in
+        let blockFormatter = LambdaFormatter { message, _, _ in
             return "« \(message) »"
         }
         
-        let formattedMessage = blockFormatter.format(message: "Test", metadata: LogMetadata())
+        let formattedMessage = blockFormatter.format(message: "Test", logLevel: .info, metadata: LogMetadata())
         
         XCTAssertEqual("« Test »", formattedMessage)
     }
@@ -105,7 +105,7 @@ class FormatterTests: XCTestCase {
     func testDateFormatter() {        
         let dateFormatter = DateLogFormatter()
 
-        let formattedMessage = dateFormatter.format(message: "Test", metadata: LogMetadata()); let line = #line
+        let formattedMessage = dateFormatter.format(message: "Test", logLevel: .info, metadata: LogMetadata()); let line = #line
 
         // TODO
         XCTAssertMatches(input: formattedMessage, pattern: "\\[FormatterTests\\.swift → testDateFormatter\\(\\):\(line)\\] \(dateTimeExpr) Test")
@@ -118,9 +118,9 @@ class FormatterTests: XCTestCase {
         let batchFormatter = NewLineBatchFormatter()
         
         let formattedMessage = batchFormatter.format(batch: [
-            ("Test1", LogMetadata()),
-            ("Test2", LogMetadata()),
-            ("Test3", LogMetadata())
+            ("Test1", .info, LogMetadata()),
+            ("Test2", .info, LogMetadata()),
+            ("Test3", .info, LogMetadata())
         ])
         
         XCTAssertEqual("Test1\nTest2\nTest3", formattedMessage)
@@ -136,9 +136,9 @@ class FormatterTests: XCTestCase {
         }
         
         let formattedMessage = batchFormatter.format(batch: [
-            ("Test1", LogMetadata()),
-            ("Test2", LogMetadata()),
-            ("Test3", LogMetadata())
+            ("Test1", .info, LogMetadata()),
+            ("Test2", .info, LogMetadata()),
+            ("Test3", .info, LogMetadata())
         ])
         
         let template: (String) -> String = { "{\"message\":\"\($0)\"}" }

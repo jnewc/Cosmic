@@ -8,7 +8,7 @@
 
 import Foundation
 
-public typealias LambdaFormatterCompletion = (String, LogMetadata) -> (String)
+public typealias LambdaFormatterCompletion = (String, LogLevel, LogMetadata) -> (String)
 
 public class LambdaFormatter: LogFormatter {
     
@@ -18,8 +18,8 @@ public class LambdaFormatter: LogFormatter {
         self.completion = completion
     }
     
-    public func format(message: String, metadata: LogMetadata) -> String {
-        return completion(message, metadata)
+    public func format(message: String, logLevel: LogLevel, metadata: LogMetadata) -> String {
+        return completion(message, logLevel, metadata)
     }
     
 }

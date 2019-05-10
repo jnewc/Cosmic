@@ -92,7 +92,7 @@ public extension Logger {
     func debug(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.debug) else { return }
         let metadata = LogMetadata(file: file, line: line, function: function)
-        log(format(message, metadata), logLevel: .debug, metadata: metadata)
+        log(format(message, .debug, metadata), logLevel: .debug, metadata: metadata)
     }
     
     // MARK: info
@@ -109,7 +109,7 @@ public extension Logger {
     func info(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.info) else { return }
         let metadata = LogMetadata(file: file, line: line, function: function)
-        log(format(message, metadata), logLevel: .info, metadata: metadata)
+        log(format(message, .info, metadata), logLevel: .info, metadata: metadata)
     }
     
     // MARK: warn
@@ -123,7 +123,7 @@ public extension Logger {
     func warn(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.warn) else { return }
         let metadata = LogMetadata(file: file, line: line, function: function)
-        log(format(message, metadata), logLevel: .warn, metadata: metadata)
+        log(format(message, .warn, metadata), logLevel: .warn, metadata: metadata)
     }
     
     // MARK: error
@@ -141,10 +141,10 @@ public extension Logger {
     func error(_ message: String, file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         guard enabled(.error) else { return }
         let metadata = LogMetadata(file: file, line: line, function: function)
-        log(format(message, metadata), logLevel: .error, metadata: metadata)
+        log(format(message, .error, metadata), logLevel: .error, metadata: metadata)
     }
     
-    internal func format(_ message: String, _ metadata: LogMetadata) -> String {
-        return formatters.reduce(message, { $1.format(message: $0, metadata: metadata) })
+    internal func format(_ message: String, _ logLevel: LogLevel, _ metadata: LogMetadata) -> String {
+        return formatters.reduce(message, { $1.format(message: $0, logLevel: logLevel, metadata: metadata) })
     }
 }
