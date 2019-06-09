@@ -5,7 +5,7 @@ let package = Package(
   name: "Cosmic",
 
   products: [
-    .library(name: "Cosmic", type: .dynamic, targets: [ "Cosmic" ])
+    .library(name: "Cosmic", targets: [ "Cosmic" ])
   ],
 
   dependencies: [
