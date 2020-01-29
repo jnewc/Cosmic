@@ -16,7 +16,6 @@ typealias JSONFormatterConverterCompletion = (String) -> JSONFormatterDictionary
 
 protocol JSONFormatterConverter {
 
-    /// <#Description#>
     var converter: JSONFormatterConverterCompletion { get }
 
     func toJSON(message: String, metadata: LogMetadata) -> String?
@@ -30,10 +29,10 @@ class JSONFormatter: LogFormatter, JSONFormatterConverter  {
     let converter: JSONFormatterConverterCompletion
 
     var options: JSONSerialization.WritingOptions = {
-      if #available(macOS 10.13, *) {
-        return [ .sortedKeys ]
-      }
-      return []
+        if #available(macOS 10.13, iOS 11.0, *) {
+            return [ .sortedKeys ]
+        }
+        return []
     }()
     init(converter: @escaping JSONFormatterConverterCompletion) {
         self.converter = converter
