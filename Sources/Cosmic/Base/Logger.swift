@@ -11,11 +11,11 @@ import Foundation
 
 public struct LogMetadata {
     
-    let file: StaticString
+    public let file: StaticString
     
-    let line: UInt
+    public let line: UInt
     
-    let function: StaticString
+    public let function: StaticString
     
     public init(file: StaticString = #file, line: UInt = #line, function: StaticString = #function) {
         self.file = file
@@ -25,7 +25,7 @@ public struct LogMetadata {
     
     // MARK: Computed properties
     
-    var filename: String {
+    public var filename: String {
         return "\(file)".components(separatedBy: "/").last ?? "\(file)"
     }
 }
