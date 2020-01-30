@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public struct LogMetadata {
     
     public let file: StaticString
@@ -27,6 +26,10 @@ public struct LogMetadata {
     
     public var filename: String {
         return "\(file)".components(separatedBy: "/").last ?? "\(file)"
+    }
+    
+    public var functionName: String {
+        return String("\(function)".split(separator: "(").first ?? "\(function)")
     }
 }
 

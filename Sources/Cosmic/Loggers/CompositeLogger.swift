@@ -28,21 +28,7 @@ open class CompositeLogger: Logger {
 
     public func log(_ message: String, logLevel: LogLevel, metadata: LogMetadata) {
         loggers.forEach { logger in
-            switch logLevel {
-            case .debug:
-                logger.debug(message)
-                break
-            case .info:
-                logger.info(message)
-                break
-            case .warn:
-                logger.warn(message)
-                break
-            case .error:
-                logger.error(message)
-                break
-            case .none: break
-            }
+            logger.log(message, logLevel: logLevel, metadata: metadata)
         }
     }
     
