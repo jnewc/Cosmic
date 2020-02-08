@@ -42,7 +42,7 @@ public class ClassBasedLogFilter: LogFilter {
     
     private var excluded: [String: LogLevel]
     
-    init(included: [String: LogLevel] = [:], excluded: [String: LogLevel] = [:]) {
+    public init(included: [String: LogLevel] = [:], excluded: [String: LogLevel] = [:]) {
         self.included = included
         self.excluded = excluded
     }
