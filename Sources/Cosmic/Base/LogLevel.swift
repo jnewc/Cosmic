@@ -35,4 +35,16 @@ public enum LogLevel: UInt {
         default:        return ""
         }
     }
+
+    /// The Syslog severity value
+    /// See: https://tools.ietf.org/html/rfc5424#section-6.2.1
+    var syslogSeverity: Int {
+        switch self {
+        case .debug:    return 7
+        case .info:     return 6
+        case .warn:     return 4
+        case .error:    return 3
+        case .none:     return 0
+        }
+    }
 }
