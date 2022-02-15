@@ -9,7 +9,7 @@ let package = Package(
   ],
 
   dependencies: [
-		.package(url: "https://github.com/IBM-Swift/BlueSocket", from: "1.0.0")
+		.package(url: "https://github.com/Kitura/BlueSocket", from: "2.0.2")
 	],
 
   targets: [
@@ -25,5 +25,5 @@ let package = Package(
     )
   ],
 
-  swiftLanguageVersions: [ .v4_2, .v5 ]
+  swiftLanguageVersions: [ .v4, .v5 ]
 )

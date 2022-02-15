@@ -1,16 +1,16 @@
 PODS:
-  - BlueSocket (1.0.45)
+  - BlueSocket (2.0.2)
 
 DEPENDENCIES:
-  - BlueSocket (~> 1.0.44)
+  - BlueSocket (~> 2.0.2)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - BlueSocket
 
 SPEC CHECKSUMS:
-  BlueSocket: b59f969c51b723f1297aceecf12ad5113a6db70d
+  BlueSocket: 1f02d81f5eeb695aebdb1305ef3173b15a8627cf
 
-PODFILE CHECKSUM: ce8b11e2add1c592d85230d8b7529654f72c375f
+PODFILE CHECKSUM: a756da289bcadc374ff1e9a3f229357bd48946b1
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.2
