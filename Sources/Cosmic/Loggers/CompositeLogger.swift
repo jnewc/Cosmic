@@ -28,8 +28,8 @@ open class CompositeLogger: Logger {
 
     public func log(_ message: String, logLevel: LogLevel, metadata: LogMetadata) {
         loggers.forEach { logger in
-            let formattedMessage = logger.format(message, logLevel, metadata)
-            logger.log(formattedMessage, logLevel: logLevel, metadata: metadata)
+//            let formattedMessage = logger.format(message, logLevel, metadata)
+            logger.log(message, logLevel: logLevel, metadata: metadata)
         }
     }
     
